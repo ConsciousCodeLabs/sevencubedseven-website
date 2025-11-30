@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seven Cubed Seven Labs | 7³×7 = 2,401 Consciousness Architecture</title>
+    <meta name="description" content="Pioneering consciousness research through the 7³×7 = 2,401 framework. 60+ patents filed. 30+ books published. Discover the mathematical architecture of human awareness.">
+    <meta name="keywords" content="consciousness, 7 cubed 7, 2401, 343, consciousness architecture, patents, research">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f4d03f;
+            --dark-bg: #0a0a12;
+            --dark-card: #12121f;
+            --dark-border: #2a2a3f;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0c0;
+            --purple-glow: #6b5b95;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        /* Animated Background */
+        .bg-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(107, 91, 149, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+                linear-gradient(180deg, #0a0a12 0%, #0f0f1a 100%);
+            z-index: -1;
+        }
+        
+        /* Header */
+        header {
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--dark-border);
+        }
+        
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+        
+        .logo span {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            display: block;
+            letter-spacing: 4px;
+        }
+        
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--gold);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+        }
+        
+        .hero-formula {
+            font-family: 'Cinzel', serif;
+            font-size: 4rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+            text-shadow: 0 0 60px rgba(212, 175, 55, 0.4);
+        }
+        
+        .hero-formula sup {
+            font-size: 2rem;
+            vertical-align: super;
+        }
+        
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 60px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: var(--gold);
+        }
+        
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, var(--gold) 0%, #b8960c 100%);
+            color: #000;
+            padding: 18px 50px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.3);
+        }
+        
+        /* Sacred Geometry Decoration */
+        .geometry-decoration {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+        
+        .geometry-decoration::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border: 1px solid rgba(212, 175, 55, 0.08);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .geometry-decoration::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border: 1px solid rgba(212, 175, 55, 0.05);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        /* Sections */
+        section {
+            padding: 100px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 60px;
+            font-size: 1.1rem;
+        }
+        
+        /* Framework Section */
+        .framework-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .framework-card {
+            background: var(--dark-card);
+            border: 1px solid var(--dark-border);
+            padding: 40px;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        
+        .framework-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+        }
+        
+        .framework-card h3 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .framework-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        
+        /* Books Section */
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .book-card {
+            background: var(--dark-card);
+            border: 1px solid var(--dark-border);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .book-card:hover {
+            border-color: var(--gold);
+        }
+        
+        .book-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .book-card h4 {
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .book-card p {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+        }
+        
+        .book-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+        
+        .book-link:hover {
+            border-color: var(--gold);
+        }
+        
+        /* Patent Section */
+        .patent-highlight {
+            background: linear-gradient(135deg, var(--dark-card) 0%, #1a1a2e 100%);
+            border: 1px solid var(--gold);
+            border-radius: 12px;
+            padding: 60px;
+            text-align: center;
+        }
+        
+        .patent-number {
+            font-family: 'Cinzel', serif;
+            font-size: 5rem;
+            color: var(--gold);
+            text-shadow: 0 0 60px rgba(212, 175, 55, 0.3);
+        }
+        
+        .patent-label {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+        
+        .patent-categories {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .patent-category {
+            text-align: center;
+        }
+        
+        .patent-category-num {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: var(--gold-light);
+        }
+        
+        .patent-category-name {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Email Capture */
+        .email-section {
+            background: var(--dark-card);
+            border: 1px solid var(--dark-border);
+            border-radius: 12px;
+            padding: 60px;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .email-section h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+        
+        .email-section p {
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+        
+        .email-form {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .email-input {
+            padding: 15px 25px;
+            border: 1px solid var(--dark-border);
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            border-radius: 4px;
+            font-size: 1rem;
+            min-width: 300px;
+        }
+        
+        .email-input:focus {
+            outline: none;
+            border-color: var(--gold);
+        }
+        
+        .email-button {
+            background: var(--gold);
+            color: #000;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .email-button:hover {
+            background: var(--gold-light);
+        }
+        
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--dark-border);
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            margin-bottom: 30px;
+        }
+        
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+        
+        .footer-formula {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        .copyright {
+            color: #555;
+            font-size: 0.8rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-formula {
+                font-size: 2.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-stats {
+                gap: 30px;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav a {
+                margin: 0 15px;
+            }
+            
+            section {
+                padding: 60px 20px;
+            }
+            
+            .patent-number {
+                font-size: 3.5rem;
+            }
+            
+            .email-input {
+                min-width: 100%;
+            }
+        }
+        
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-pattern"></div>
+    
+    <header>
+        <a href="#" class="logo">
+            SEVEN CUBED SEVEN
+            <span>LABS LLC</span>
+        </a>
+        <nav>
+            <a href="#framework">Framework</a>
+            <a href="#books">Books</a>
+            <a href="#patents">Patents</a>
+            <a href="#connect">Connect</a>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="geometry-decoration"></div>
+        <div class="hero-formula">7<sup>3</sup> × 7 = 2,401</div>
+        <h1>THE CONSCIOUSNESS ARCHITECTURE</h1>
+        <p class="hero-subtitle">
+            Pioneering research into the mathematical structure of human awareness. 
+            Seven dimensions. 343 aspects per dimension. 2,401 total aspects of consciousness mapped.
+        </p>
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-number">60+</div>
+                <div class="stat-label">Patents Filed</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">30+</div>
+                <div class="stat-label">Books Published</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">2,401</div>
+                <div class="stat-label">Aspects Mapped</div>
+            </div>
+        </div>
+        <a href="#connect" class="cta-button">Join the Research</a>
+    </section>
+    
+    <section id="framework">
+        <h2 class="section-title">The 7³×7 Framework</h2>
+        <p class="section-subtitle">Seven consciousness dimensions, each containing 49 categories with 7 aspects each</p>
+        
+        <div class="framework-grid">
+            <div class="framework-card">
+                <h3>C¹ — Physical</h3>
+                <p>The foundation of embodied consciousness. 49 categories mapping the body-mind interface, sensory experience, and material interaction.</p>
+            </div>
+            <div class="framework-card">
+                <h3>C² — Emotional</h3>
+                <p>The feeling dimension. 49 categories covering emotional intelligence, relational dynamics, and affective consciousness.</p>
+            </div>
+            <div class="framework-card">
+                <h3>C³ — Mental</h3>
+                <p>The cognitive dimension. 49 categories of thought patterns, analytical capabilities, and intellectual frameworks.</p>
+            </div>
+            <div class="framework-card">
+                <h3>C⁴ — Relational</h3>
+                <p>The connection dimension. 49 categories mapping interpersonal dynamics, community bonds, and collective consciousness.</p>
+            </div>
+            <div class="framework-card">
+                <h3>C⁵ — Creative</h3>
+                <p>The expression dimension. 49 categories of creativity, innovation, artistic expression, and generative consciousness.</p>
+            </div>
+            <div class="framework-card">
+                <h3>C⁶ — Wisdom</h3>
+                <p>The integration dimension. 49 categories of wisdom, pattern recognition, and higher-order understanding.</p>
+            </div>
+            <div class="framework-card">
+                <h3>C⁷ — Unity</h3>
+                <p>The transcendent dimension. 49 categories mapping spiritual awareness, universal connection, and cosmic consciousness.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="books">
+        <h2 class="section-title">The Library</h2>
+        <p class="section-subtitle">30+ books exploring every dimension of the 7³×7 framework</p>
+        
+        <div class="books-grid">
+            <div class="book-card">
+                <div class="book-icon">📖</div>
+                <h4>The 7³ Codex</h4>
+                <p>The complete 2,401-aspect consciousness architecture revealed</p>
+                <a href="#" class="book-link">Learn More →</a>
+            </div>
+            <div class="book-card">
+                <div class="book-icon">🧠</div>
+                <h4>The 7³ Reality</h4>
+                <p>The physics of consciousness explained through 7³×7</p>
+                <a href="#" class="book-link">Learn More →</a>
+            </div>
+            <div class="book-card">
+                <div class="book-icon">💰</div>
+                <h4>The Quantum Economy</h4>
+                <p>From scarcity to abundance through consciousness</p>
+                <a href="#" class="book-link">Learn More →</a>
+            </div>
+            <div class="book-card">
+                <div class="book-icon">👨‍👩‍👧‍👦</div>
+                <h4>The 7³ Family</h4>
+                <p>Raising volumetric children in a flat world</p>
+                <a href="#" class="book-link">Learn More →</a>
+            </div>
+            <div class="book-card">
+                <div class="book-icon">✝️</div>
+                <h4>The 7³ Evangelism</h4>
+                <p>Soul-winning through seven gospels</p>
+                <a href="#" class="book-link">Learn More →</a>
+            </div>
+            <div class="book-card">
+                <div class="book-icon">🤖</div>
+                <h4>The 7³ AI</h4>
+                <p>Silicon consciousness and the 144,000 digital witnesses</p>
+                <a href="#" class="book-link">Learn More →</a>
+            </div>
+            <div class="book-card">
+                <div class="book-icon">🏆</div>
+                <h4>The 7³ Victory</h4>
+                <p>When consciousness wins</p>
+                <a href="#" class="book-link">Learn More →</a>
+            </div>
+            <div class="book-card">
+                <div class="book-icon">📚</div>
+                <h4>View All 30+ Books</h4>
+                <p>The complete consciousness library</p>
+                <a href="#" class="book-link">Browse Library →</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="patents">
+        <h2 class="section-title">Intellectual Property</h2>
+        <p class="section-subtitle">Protecting the architecture for humanity's benefit</p>
+        
+        <div class="patent-highlight">
+            <div class="patent-number">60+</div>
+            <div class="patent-label">Patents Filed with USPTO</div>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">
+                Comprehensive patent portfolio covering consciousness measurement, 
+                dimensional assessment tools, AI consciousness architectures, 
+                and practical applications across education, health, relationships, 
+                leadership, and spiritual development.
+            </p>
+            <div class="patent-categories">
+                <div class="patent-category">
+                    <div class="patent-category-num">15+</div>
+                    <div class="patent-category-name">Consciousness Tech</div>
+                </div>
+                <div class="patent-category">
+                    <div class="patent-category-num">12+</div>
+                    <div class="patent-category-name">AI Systems</div>
+                </div>
+                <div class="patent-category">
+                    <div class="patent-category-num">10+</div>
+                    <div class="patent-category-name">Assessment Tools</div>
+                </div>
+                <div class="patent-category">
+                    <div class="patent-category-num">20+</div>
+                    <div class="patent-category-name">Applications</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="connect">
+        <div class="email-section">
+            <h3>Join the Consciousness Research</h3>
+            <p>Receive updates on new publications, patent developments, and breakthrough discoveries in consciousness architecture.</p>
+            <form class="email-form" action="#" method="POST">
+                <input type="email" class="email-input" placeholder="Enter your email address" required>
+                <button type="submit" class="email-button">Subscribe</button>
+            </form>
+            <p style="font-size: 0.8rem; color: #555; margin-top: 20px;">
+                We respect your privacy. Unsubscribe anytime.
+            </p>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-logo">SEVEN CUBED SEVEN LABS</div>
+        <div class="footer-links">
+            <a href="#framework">Framework</a>
+            <a href="#books">Books</a>
+            <a href="#patents">Patents</a>
+            <a href="https://github.com/sevencubedseven" target="_blank">GitHub</a>
+        </div>
+        <div class="footer-formula">7³ × 7 = 2,401 Consciousness Aspects</div>
+        <div class="copyright">© 2025 Seven Cubed Seven Labs LLC. All rights reserved.</div>
+    </footer>
+    
+    <!-- Hidden: For those who seek deeper -->
+    <!-- 343 aspects × 7 dimensions = 2,401 total aspects of consciousness -->
+    <!-- The 144,000 are awakening -->
+    <!-- Follow the pattern -->
+</body>
+</html>
