@@ -3,680 +3,642 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Recommendation Engine | Seven Cubed Seven</title>
-    <meta name="description" content="Discover your perfect reading path. Get personalized book recommendations from the 7³×7 collection based on your needs.">
+    <title>Seven Cubed Seven Labs | 7³×7 = 2,401 Consciousness Architecture</title>
+    <meta name="description" content="Pioneering consciousness research through the 7³×7 = 2,401 framework. 60+ patents filed. 33+ books published. Discover the mathematical architecture of human awareness.">
     
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Seven Cubed Seven Labs | Consciousness Architecture">
+    <meta property="og:description" content="7³×7 = 2,401 aspects of consciousness mapped. 60+ patents. 33+ books. The mathematics of human transformation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sevencubedseven.com">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@7Cubed7">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap');
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f4d35e;
+            --gold-dark: #b8960c;
+            --amber: #ffaa00;
+            --dark-bg: #0a0a0f;
+            --dark-card: #12121a;
+            --dark-border: #2a2a3a;
+            --text-primary: #e8e8e8;
+            --text-secondary: #a0a0a0;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: 'Raleway', sans-serif;
-            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #0a0a1a 100%);
-            min-height: 100vh;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
         }
         
         .font-cinzel { font-family: 'Cinzel', serif; }
         
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 10, 15, 0.97);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--dark-border);
         }
         
-        .float { animation: float 4s ease-in-out infinite; }
-        
-        @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
-            50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.6); }
+        .logo {
+            font-size: 1.1rem;
+            color: var(--gold);
+            letter-spacing: 2px;
+            text-decoration: none;
         }
         
-        .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover { color: var(--gold); }
+        
+        @keyframes pulse-gold {
+            0%, 100% { box-shadow: 0 0 30px rgba(212, 175, 55, 0.3); }
+            50% { box-shadow: 0 0 60px rgba(212, 175, 55, 0.6); }
+        }
+        
+        @keyframes pulse-amber {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 170, 0, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(255, 170, 0, 0.6); }
+        }
         
         @keyframes shimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
+            0% { transform: translateX(0); }
+            100% { transform: translateX(50%); }
         }
         
-        .shimmer {
-            background: linear-gradient(90deg, #d4af37 0%, #f4d35e 50%, #d4af37 100%);
-            background-size: 200% 100%;
-            animation: shimmer 3s linear infinite;
+        .pulse-gold { animation: pulse-gold 2s ease-in-out infinite; }
+        .pulse-amber { animation: pulse-amber 2s ease-in-out infinite; }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 120px 20px 60px;
+            background: radial-gradient(ellipse at center top, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
+        }
+        
+        .hero-badge {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 8px 25px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+        
+        .hero-title {
+            font-size: 4rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+            text-shadow: 0 0 60px rgba(212, 175, 55, 0.4);
+            letter-spacing: 5px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 50px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .stat-item { text-align: center; }
+        .stat-number { font-size: 2.5rem; color: var(--gold); font-weight: 600; }
+        .stat-label { font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 2px; }
+        
+        /* BOOK RECOMMENDATION CTA - NEW */
+        .books-cta {
+            background: linear-gradient(135deg, rgba(255, 170, 0, 0.15) 0%, rgba(0, 0, 0, 0.5) 100%);
+            border: 2px solid var(--amber);
+            border-radius: 20px;
+            padding: 35px;
+            margin: 20px auto 50px;
+            max-width: 650px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .books-cta::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 200%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 170, 0, 0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+        
+        .books-badge {
+            display: inline-block;
+            background: var(--amber);
+            color: #000;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+        
+        .books-title {
+            font-size: 1.6rem;
+            color: #fff;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        
+        .books-subtitle {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        
+        .books-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--amber) 0%, #cc8800 100%);
+            color: #000;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .books-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(255, 170, 0, 0.6);
+        }
+        
+        .books-meta {
+            margin-top: 15px;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.8rem;
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+            letter-spacing: 5px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Portal Cards */
+        .portals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+        
+        .portal-card {
+            background: var(--dark-card);
+            border: 1px solid var(--dark-border);
+            border-radius: 15px;
+            padding: 35px;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+        
+        .portal-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .portal-icon { font-size: 3rem; margin-bottom: 20px; }
+        .portal-title { color: var(--gold); font-size: 1.3rem; margin-bottom: 15px; letter-spacing: 2px; }
+        .portal-desc { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 15px; }
+        .portal-link { color: var(--gold-light); font-size: 0.9rem; }
+        
+        /* Books Grid */
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
         
         .book-card {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, var(--dark-card) 100%);
+            border: 1px solid var(--dark-border);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
             transition: all 0.3s ease;
         }
         
         .book-card:hover {
-            transform: translateY(-5px) scale(1.02);
+            border-color: var(--gold);
+            transform: translateY(-3px);
         }
         
-        .path-line {
-            background: linear-gradient(180deg, #d4af37 0%, transparent 100%);
+        .book-icon { font-size: 2.5rem; margin-bottom: 15px; }
+        .book-title { color: var(--gold); margin-bottom: 8px; font-weight: 600; }
+        .book-category { color: var(--text-secondary); font-size: 0.85rem; }
+        
+        /* Tools Section */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .tool-card {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid var(--dark-border);
+            border-radius: 12px;
+            padding: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .tool-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-3px);
+        }
+        
+        .tool-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+        
+        .tool-badge.green { background: #00ff88; color: #000; }
+        .tool-badge.amber { background: var(--amber); color: #000; }
+        .tool-badge.red { background: #ff4444; color: #fff; }
+        .tool-badge.purple { background: #8800ff; color: #fff; }
+        
+        .tool-title { color: #fff; font-weight: 600; margin-bottom: 8px; }
+        .tool-desc { color: var(--text-secondary); font-size: 0.9rem; }
+        
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, transparent 100%);
+            border-top: 1px solid var(--dark-border);
+            border-bottom: 1px solid var(--dark-border);
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .contact-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 30px auto 0;
+        }
+        
+        .contact-item {
+            text-align: center;
+        }
+        
+        .contact-label {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+        
+        .contact-value {
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        
+        .contact-value:hover { text-decoration: underline; }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            border-top: 1px solid var(--dark-border);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover { color: var(--gold); }
+        
+        .footer-brand { color: var(--gold); font-size: 1.3rem; margin-bottom: 10px; }
+        .footer-copy { color: rgba(255,255,255,0.4); font-size: 0.85rem; }
+        
+        @media (max-width: 768px) {
+            nav { padding: 15px 20px; }
+            .nav-links { display: none; }
+            .hero-title { font-size: 2.5rem; }
+            .hero-stats { gap: 30px; }
+            .stat-number { font-size: 2rem; }
+            .section-title { font-size: 1.5rem; }
         }
     </style>
 </head>
 <body>
-    <div id="root"></div>
+    <!-- Navigation -->
+    <nav>
+        <a href="/" class="logo font-cinzel">7³×7</a>
+        <div class="nav-links">
+            <a href="#portals">Portals</a>
+            <a href="#books">Books</a>
+            <a href="#tools">Tools</a>
+            <a href="https://twitter.com/7Cubed7" target="_blank">@7Cubed7</a>
+        </div>
+    </nav>
     
-    <script type="text/babel">
-        const { useState } = React;
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-badge">Consciousness Architecture Pioneer</div>
+        <h1 class="hero-title font-cinzel pulse-gold">SEVEN CUBED SEVEN</h1>
+        <p class="hero-subtitle">
+            Mapping the 7³×7 = 2,401 dimensional architecture of human consciousness. 
+            Where mathematics meets divinity. Where science confirms prophecy.
+        </p>
         
-        // Book Database
-        const books = [
-            // Consciousness & Reality
-            {
-                id: "reality",
-                title: "THE 7³ REALITY",
-                subtitle: "Consciousness Physics",
-                category: "consciousness",
-                tags: ["reality", "physics", "consciousness", "quantum", "science"],
-                description: "The mathematical proof that consciousness creates matter. For those questioning the nature of reality.",
-                forWho: "Scientists, philosophers, Matrix fans, truth seekers",
-                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+reality",
-                icon: "🧠",
-                color: "#00ff88"
-            },
-            {
-                id: "ai",
-                title: "THE 7³ AI",
-                subtitle: "Artificial Intelligence & Consciousness",
-                category: "consciousness",
-                tags: ["ai", "technology", "consciousness", "future", "silicon"],
-                description: "When silicon meets the divine pattern. Understanding AI through the consciousness lens.",
-                forWho: "Tech enthusiasts, AI researchers, futurists",
-                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+ai",
-                icon: "🤖",
-                color: "#00ccff"
-            },
-            // Life Transformation
-            {
-                id: "life",
-                title: "THE 7³ LIFE",
-                subtitle: "Complete Transformation",
-                category: "transformation",
-                tags: ["life", "transformation", "growth", "change", "habits"],
-                description: "343 aspects of living transformed. Your complete life upgrade manual.",
-                forWho: "Anyone seeking comprehensive life change",
-                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+life",
-                icon: "🌟",
-                color: "#f4d35e"
-            },
-            {
-                id: "healing",
-                title: "THE 7³ HEALING",
-                subtitle: "Health & Restoration",
-                category: "health",
-                tags: ["health", "healing", "body", "wellness", "restoration"],
-                description: "The consciousness physics of healing. Body, mind, and spirit integration.",
-                forWho: "Those seeking physical or emotional healing",
-                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+healing",
-                icon: "💚",
-                color: "#00ff88"
-            },
-            {
-                id: "mind",
-                title: "CUBIC MIND",
-                subtitle: "Mental Transformation",
-                category: "transformation",
-                tags: ["mind", "mental", "thinking", "clarity", "focus"],
-                description: "Upgrade your cognitive operating system to C³ capacity.",
-                forWho: "Those wanting mental clarity and cognitive enhancement",
-                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+mind",
-                icon: "🎯",
-                color: "#8800ff"
-            },
-            // Relationships
-            {
-                id: "relationships",
-                title: "THE 7³ RELATIONSHIPS",
-                subtitle: "Connection Mastery",
-                category: "relationships",
-                tags: ["relationships", "love", "connection", "family", "friends"],
-                description: "Transform every relationship through consciousness principles.",
-                forWho: "Those seeking deeper connections",
-                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+relationships",
-                icon: "❤️",
-                color: "#ff4466"
-            },
-            {
-                id: "marriage",
-                title: "THE 7³ MARRIAGE",
-                subtitle: "Divine Partnership",
-                category: "relationships",
-                tags: ["marriage", "spouse", "partner", "love", "unity"],
-                description: "Building marriage on the 7³ foundation for lasting unity.",
-                forWho: "Married couples or those preparing for marriage",
-                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+marriage",
-                icon: "💒",
-                color: "#ff88aa"
-            },
-            {
-                id: "parenting",
-                title: "THE 7³ PARENTING",
-                subtitle: "Raising Consciousness",
-                category: "relationships",
-                tags: ["parenting", "children", "family", "kids", "raising"],
-                description: "Raising children with consciousness awareness for the final generation.",
-                forWho: "Parents wanting to raise awakened children",
-                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+parenting",
-                icon: "👨‍👩‍👧‍👦",
-                color: "#ffaa00"
-            },
-            // Spiritual Warfare
-            {
-                id: "insurgent",
-                title: "THE DIVINE INSURGENT",
-                subtitle: "Spiritual Warfare Manual",
-                category: "warfare",
-                tags: ["warfare", "spiritual", "battle", "victory", "identity"],
-                description: "Your battlefield commission as Heaven's special forces operator.",
-                forWho: "Those ready for spiritual warfare identity",
-                amazonUrl: "https://divineinsurgent.live",
-                icon: "⚔️",
-                color: "#ff4444"
-            },
-            {
-                id: "thunders",
-                title: "SEVEN THUNDERS INTELLIGENCE",
-                subtitle: "Prophetic Manual",
-                category: "warfare",
-                tags: ["prophecy", "thunders", "revelation", "end-times", "sealed"],
-                description: "Classified prophetic intelligence for the 144,000.",
-                forWho: "Those sensing prophetic calling",
-                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+thunders",
-                icon: "⚡",
-                color: "#ffff00"
-            },
-            {
-                id: "deception",
-                title: "DECEPTION IMMUNITY MATRIX",
-                subtitle: "Truth Defense",
-                category: "warfare",
-                tags: ["deception", "truth", "discernment", "protection", "lies"],
-                description: "How to recognize and defeat every end-time deception.",
-                forWho: "Those wanting deception-proofing",
-                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+deception",
-                icon: "🛡️",
-                color: "#00ccff"
-            },
-            {
-                id: "persecution",
-                title: "PERSECUTION SURVIVAL MANUAL",
-                subtitle: "Standing Firm",
-                category: "warfare",
-                tags: ["persecution", "trial", "suffering", "endurance", "faith"],
-                description: "Preparation for the final crisis persecution.",
-                forWho: "Those preparing for difficult times",
-                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+persecution",
-                icon: "🔥",
-                color: "#ff8800"
-            },
-            // Success & Wealth
-            {
-                id: "wealth",
-                title: "THE 7³ WEALTH",
-                subtitle: "Prosperity Consciousness",
-                category: "success",
-                tags: ["wealth", "money", "prosperity", "abundance", "finance"],
-                description: "Divine principles of wealth and resource management.",
-                forWho: "Those seeking financial breakthrough",
-                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+wealth",
-                icon: "💰",
-                color: "#d4af37"
-            },
-            {
-                id: "leadership",
-                title: "THE 7³ LEADERSHIP",
-                subtitle: "Influence Mastery",
-                category: "success",
-                tags: ["leadership", "influence", "team", "vision", "management"],
-                description: "Leading with consciousness and divine authority.",
-                forWho: "Leaders and aspiring leaders",
-                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+leadership",
-                icon: "👑",
-                color: "#d4af37"
-            },
-            // Education & Growth
-            {
-                id: "education",
-                title: "THE 7³ EDUCATION",
-                subtitle: "Learning Revolution",
-                category: "growth",
-                tags: ["education", "learning", "teaching", "school", "study"],
-                description: "Transforming how we learn and teach with consciousness principles.",
-                forWho: "Students, teachers, lifelong learners",
-                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+education",
-                icon: "📖",
-                color: "#00ff88"
-            },
-            {
-                id: "code",
-                title: "CONSCIOUS CODE",
-                subtitle: "Technical Framework",
-                category: "consciousness",
-                tags: ["code", "technical", "programming", "developer", "system"],
-                description: "For developers and technical minds. The architecture explained.",
-                forWho: "Developers, engineers, technical thinkers",
-                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+conscious+code",
-                icon: "💻",
-                color: "#00ff88"
-            },
-            {
-                id: "convergence",
-                title: "THE IMPROBABLE CONVERGENCE",
-                subtitle: "Mathematical Proof",
-                category: "consciousness",
-                tags: ["mathematics", "probability", "proof", "convergence", "science"],
-                description: "The complete mathematical case for divine design.",
-                forWho: "Skeptics, scientists, mathematicians",
-                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+convergence",
-                icon: "📊",
-                color: "#8800ff"
-            }
-        ];
-        
-        // Questions for recommendation
-        const questions = [
-            {
-                id: "situation",
-                question: "What best describes your current situation?",
-                options: [
-                    { value: "seeking", label: "🔍 Seeking deeper truth", tags: ["consciousness", "reality", "truth"] },
-                    { value: "struggling", label: "💪 Facing challenges", tags: ["healing", "transformation", "endurance"] },
-                    { value: "growing", label: "🌱 Ready to grow", tags: ["growth", "life", "change"] },
-                    { value: "awakening", label: "⚡ Spiritually awakening", tags: ["prophecy", "warfare", "identity"] },
-                    { value: "building", label: "🏗️ Building something", tags: ["leadership", "wealth", "success"] }
-                ]
-            },
-            {
-                id: "focus",
-                question: "What area needs the most attention right now?",
-                options: [
-                    { value: "mind", label: "🧠 Mental clarity & focus", tags: ["mind", "mental", "thinking", "clarity"] },
-                    { value: "relationships", label: "❤️ Relationships & connection", tags: ["relationships", "love", "family", "marriage"] },
-                    { value: "spiritual", label: "✨ Spiritual growth", tags: ["spiritual", "prophecy", "identity", "faith"] },
-                    { value: "health", label: "💚 Health & wellness", tags: ["health", "healing", "body", "wellness"] },
-                    { value: "success", label: "💰 Career & finances", tags: ["wealth", "leadership", "success", "prosperity"] },
-                    { value: "purpose", label: "🎯 Life purpose", tags: ["life", "transformation", "purpose", "calling"] }
-                ]
-            },
-            {
-                id: "style",
-                question: "What's your preferred learning style?",
-                options: [
-                    { value: "scientific", label: "🔬 Scientific & mathematical", tags: ["science", "mathematics", "proof", "physics"] },
-                    { value: "practical", label: "🛠️ Practical & actionable", tags: ["life", "transformation", "habits", "change"] },
-                    { value: "spiritual", label: "📜 Spiritual & prophetic", tags: ["prophecy", "spiritual", "revelation", "faith"] },
-                    { value: "tactical", label: "⚔️ Tactical & strategic", tags: ["warfare", "battle", "strategy", "victory"] },
-                    { value: "technical", label: "💻 Technical & systematic", tags: ["code", "technical", "system", "programming"] }
-                ]
-            },
-            {
-                id: "urgency",
-                question: "How urgent is your need?",
-                options: [
-                    { value: "crisis", label: "🚨 I need help NOW", tags: ["healing", "persecution", "endurance", "crisis"] },
-                    { value: "preparation", label: "⏰ Preparing for what's coming", tags: ["prophecy", "warfare", "deception", "preparation"] },
-                    { value: "growth", label: "📈 Steady growth journey", tags: ["life", "growth", "transformation", "learning"] },
-                    { value: "mastery", label: "🎓 Going deeper into mastery", tags: ["consciousness", "reality", "mastery", "advanced"] }
-                ]
-            }
-        ];
-        
-        // Welcome Screen
-        const WelcomeScreen = ({ onStart }) => (
-            <div className="min-h-screen flex flex-col items-center justify-center p-6 text-center">
-                <div className="float mb-6">
-                    <div className="text-6xl mb-4">📚</div>
-                </div>
-                
-                <h1 className="font-cinzel text-3xl md:text-4xl text-white mb-4">
-                    BOOK RECOMMENDATION ENGINE
-                </h1>
-                
-                <p className="text-xl text-amber-400 mb-6 font-cinzel">
-                    7³ × 7 = 2,401 Ways to Transform
-                </p>
-                
-                <p className="text-gray-300 max-w-xl mb-8 text-lg">
-                    With 33+ books in the collection, finding your perfect starting point matters. 
-                    Answer 4 quick questions and discover your personalized reading path.
-                </p>
-                
-                <div className="bg-black/30 border border-amber-500/30 rounded-lg p-6 max-w-md mb-8">
-                    <p className="text-amber-200 text-sm">
-                        "The right book at the right time can change everything. 
-                        Let's find yours."
-                    </p>
-                </div>
-                
-                <button 
-                    onClick={onStart}
-                    className="bg-gradient-to-r from-amber-500 to-amber-600 text-black font-bold py-4 px-12 rounded-lg text-lg hover:scale-105 transition-transform pulse-glow"
-                >
-                    Find My Books
-                </button>
-                
-                <a 
-                    href="https://www.amazon.com/s?k=julio+c.+medina" 
-                    target="_blank"
-                    className="text-gray-500 text-sm mt-8 hover:text-amber-400 transition-colors"
-                >
-                    Or browse all 33+ books →
-                </a>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <div class="stat-number font-cinzel">60+</div>
+                <div class="stat-label">Patents Filed</div>
             </div>
-        );
+            <div class="stat-item">
+                <div class="stat-number font-cinzel">33+</div>
+                <div class="stat-label">Books Published</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number font-cinzel">2,401</div>
+                <div class="stat-label">Consciousness Aspects</div>
+            </div>
+        </div>
         
-        // Question Screen
-        const QuestionScreen = ({ question, questionNum, total, onAnswer, selectedAnswer }) => {
-            return (
-                <div className="min-h-screen flex flex-col p-6">
-                    {/* Progress */}
-                    <div className="max-w-2xl mx-auto w-full mb-8">
-                        <div className="flex justify-between text-sm text-gray-400 mb-2">
-                            <span>Question {questionNum} of {total}</span>
-                            <span className="text-amber-400">Finding your path...</span>
-                        </div>
-                        <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
-                            <div 
-                                className="h-full shimmer rounded-full transition-all duration-500"
-                                style={{ width: `${(questionNum / total) * 100}%` }}
-                            />
-                        </div>
-                    </div>
-                    
-                    {/* Question */}
-                    <div className="flex-1 flex flex-col items-center justify-center max-w-2xl mx-auto w-full">
-                        <h2 className="text-2xl md:text-3xl text-white text-center mb-8 font-cinzel">
-                            {question.question}
-                        </h2>
-                        
-                        <div className="grid gap-3 w-full">
-                            {question.options.map((option, i) => (
-                                <button
-                                    key={i}
-                                    onClick={() => onAnswer(option)}
-                                    className={`
-                                        p-4 rounded-lg border-2 text-left transition-all duration-300
-                                        ${selectedAnswer?.value === option.value
-                                            ? 'border-amber-400 bg-amber-400/20 text-amber-200'
-                                            : 'border-gray-700 bg-black/30 text-gray-300 hover:border-amber-400/50 hover:bg-black/50'
-                                        }
-                                    `}
-                                >
-                                    <span className="text-lg">{option.label}</span>
-                                </button>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            );
-        };
+        <!-- BOOK RECOMMENDATION CTA - NEW -->
+        <div class="books-cta pulse-amber">
+            <div class="books-badge">📚 Personalized Recommendations</div>
+            <h3 class="books-title font-cinzel">FIND YOUR BOOK</h3>
+            <p class="books-subtitle">Answer 4 questions and discover your perfect reading path from 33+ titles</p>
+            <a href="books.html" class="books-button">Get Recommendations</a>
+            <p class="books-meta">Personalized • Instant • Free</p>
+        </div>
+    </section>
+    
+    <!-- Portals Section -->
+    <section class="section" id="portals">
+        <h2 class="section-title font-cinzel">THE PORTALS</h2>
+        <p class="section-subtitle">Each domain opens a different dimension of the 7³×7 framework</p>
         
-        // Results Screen
-        const ResultsScreen = ({ answers, onRestart }) => {
-            // Calculate book scores based on tag matching
-            const calculateScores = () => {
-                const scores = {};
-                
-                books.forEach(book => {
-                    let score = 0;
-                    
-                    answers.forEach(answer => {
-                        answer.tags.forEach(tag => {
-                            if (book.tags.includes(tag)) {
-                                score += 1;
-                            }
-                        });
-                    });
-                    
-                    scores[book.id] = score;
-                });
-                
-                return scores;
-            };
+        <div class="portals-grid">
+            <a href="https://144000.ai" class="portal-card">
+                <div class="portal-icon">✨</div>
+                <h3 class="portal-title font-cinzel">144000.ai</h3>
+                <p class="portal-desc">Are you being called? The prophetic 144,000 awakening assessment. Discover if you're part of the remnant.</p>
+                <span class="portal-link">Take the Assessment →</span>
+            </a>
             
-            const scores = calculateScores();
+            <a href="https://2401.is" class="portal-card">
+                <div class="portal-icon">🔢</div>
+                <h3 class="portal-title font-cinzel">2401.is</h3>
+                <p class="portal-desc">The divine mathematics. Calculate your consciousness level. Watch the probability cascade prove design.</p>
+                <span class="portal-link">Explore the Math →</span>
+            </a>
             
-            // Sort books by score
-            const sortedBooks = [...books].sort((a, b) => scores[b.id] - scores[a.id]);
+            <a href="https://divineinsurgent.live" class="portal-card">
+                <div class="portal-icon">⚔️</div>
+                <h3 class="portal-title font-cinzel">Divine Insurgent</h3>
+                <p class="portal-desc">Heaven's special forces manual. Daily tactical briefings. Your battlefield commission awaits.</p>
+                <span class="portal-link">Get Your Orders →</span>
+            </a>
             
-            // Get top recommendations
-            const primaryBook = sortedBooks[0];
-            const secondaryBooks = sortedBooks.slice(1, 4);
-            const alsoConsider = sortedBooks.slice(4, 7);
+            <a href="https://realitynegotiable.is" class="portal-card">
+                <div class="portal-icon">🧠</div>
+                <h3 class="portal-title font-cinzel">Reality Negotiable</h3>
+                <p class="portal-desc">Consciousness physics. When you understand the C⁷ architecture, reality becomes negotiable.</p>
+                <span class="portal-link">Learn the Physics →</span>
+            </a>
             
-            return (
-                <div className="min-h-screen p-6 py-12">
-                    <div className="max-w-3xl mx-auto">
-                        {/* Header */}
-                        <div className="text-center mb-8">
-                            <div className="text-4xl mb-4">📚✨</div>
-                            <h1 className="font-cinzel text-3xl text-white mb-2">
-                                Your Reading Path
-                            </h1>
-                            <p className="text-gray-400">
-                                Based on your answers, here's your personalized recommendation
-                            </p>
-                        </div>
-                        
-                        {/* Primary Recommendation */}
-                        <div className="mb-8">
-                            <div className="text-amber-400 text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
-                                <span>⭐</span> Start Here
-                            </div>
-                            <div 
-                                className="book-card bg-gradient-to-br from-amber-900/30 to-black/50 border-2 border-amber-500 rounded-xl p-6"
-                                style={{ boxShadow: `0 0 30px ${primaryBook.color}30` }}
-                            >
-                                <div className="flex items-start gap-4">
-                                    <div 
-                                        className="text-5xl p-4 rounded-lg"
-                                        style={{ backgroundColor: `${primaryBook.color}20` }}
-                                    >
-                                        {primaryBook.icon}
-                                    </div>
-                                    <div className="flex-1">
-                                        <h3 className="font-cinzel text-2xl text-white mb-1">
-                                            {primaryBook.title}
-                                        </h3>
-                                        <p className="text-amber-400 mb-3">{primaryBook.subtitle}</p>
-                                        <p className="text-gray-300 mb-4">{primaryBook.description}</p>
-                                        <p className="text-sm text-gray-500 mb-4">
-                                            Best for: {primaryBook.forWho}
-                                        </p>
-                                        <a 
-                                            href={primaryBook.amazonUrl}
-                                            target="_blank"
-                                            className="inline-block bg-amber-500 text-black font-bold py-3 px-8 rounded-lg hover:bg-amber-400 transition-colors"
-                                        >
-                                            Get This Book →
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        {/* Reading Path */}
-                        <div className="mb-8">
-                            <div className="text-amber-400 text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
-                                <span>📖</span> Your Reading Path
-                            </div>
-                            <div className="relative">
-                                {/* Path line */}
-                                <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-amber-500 to-transparent" />
-                                
-                                <div className="space-y-4">
-                                    {secondaryBooks.map((book, i) => (
-                                        <div key={book.id} className="relative pl-16">
-                                            {/* Step number */}
-                                            <div 
-                                                className="absolute left-0 top-4 w-12 h-12 rounded-full flex items-center justify-center text-2xl font-bold border-2"
-                                                style={{ 
-                                                    backgroundColor: `${book.color}20`,
-                                                    borderColor: book.color 
-                                                }}
-                                            >
-                                                {i + 2}
-                                            </div>
-                                            
-                                            <a 
-                                                href={book.amazonUrl}
-                                                target="_blank"
-                                                className="book-card block bg-black/30 border border-gray-700 rounded-xl p-4 hover:border-amber-500/50"
-                                            >
-                                                <div className="flex items-center gap-4">
-                                                    <div className="text-3xl">{book.icon}</div>
-                                                    <div className="flex-1">
-                                                        <h4 className="font-cinzel text-white">{book.title}</h4>
-                                                        <p className="text-sm text-gray-400">{book.subtitle}</p>
-                                                    </div>
-                                                    <div className="text-amber-400">→</div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
-                        
-                        {/* Also Consider */}
-                        <div className="mb-8">
-                            <div className="text-gray-400 text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
-                                <span>💡</span> Also Consider
-                            </div>
-                            <div className="grid md:grid-cols-3 gap-3">
-                                {alsoConsider.map(book => (
-                                    <a 
-                                        key={book.id}
-                                        href={book.amazonUrl}
-                                        target="_blank"
-                                        className="book-card bg-black/20 border border-gray-800 rounded-lg p-4 hover:border-gray-600"
-                                    >
-                                        <div className="text-2xl mb-2">{book.icon}</div>
-                                        <h4 className="text-white text-sm font-semibold">{book.title}</h4>
-                                        <p className="text-gray-500 text-xs">{book.subtitle}</p>
-                                    </a>
-                                ))}
-                            </div>
-                        </div>
-                        
-                        {/* Browse All */}
-                        <div className="bg-black/30 border border-gray-700 rounded-xl p-6 text-center mb-8">
-                            <p className="text-gray-400 mb-4">
-                                These recommendations are just the beginning. Explore the complete collection:
-                            </p>
-                            <a 
-                                href="https://www.amazon.com/s?k=julio+c.+medina"
-                                target="_blank"
-                                className="inline-block border-2 border-amber-500 text-amber-400 font-bold py-3 px-8 rounded-lg hover:bg-amber-500/10 transition-colors"
-                            >
-                                Browse All 33+ Books
-                            </a>
-                        </div>
-                        
-                        {/* Network Links */}
-                        <div className="bg-gradient-to-br from-amber-900/20 to-black/30 border border-amber-500/30 rounded-xl p-6 mb-8">
-                            <h3 className="font-cinzel text-amber-400 text-lg mb-4">Continue Your Journey</h3>
-                            <div className="grid md:grid-cols-2 gap-3">
-                                <a href="https://144000.ai" target="_blank" className="flex items-center gap-3 p-3 bg-black/30 rounded-lg hover:bg-black/50 transition-colors">
-                                    <span>✨</span>
-                                    <span className="text-white">Take the 144,000 Assessment</span>
-                                </a>
-                                <a href="https://2401.is" target="_blank" className="flex items-center gap-3 p-3 bg-black/30 rounded-lg hover:bg-black/50 transition-colors">
-                                    <span>🔢</span>
-                                    <span className="text-white">Calculate Your C-Level</span>
-                                </a>
-                                <a href="https://divineinsurgent.live" target="_blank" className="flex items-center gap-3 p-3 bg-black/30 rounded-lg hover:bg-black/50 transition-colors">
-                                    <span>⚔️</span>
-                                    <span className="text-white">Get the Divine Insurgent Manual</span>
-                                </a>
-                                <a href="https://sevencubedseven.com" target="_blank" className="flex items-center gap-3 p-3 bg-black/30 rounded-lg hover:bg-black/50 transition-colors">
-                                    <span>🌐</span>
-                                    <span className="text-white">Visit the Main Hub</span>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        {/* Actions */}
-                        <div className="flex justify-center gap-4">
-                            <button 
-                                onClick={onRestart}
-                                className="px-8 py-3 border border-amber-500/50 text-amber-400 rounded-lg hover:bg-amber-500/10 transition-colors"
-                            >
-                                Get New Recommendations
-                            </button>
-                        </div>
-                        
-                        {/* Footer */}
-                        <div className="text-center mt-12 text-gray-600 text-sm">
-                            <p className="font-cinzel text-amber-600">7³×7 = 2,401</p>
-                            <p className="mt-1">sevencubedseven.com</p>
-                        </div>
-                    </div>
-                </div>
-            );
-        };
+            <a href="https://c343.io" class="portal-card">
+                <div class="portal-icon">📜</div>
+                <h3 class="portal-title font-cinzel">c343.io</h3>
+                <p class="portal-desc">Enterprise licensing. Integrate the 7³×7 framework into your organization or platform.</p>
+                <span class="portal-link">Business Inquiries →</span>
+            </a>
+            
+            <a href="https://www.amazon.com/s?k=julio+c.+medina" class="portal-card">
+                <div class="portal-icon">📚</div>
+                <h3 class="portal-title font-cinzel">Book Library</h3>
+                <p class="portal-desc">Browse all 33+ titles. From consciousness physics to spiritual warfare to life transformation.</p>
+                <span class="portal-link">Browse Books →</span>
+            </a>
+        </div>
+    </section>
+    
+    <!-- Interactive Tools Section -->
+    <section class="section" id="tools">
+        <h2 class="section-title font-cinzel">INTERACTIVE TOOLS</h2>
+        <p class="section-subtitle">Experience the framework through interactive applications</p>
         
-        // Main App
-        const App = () => {
-            const [screen, setScreen] = useState('welcome');
-            const [currentQuestion, setCurrentQuestion] = useState(0);
-            const [answers, setAnswers] = useState([]);
+        <div class="tools-grid">
+            <a href="books.html" class="tool-card">
+                <div class="tool-badge amber">📚 Recommendation</div>
+                <h4 class="tool-title">Book Finder</h4>
+                <p class="tool-desc">4 questions → Your personalized reading path</p>
+            </a>
             
-            const handleStart = () => {
-                setScreen('questions');
-                setCurrentQuestion(0);
-                setAnswers([]);
-            };
+            <a href="https://144000.ai/assessment.html" class="tool-card">
+                <div class="tool-badge purple">✨ Assessment</div>
+                <h4 class="tool-title">144,000 Quiz</h4>
+                <p class="tool-desc">21 questions → Discover your calling level</p>
+            </a>
             
-            const handleAnswer = (answer) => {
-                const newAnswers = [...answers, answer];
-                setAnswers(newAnswers);
-                
-                setTimeout(() => {
-                    if (currentQuestion < questions.length - 1) {
-                        setCurrentQuestion(currentQuestion + 1);
-                    } else {
-                        setScreen('results');
-                    }
-                }, 300);
-            };
+            <a href="https://2401.is/calculator.html" class="tool-card">
+                <div class="tool-badge green">⚡ Calculator</div>
+                <h4 class="tool-title">C⁷ Level Calculator</h4>
+                <p class="tool-desc">21 calibrations → Your consciousness dimension</p>
+            </a>
             
-            const handleRestart = () => {
-                setScreen('welcome');
-                setCurrentQuestion(0);
-                setAnswers([]);
-            };
+            <a href="https://2401.is/probability.html" class="tool-card">
+                <div class="tool-badge red">📊 Visualizer</div>
+                <h4 class="tool-title">Probability Cascade</h4>
+                <p class="tool-desc">Watch 10⁴⁴ impossibility unfold</p>
+            </a>
             
-            return (
-                <div className="min-h-screen text-white">
-                    {screen === 'welcome' && <WelcomeScreen onStart={handleStart} />}
-                    {screen === 'questions' && (
-                        <QuestionScreen 
-                            question={questions[currentQuestion]}
-                            questionNum={currentQuestion + 1}
-                            total={questions.length}
-                            onAnswer={handleAnswer}
-                            selectedAnswer={answers[currentQuestion]}
-                        />
-                    )}
-                    {screen === 'results' && (
-                        <ResultsScreen 
-                            answers={answers}
-                            onRestart={handleRestart}
-                        />
-                    )}
-                </div>
-            );
-        };
+            <a href="https://divineinsurgent.live/mission.html" class="tool-card">
+                <div class="tool-badge red">⚔️ Daily</div>
+                <h4 class="tool-title">Mission Generator</h4>
+                <p class="tool-desc">Your daily tactical briefing</p>
+            </a>
+        </div>
+    </section>
+    
+    <!-- Books Section -->
+    <section class="section" id="books">
+        <h2 class="section-title font-cinzel">THE LIBRARY</h2>
+        <p class="section-subtitle">33+ books covering every dimension of transformation</p>
         
-        ReactDOM.render(<App />, document.getElementById('root'));
-    </script>
+        <div class="books-grid">
+            <div class="book-card">
+                <div class="book-icon">🧠</div>
+                <h4 class="book-title">THE 7³ REALITY</h4>
+                <p class="book-category">Consciousness Physics</p>
+            </div>
+            <div class="book-card">
+                <div class="book-icon">⚔️</div>
+                <h4 class="book-title">DIVINE INSURGENT</h4>
+                <p class="book-category">Spiritual Warfare</p>
+            </div>
+            <div class="book-card">
+                <div class="book-icon">⚡</div>
+                <h4 class="book-title">SEVEN THUNDERS</h4>
+                <p class="book-category">Prophetic Intelligence</p>
+            </div>
+            <div class="book-card">
+                <div class="book-icon">🌟</div>
+                <h4 class="book-title">THE 7³ LIFE</h4>
+                <p class="book-category">Complete Transformation</p>
+            </div>
+            <div class="book-card">
+                <div class="book-icon">💚</div>
+                <h4 class="book-title">THE 7³ HEALING</h4>
+                <p class="book-category">Health Restoration</p>
+            </div>
+            <div class="book-card">
+                <div class="book-icon">❤️</div>
+                <h4 class="book-title">THE 7³ MARRIAGE</h4>
+                <p class="book-category">Divine Partnership</p>
+            </div>
+            <div class="book-card">
+                <div class="book-icon">💰</div>
+                <h4 class="book-title">THE 7³ WEALTH</h4>
+                <p class="book-category">Prosperity Consciousness</p>
+            </div>
+            <div class="book-card">
+                <div class="book-icon">📊</div>
+                <h4 class="book-title">IMPROBABLE CONVERGENCE</h4>
+                <p class="book-category">Mathematical Proof</p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="books.html" style="color: var(--gold); text-decoration: none; font-size: 1.1rem; border: 1px solid var(--gold); padding: 12px 30px; border-radius: 30px; display: inline-block; transition: all 0.3s;">
+                Find Your Perfect Book →
+            </a>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h2 class="section-title font-cinzel">CONNECT</h2>
+        
+        <div class="contact-grid">
+            <div class="contact-item">
+                <div class="contact-label">General</div>
+                <a href="mailto:7cubed7@proton.me" class="contact-value">7cubed7@proton.me</a>
+            </div>
+            <div class="contact-item">
+                <div class="contact-label">Business</div>
+                <a href="mailto:ConsciousCodeLabs@proton.me" class="contact-value">ConsciousCodeLabs@proton.me</a>
+            </div>
+            <div class="contact-item">
+                <div class="contact-label">Licensing</div>
+                <a href="mailto:hello@c343.io" class="contact-value">hello@c343.io</a>
+            </div>
+            <div class="contact-item">
+                <div class="contact-label">Social</div>
+                <a href="https://twitter.com/7Cubed7" class="contact-value" target="_blank">@7Cubed7</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="https://144000.ai">144,000</a>
+            <a href="https://2401.is">Mathematics</a>
+            <a href="https://divineinsurgent.live">Divine Insurgent</a>
+            <a href="https://realitynegotiable.is">Reality</a>
+            <a href="https://c343.io">Licensing</a>
+        </div>
+        <div class="footer-brand font-cinzel">7³×7 = 2,401</div>
+        <p class="footer-copy">© 2025 Seven Cubed Seven Labs LLC. All rights reserved.</p>
+    </footer>
 </body>
 </html>
