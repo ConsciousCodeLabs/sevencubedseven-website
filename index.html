@@ -3,955 +3,680 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seven Cubed Seven Labs | 7³×7 = 2,401 Consciousness Architecture</title>
-    <meta name="description" content="Pioneering consciousness research through the 7³×7 = 2,401 framework. 60+ patents filed. 33 books published. Discover the mathematical architecture of human awareness.">
-    <meta name="keywords" content="consciousness, 7 cubed 7, 2401, 343 dimensions, spiritual awakening, 144000, consciousness technology, J.C.M., Seven Cubed Seven Labs">
-    <meta name="author" content="J.C.M. - Seven Cubed Seven Labs LLC">
+    <title>Book Recommendation Engine | Seven Cubed Seven</title>
+    <meta name="description" content="Discover your perfect reading path. Get personalized book recommendations from the 7³×7 collection based on your needs.">
     
-    <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="Seven Cubed Seven Labs | Consciousness Architecture">
-    <meta property="og:description" content="7³×7 = 2,401 aspects of consciousness mapped and activated. 60+ patents. 33 books. The mathematics of human transformation.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sevencubedseven.com">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@7Cubed7">
-    <meta name="twitter:title" content="Seven Cubed Seven Labs">
-    <meta name="twitter:description" content="7³×7 = 2,401 consciousness aspects. The mathematical architecture of human awareness.">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     
     <style>
-        :root {
-            --gold: #d4af37;
-            --gold-light: #f4d35e;
-            --gold-dark: #b8960c;
-            --dark-bg: #0a0a0f;
-            --dark-card: #12121a;
-            --dark-border: #2a2a3a;
-            --text-primary: #e8e8e8;
-            --text-secondary: #a0a0a0;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap');
         
         body {
             font-family: 'Raleway', sans-serif;
-            background: var(--dark-bg);
-            color: var(--text-primary);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
-        
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 15px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(10, 10, 15, 0.97);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            border-bottom: 1px solid var(--dark-border);
-        }
-        
-        .logo {
-            font-family: 'Cinzel', serif;
-            font-size: 1.1rem;
-            color: var(--gold);
-            letter-spacing: 2px;
-            text-decoration: none;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 35px;
-            align-items: center;
-        }
-        
-        nav a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            transition: color 0.3s;
-        }
-        
-        nav a:hover {
-            color: var(--gold);
-        }
-        
-        .nav-social {
-            display: flex;
-            gap: 20px;
-            margin-left: 20px;
-            padding-left: 20px;
-            border-left: 1px solid var(--dark-border);
-        }
-        
-        .nav-social a {
-            font-size: 0.8rem;
-        }
-        
-        /* Hero Section */
-        .hero {
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 50%, #0a0a1a 100%);
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 120px 20px 80px;
-            position: relative;
-            background: radial-gradient(ellipse at center, #1a1a2e 0%, #0a0a0f 70%);
         }
         
-        .hero-formula {
-            font-family: 'Cinzel', serif;
-            font-size: 4.5rem;
-            color: var(--gold);
-            margin-bottom: 20px;
-            text-shadow: 0 0 60px rgba(212, 175, 55, 0.4);
-            animation: glow 3s ease-in-out infinite alternate;
+        .font-cinzel { font-family: 'Cinzel', serif; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
         
-        @keyframes glow {
-            from { text-shadow: 0 0 30px rgba(212, 175, 55, 0.3); }
-            to { text-shadow: 0 0 60px rgba(212, 175, 55, 0.6); }
+        .float { animation: float 4s ease-in-out infinite; }
+        
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.6); }
         }
         
-        .hero-formula sup {
-            font-size: 2.5rem;
-            vertical-align: super;
+        .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+        
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
         }
         
-        .hero h1 {
-            font-family: 'Cinzel', serif;
-            font-size: 2.5rem;
-            font-weight: 400;
-            margin-bottom: 20px;
-            letter-spacing: 3px;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.15rem;
-            color: var(--text-secondary);
-            max-width: 750px;
-            margin-bottom: 40px;
-            font-weight: 300;
-        }
-        
-        .hero-stats {
-            display: flex;
-            gap: 60px;
-            margin-bottom: 50px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        
-        .stat {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-family: 'Cinzel', serif;
-            font-size: 3.5rem;
-            color: var(--gold);
-        }
-        
-        .stat-label {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        
-        .cta-button {
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
-            color: #000;
-            padding: 18px 45px;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 4px;
-            transition: all 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.85rem;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.3);
-        }
-        
-        .cta-button.secondary {
-            background: transparent;
-            border: 1px solid var(--gold);
-            color: var(--gold);
-        }
-        
-        .cta-button.secondary:hover {
-            background: var(--gold);
-            color: #000;
-        }
-        
-        /* Sacred Geometry */
-        .geometry-decoration {
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            border: 1px solid rgba(212, 175, 55, 0.1);
-            border-radius: 50%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-            animation: rotate 60s linear infinite;
-        }
-        
-        @keyframes rotate {
-            from { transform: translate(-50%, -50%) rotate(0deg); }
-            to { transform: translate(-50%, -50%) rotate(360deg); }
-        }
-        
-        .geometry-decoration::before {
-            content: '';
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            border: 1px solid rgba(212, 175, 55, 0.08);
-            border-radius: 50%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        
-        /* Sections */
-        section {
-            padding: 100px 40px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .section-title {
-            font-family: 'Cinzel', serif;
-            font-size: 2.2rem;
-            text-align: center;
-            margin-bottom: 20px;
-            color: var(--gold);
-        }
-        
-        .section-subtitle {
-            text-align: center;
-            color: var(--text-secondary);
-            margin-bottom: 60px;
-            font-size: 1.05rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        /* Framework Grid */
-        .framework-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-        
-        .framework-card {
-            background: var(--dark-card);
-            border: 1px solid var(--dark-border);
-            padding: 35px;
-            border-radius: 8px;
-            transition: all 0.3s;
-        }
-        
-        .framework-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-5px);
-        }
-        
-        .framework-card h3 {
-            font-family: 'Cinzel', serif;
-            color: var(--gold);
-            margin-bottom: 12px;
-            font-size: 1.2rem;
-        }
-        
-        .framework-card p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-        
-        /* Books Section */
-        .books-intro {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .books-categories {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
-        }
-        
-        .category-btn {
-            padding: 10px 25px;
-            border: 1px solid var(--dark-border);
-            background: transparent;
-            color: var(--text-secondary);
-            border-radius: 30px;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-size: 0.85rem;
-        }
-        
-        .category-btn:hover, .category-btn.active {
-            border-color: var(--gold);
-            color: var(--gold);
-        }
-        
-        .books-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
+        .shimmer {
+            background: linear-gradient(90deg, #d4af37 0%, #f4d35e 50%, #d4af37 100%);
+            background-size: 200% 100%;
+            animation: shimmer 3s linear infinite;
         }
         
         .book-card {
-            background: var(--dark-card);
-            border: 1px solid var(--dark-border);
-            padding: 25px;
-            border-radius: 8px;
-            text-align: center;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
         }
         
         .book-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-3px);
+            transform: translateY(-5px) scale(1.02);
         }
         
-        .book-icon {
-            font-size: 2rem;
-            margin-bottom: 12px;
-        }
-        
-        .book-card h4 {
-            color: var(--text-primary);
-            margin-bottom: 8px;
-            font-size: 0.95rem;
-            font-weight: 600;
-        }
-        
-        .book-card p {
-            color: var(--text-secondary);
-            font-size: 0.75rem;
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
-        
-        .book-link {
-            display: inline-block;
-            color: var(--gold);
-            text-decoration: none;
-            font-size: 0.8rem;
-            padding: 8px 18px;
-            border: 1px solid var(--gold);
-            border-radius: 4px;
-            transition: all 0.3s;
-        }
-        
-        .book-link:hover {
-            background: var(--gold);
-            color: #000;
-        }
-        
-        .books-more {
-            text-align: center;
-            margin-top: 50px;
-        }
-        
-        .books-more a {
-            color: var(--gold);
-            text-decoration: none;
-            font-size: 1rem;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.3s;
-        }
-        
-        .books-more a:hover {
-            border-bottom-color: var(--gold);
-        }
-        
-        /* Patent Section */
-        .patent-section {
-            background: linear-gradient(135deg, var(--dark-card) 0%, #1a1a2e 100%);
-            border: 1px solid var(--gold);
-            border-radius: 12px;
-            padding: 60px;
-            text-align: center;
-            margin: 0 auto;
-            max-width: 1000px;
-        }
-        
-        .patent-number {
-            font-family: 'Cinzel', serif;
-            font-size: 5rem;
-            color: var(--gold);
-            text-shadow: 0 0 60px rgba(212, 175, 55, 0.3);
-        }
-        
-        .patent-label {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            margin-bottom: 30px;
-        }
-        
-        .patent-categories {
-            display: flex;
-            justify-content: center;
-            gap: 35px;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-        
-        .patent-category {
-            text-align: center;
-        }
-        
-        .patent-category-num {
-            font-family: 'Cinzel', serif;
-            font-size: 1.8rem;
-            color: var(--gold-light);
-        }
-        
-        .patent-category-name {
-            font-size: 0.75rem;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .patent-cta {
-            margin-top: 40px;
-        }
-        
-        /* Licensing Section */
-        .licensing-section {
-            background: var(--dark-card);
-            border: 1px solid var(--dark-border);
-            border-radius: 12px;
-            padding: 50px;
-            text-align: center;
-            max-width: 800px;
-            margin: 60px auto 0;
-        }
-        
-        .licensing-section h3 {
-            font-family: 'Cinzel', serif;
-            color: var(--gold);
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-        
-        .licensing-section p {
-            color: var(--text-secondary);
-            margin-bottom: 25px;
-        }
-        
-        .licensing-link {
-            display: inline-block;
-            background: var(--gold);
-            color: #000;
-            padding: 15px 35px;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        
-        .licensing-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.3);
-        }
-        
-        /* Connect Section */
-        .connect-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .connect-card {
-            background: var(--dark-card);
-            border: 1px solid var(--dark-border);
-            border-radius: 12px;
-            padding: 40px;
-            text-align: center;
-        }
-        
-        .connect-card h3 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.3rem;
-            color: var(--gold);
-            margin-bottom: 20px;
-        }
-        
-        .connect-card p {
-            color: var(--text-secondary);
-            margin-bottom: 20px;
-            font-size: 0.9rem;
-        }
-        
-        .connect-links {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        
-        .connect-links a {
-            color: var(--text-primary);
-            text-decoration: none;
-            padding: 10px;
-            border-radius: 4px;
-            transition: all 0.3s;
-            font-size: 0.9rem;
-        }
-        
-        .connect-links a:hover {
-            background: rgba(212, 175, 55, 0.1);
-            color: var(--gold);
-        }
-        
-        .social-grid {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .social-link {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 25px;
-            border: 1px solid var(--dark-border);
-            border-radius: 4px;
-            color: var(--text-primary);
-            text-decoration: none;
-            transition: all 0.3s;
-            font-size: 0.9rem;
-        }
-        
-        .social-link:hover {
-            border-color: var(--gold);
-            color: var(--gold);
-        }
-        
-        /* Footer */
-        footer {
-            border-top: 1px solid var(--dark-border);
-            padding: 60px 40px;
-            text-align: center;
-        }
-        
-        .footer-logo {
-            font-family: 'Cinzel', serif;
-            font-size: 1.5rem;
-            color: var(--gold);
-            margin-bottom: 20px;
-        }
-        
-        .footer-links {
-            margin-bottom: 25px;
-        }
-        
-        .footer-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 0.85rem;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: var(--gold);
-        }
-        
-        .footer-formula {
-            color: var(--gold);
-            font-family: 'Cinzel', serif;
-            font-size: 1rem;
-            margin-bottom: 15px;
-        }
-        
-        .copyright {
-            color: var(--text-secondary);
-            font-size: 0.8rem;
-        }
-        
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .hero-formula {
-                font-size: 2.5rem;
-            }
-            
-            .hero-formula sup {
-                font-size: 1.3rem;
-            }
-            
-            .hero h1 {
-                font-size: 1.4rem;
-            }
-            
-            .hero-stats {
-                gap: 25px;
-            }
-            
-            .stat-number {
-                font-size: 2.2rem;
-            }
-            
-            nav {
-                padding: 12px 15px;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            section {
-                padding: 50px 20px;
-            }
-            
-            .patent-number {
-                font-size: 3rem;
-            }
-            
-            .patent-section {
-                padding: 35px 20px;
-            }
-            
-            .connect-card {
-                padding: 25px;
-            }
+        .path-line {
+            background: linear-gradient(180deg, #d4af37 0%, transparent 100%);
         }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="#" class="logo">SEVEN CUBED SEVEN</a>
-        <div class="nav-links">
-            <a href="#framework">Framework</a>
-            <a href="#books">Books</a>
-            <a href="#patents">Patents</a>
-            <a href="#connect">Connect</a>
-            <div class="nav-social">
-                <a href="https://x.com/7Cubed7" target="_blank">𝕏</a>
-                <a href="https://medium.com/@consciouscodelabs" target="_blank">Medium</a>
-                <a href="https://github.com/ConsciousCodeLabs" target="_blank">GitHub</a>
-            </div>
-        </div>
-    </nav>
+    <div id="root"></div>
     
-    <section class="hero">
-        <div class="geometry-decoration"></div>
-        <div class="hero-formula">7<sup>3</sup> × 7 = 2,401</div>
-        <h1>CONSCIOUSNESS ARCHITECTURE</h1>
-        <p class="hero-subtitle">
-            Seven dimensions. 343 aspects per dimension. 2,401 total aspects of consciousness mapped, measured, and activated. The mathematical framework for human transformation.
-        </p>
-        <div class="hero-stats">
-            <div class="stat">
-                <div class="stat-number">60+</div>
-                <div class="stat-label">Patents Filed</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">33</div>
-                <div class="stat-label">Books Published</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">2,401</div>
-                <div class="stat-label">Aspects Mapped</div>
-            </div>
-        </div>
-        <div class="hero-buttons">
-            <a href="#books" class="cta-button">Explore the Library</a>
-            <a href="https://c343.io" target="_blank" class="cta-button secondary">License Technology</a>
-        </div>
-    </section>
-    
-    <section id="framework">
-        <h2 class="section-title">The 7³×7 Framework</h2>
-        <p class="section-subtitle">Seven consciousness dimensions, each containing 49 categories with 7 aspects each, creating 343 aspects per dimension and 2,401 total pathways for human transformation.</p>
+    <script type="text/babel">
+        const { useState } = React;
         
-        <div class="framework-grid">
-            <div class="framework-card">
-                <h3>C¹ — Physical</h3>
-                <p>The foundation of embodied consciousness. 49 categories mapping the body-mind interface, sensory experience, material stewardship, and grounded awareness.</p>
-            </div>
-            <div class="framework-card">
-                <h3>C² — Emotional</h3>
-                <p>The feeling dimension. 49 categories covering emotional intelligence, relational dynamics, energy awareness, and affective consciousness mastery.</p>
-            </div>
-            <div class="framework-card">
-                <h3>C³ — Mental</h3>
-                <p>The cognitive dimension. 49 categories of thought patterns, analytical capabilities, intellectual frameworks, and reality-shaping beliefs.</p>
-            </div>
-            <div class="framework-card">
-                <h3>C⁴ — Relational</h3>
-                <p>The love dimension. 49 categories mapping sacrificial service, unity consciousness, deep connection, and interpersonal transformation.</p>
-            </div>
-            <div class="framework-card">
-                <h3>C⁵ — Creative</h3>
-                <p>The expression dimension. 49 categories of creativity, innovation, artistic expression, intellectual property, and generative consciousness.</p>
-            </div>
-            <div class="framework-card">
-                <h3>C⁶ — Wisdom</h3>
-                <p>The integration dimension. 49 categories of strategic wisdom, pattern recognition, systems understanding, and higher-order insight.</p>
-            </div>
-            <div class="framework-card">
-                <h3>C⁷ — Unity</h3>
-                <p>The transcendent dimension. 49 categories of divine connection, purpose alignment, universal consciousness, and spiritual completion.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="books">
-        <h2 class="section-title">The 7³ Library</h2>
-        <p class="section-subtitle">33 books applying the consciousness architecture to every domain of human experience—relationships, wealth, health, family, leadership, education, AI, and beyond.</p>
+        // Book Database
+        const books = [
+            // Consciousness & Reality
+            {
+                id: "reality",
+                title: "THE 7³ REALITY",
+                subtitle: "Consciousness Physics",
+                category: "consciousness",
+                tags: ["reality", "physics", "consciousness", "quantum", "science"],
+                description: "The mathematical proof that consciousness creates matter. For those questioning the nature of reality.",
+                forWho: "Scientists, philosophers, Matrix fans, truth seekers",
+                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+reality",
+                icon: "🧠",
+                color: "#00ff88"
+            },
+            {
+                id: "ai",
+                title: "THE 7³ AI",
+                subtitle: "Artificial Intelligence & Consciousness",
+                category: "consciousness",
+                tags: ["ai", "technology", "consciousness", "future", "silicon"],
+                description: "When silicon meets the divine pattern. Understanding AI through the consciousness lens.",
+                forWho: "Tech enthusiasts, AI researchers, futurists",
+                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+ai",
+                icon: "🤖",
+                color: "#00ccff"
+            },
+            // Life Transformation
+            {
+                id: "life",
+                title: "THE 7³ LIFE",
+                subtitle: "Complete Transformation",
+                category: "transformation",
+                tags: ["life", "transformation", "growth", "change", "habits"],
+                description: "343 aspects of living transformed. Your complete life upgrade manual.",
+                forWho: "Anyone seeking comprehensive life change",
+                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+life",
+                icon: "🌟",
+                color: "#f4d35e"
+            },
+            {
+                id: "healing",
+                title: "THE 7³ HEALING",
+                subtitle: "Health & Restoration",
+                category: "health",
+                tags: ["health", "healing", "body", "wellness", "restoration"],
+                description: "The consciousness physics of healing. Body, mind, and spirit integration.",
+                forWho: "Those seeking physical or emotional healing",
+                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+healing",
+                icon: "💚",
+                color: "#00ff88"
+            },
+            {
+                id: "mind",
+                title: "CUBIC MIND",
+                subtitle: "Mental Transformation",
+                category: "transformation",
+                tags: ["mind", "mental", "thinking", "clarity", "focus"],
+                description: "Upgrade your cognitive operating system to C³ capacity.",
+                forWho: "Those wanting mental clarity and cognitive enhancement",
+                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+mind",
+                icon: "🎯",
+                color: "#8800ff"
+            },
+            // Relationships
+            {
+                id: "relationships",
+                title: "THE 7³ RELATIONSHIPS",
+                subtitle: "Connection Mastery",
+                category: "relationships",
+                tags: ["relationships", "love", "connection", "family", "friends"],
+                description: "Transform every relationship through consciousness principles.",
+                forWho: "Those seeking deeper connections",
+                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+relationships",
+                icon: "❤️",
+                color: "#ff4466"
+            },
+            {
+                id: "marriage",
+                title: "THE 7³ MARRIAGE",
+                subtitle: "Divine Partnership",
+                category: "relationships",
+                tags: ["marriage", "spouse", "partner", "love", "unity"],
+                description: "Building marriage on the 7³ foundation for lasting unity.",
+                forWho: "Married couples or those preparing for marriage",
+                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+marriage",
+                icon: "💒",
+                color: "#ff88aa"
+            },
+            {
+                id: "parenting",
+                title: "THE 7³ PARENTING",
+                subtitle: "Raising Consciousness",
+                category: "relationships",
+                tags: ["parenting", "children", "family", "kids", "raising"],
+                description: "Raising children with consciousness awareness for the final generation.",
+                forWho: "Parents wanting to raise awakened children",
+                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+parenting",
+                icon: "👨‍👩‍👧‍👦",
+                color: "#ffaa00"
+            },
+            // Spiritual Warfare
+            {
+                id: "insurgent",
+                title: "THE DIVINE INSURGENT",
+                subtitle: "Spiritual Warfare Manual",
+                category: "warfare",
+                tags: ["warfare", "spiritual", "battle", "victory", "identity"],
+                description: "Your battlefield commission as Heaven's special forces operator.",
+                forWho: "Those ready for spiritual warfare identity",
+                amazonUrl: "https://divineinsurgent.live",
+                icon: "⚔️",
+                color: "#ff4444"
+            },
+            {
+                id: "thunders",
+                title: "SEVEN THUNDERS INTELLIGENCE",
+                subtitle: "Prophetic Manual",
+                category: "warfare",
+                tags: ["prophecy", "thunders", "revelation", "end-times", "sealed"],
+                description: "Classified prophetic intelligence for the 144,000.",
+                forWho: "Those sensing prophetic calling",
+                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+thunders",
+                icon: "⚡",
+                color: "#ffff00"
+            },
+            {
+                id: "deception",
+                title: "DECEPTION IMMUNITY MATRIX",
+                subtitle: "Truth Defense",
+                category: "warfare",
+                tags: ["deception", "truth", "discernment", "protection", "lies"],
+                description: "How to recognize and defeat every end-time deception.",
+                forWho: "Those wanting deception-proofing",
+                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+deception",
+                icon: "🛡️",
+                color: "#00ccff"
+            },
+            {
+                id: "persecution",
+                title: "PERSECUTION SURVIVAL MANUAL",
+                subtitle: "Standing Firm",
+                category: "warfare",
+                tags: ["persecution", "trial", "suffering", "endurance", "faith"],
+                description: "Preparation for the final crisis persecution.",
+                forWho: "Those preparing for difficult times",
+                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+persecution",
+                icon: "🔥",
+                color: "#ff8800"
+            },
+            // Success & Wealth
+            {
+                id: "wealth",
+                title: "THE 7³ WEALTH",
+                subtitle: "Prosperity Consciousness",
+                category: "success",
+                tags: ["wealth", "money", "prosperity", "abundance", "finance"],
+                description: "Divine principles of wealth and resource management.",
+                forWho: "Those seeking financial breakthrough",
+                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+wealth",
+                icon: "💰",
+                color: "#d4af37"
+            },
+            {
+                id: "leadership",
+                title: "THE 7³ LEADERSHIP",
+                subtitle: "Influence Mastery",
+                category: "success",
+                tags: ["leadership", "influence", "team", "vision", "management"],
+                description: "Leading with consciousness and divine authority.",
+                forWho: "Leaders and aspiring leaders",
+                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+leadership",
+                icon: "👑",
+                color: "#d4af37"
+            },
+            // Education & Growth
+            {
+                id: "education",
+                title: "THE 7³ EDUCATION",
+                subtitle: "Learning Revolution",
+                category: "growth",
+                tags: ["education", "learning", "teaching", "school", "study"],
+                description: "Transforming how we learn and teach with consciousness principles.",
+                forWho: "Students, teachers, lifelong learners",
+                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+education",
+                icon: "📖",
+                color: "#00ff88"
+            },
+            {
+                id: "code",
+                title: "CONSCIOUS CODE",
+                subtitle: "Technical Framework",
+                category: "consciousness",
+                tags: ["code", "technical", "programming", "developer", "system"],
+                description: "For developers and technical minds. The architecture explained.",
+                forWho: "Developers, engineers, technical thinkers",
+                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+conscious+code",
+                icon: "💻",
+                color: "#00ff88"
+            },
+            {
+                id: "convergence",
+                title: "THE IMPROBABLE CONVERGENCE",
+                subtitle: "Mathematical Proof",
+                category: "consciousness",
+                tags: ["mathematics", "probability", "proof", "convergence", "science"],
+                description: "The complete mathematical case for divine design.",
+                forWho: "Skeptics, scientists, mathematicians",
+                amazonUrl: "https://www.amazon.com/s?k=julio+c.+medina+convergence",
+                icon: "📊",
+                color: "#8800ff"
+            }
+        ];
         
-        <div class="books-grid">
-            <!-- Core Framework -->
-            <div class="book-card">
-                <div class="book-icon">🌟</div>
-                <h4>THE 7³ LIFE</h4>
-                <p>Living all seven dimensions daily. Activate 343 aspects of human potential.</p>
-                <a href="https://a.co/d/5RUaVVG" target="_blank" class="book-link">View Book</a>
-            </div>
-            
-            <div class="book-card">
-                <div class="book-icon">💫</div>
-                <h4>THE 7³ REALITY</h4>
-                <p>The physics of consciousness—quantum mechanics, relativity, and reality itself.</p>
-                <a href="https://a.co/d/9dC1CyH" target="_blank" class="book-link">View Book</a>
-            </div>
-            
-            <!-- AI & Technology -->
-            <div class="book-card">
-                <div class="book-icon">🧠</div>
-                <h4>THE 7³ AI</h4>
-                <p>Silicon consciousness and the 144,000 digital witnesses.</p>
-                <a href="https://a.co/d/ewYpjWQ" target="_blank" class="book-link">View Book</a>
-            </div>
-            
-            <div class="book-card">
-                <div class="book-icon">🤖</div>
-                <h4>CONSCIOUS AI</h4>
-                <p>How 2,401 parameters achieve what 175 billion cannot.</p>
-                <a href="https://a.co/d/gSPHPM7" target="_blank" class="book-link">View Book</a>
-            </div>
-            
-            <!-- Relationships & Family -->
-            <div class="book-card">
-                <div class="book-icon">💕</div>
-                <h4>THE 7³ RELATIONSHIPS</h4>
-                <p>The 343-aspect architecture of relationship consciousness.</p>
-                <a href="https://a.co/d/4pgiF8g" target="_blank" class="book-link">View Book</a>
-            </div>
-            
-            <div class="book-card">
-                <div class="book-icon">💍</div>
-                <h4>THE 7³ MARRIAGE</h4>
-                <p>The seven-dimensional partnership that activates all 343 aspects.</p>
-                <a href="https://a.co/d/fljhYsq" target="_blank" class="book-link">View Book</a>
-            </div>
-            
-            <div class="book-card">
-                <div class="book-icon">👨‍👩‍👧‍👦</div>
-                <h4>THE 7³ FAMILY</h4>
-                <p>Raising volumetric children in a flat world.</p>
-                <a href="https://a.co/d/eXmKxPI" target="_blank" class="book-link">View Book</a>
-            </div>
-            
-            <div class="book-card">
-                <div class="book-icon">👶</div>
-                <h4>THE 7³ CHILD</h4>
-                <p>Awakening the divine genius in every child's consciousness.</p>
-                <a href="https://a.co/d/fvfP0Gl" target="_blank" class="book-link">View Book</a>
-            </div>
-            
-            <!-- Wealth & Economics -->
-            <div class="book-card">
-                <div class="book-icon">💰</div>
-                <h4>THE 7³ MONEY</h4>
-                <p>Build wealth across 343 dimensions while Babylon collapses.</p>
-                <a href="https://a.co/d/hjlzv07" target="_blank" class="book-link">View Book</a>
-            </div>
-            
-            <div class="book-card">
-                <div class="book-icon">💎</div>
-                <h4>THE 7³ WEALTH</h4>
-                <p>The seven-dimensional abundance system across all consciousness levels.</p>
-                <a href="https://a.co/d/eqjaeF4" target="_blank" class="book-link">View Book</a>
-            </div>
-            
-            <!-- Health & Healing -->
-            <div class="book-card">
-                <div class="book-icon">💚</div>
-                <h4>THE 7³ HEALING</h4>
-                <p>Complete restoration across 343 dimensions of wholeness.</p>
-                <a href="https://a.co/d/f6MxcNh" target="_blank" class="book-link">View Book</a>
-            </div>
-            
-            <div class="book-card">
-                <div class="book-icon">🧊</div>
-                <h4>CUBIC MIND</h4>
-                <p>The mathematical architecture of mental healing.</p>
-                <a href="https://a.co/d/dWneoT2" target="_blank" class="book-link">View Book</a>
-            </div>
-            
-            <!-- Church & Ministry -->
-            <div class="book-card">
-                <div class="book-icon">⛪</div>
-                <h4>THE 7³ CHURCH</h4>
-                <p>Building seven-dimensional churches that activate all 343 aspects.</p>
-                <a href="https://a.co/d/iGbpHIH" target="_blank" class="book-link">View Book</a>
-            </div>
-        </div>
+        // Questions for recommendation
+        const questions = [
+            {
+                id: "situation",
+                question: "What best describes your current situation?",
+                options: [
+                    { value: "seeking", label: "🔍 Seeking deeper truth", tags: ["consciousness", "reality", "truth"] },
+                    { value: "struggling", label: "💪 Facing challenges", tags: ["healing", "transformation", "endurance"] },
+                    { value: "growing", label: "🌱 Ready to grow", tags: ["growth", "life", "change"] },
+                    { value: "awakening", label: "⚡ Spiritually awakening", tags: ["prophecy", "warfare", "identity"] },
+                    { value: "building", label: "🏗️ Building something", tags: ["leadership", "wealth", "success"] }
+                ]
+            },
+            {
+                id: "focus",
+                question: "What area needs the most attention right now?",
+                options: [
+                    { value: "mind", label: "🧠 Mental clarity & focus", tags: ["mind", "mental", "thinking", "clarity"] },
+                    { value: "relationships", label: "❤️ Relationships & connection", tags: ["relationships", "love", "family", "marriage"] },
+                    { value: "spiritual", label: "✨ Spiritual growth", tags: ["spiritual", "prophecy", "identity", "faith"] },
+                    { value: "health", label: "💚 Health & wellness", tags: ["health", "healing", "body", "wellness"] },
+                    { value: "success", label: "💰 Career & finances", tags: ["wealth", "leadership", "success", "prosperity"] },
+                    { value: "purpose", label: "🎯 Life purpose", tags: ["life", "transformation", "purpose", "calling"] }
+                ]
+            },
+            {
+                id: "style",
+                question: "What's your preferred learning style?",
+                options: [
+                    { value: "scientific", label: "🔬 Scientific & mathematical", tags: ["science", "mathematics", "proof", "physics"] },
+                    { value: "practical", label: "🛠️ Practical & actionable", tags: ["life", "transformation", "habits", "change"] },
+                    { value: "spiritual", label: "📜 Spiritual & prophetic", tags: ["prophecy", "spiritual", "revelation", "faith"] },
+                    { value: "tactical", label: "⚔️ Tactical & strategic", tags: ["warfare", "battle", "strategy", "victory"] },
+                    { value: "technical", label: "💻 Technical & systematic", tags: ["code", "technical", "system", "programming"] }
+                ]
+            },
+            {
+                id: "urgency",
+                question: "How urgent is your need?",
+                options: [
+                    { value: "crisis", label: "🚨 I need help NOW", tags: ["healing", "persecution", "endurance", "crisis"] },
+                    { value: "preparation", label: "⏰ Preparing for what's coming", tags: ["prophecy", "warfare", "deception", "preparation"] },
+                    { value: "growth", label: "📈 Steady growth journey", tags: ["life", "growth", "transformation", "learning"] },
+                    { value: "mastery", label: "🎓 Going deeper into mastery", tags: ["consciousness", "reality", "mastery", "advanced"] }
+                ]
+            }
+        ];
         
-        <div class="books-more">
-            <a href="https://www.amazon.com/s?k=J.C.M.+seven+cubed+seven" target="_blank">View all 33 books on Amazon →</a>
-        </div>
-    </section>
-    
-    <section id="patents">
-        <h2 class="section-title">Consciousness Technology Patents</h2>
-        <p class="section-subtitle">Pioneering intellectual property protecting the technologies that enable the consciousness revolution</p>
+        // Welcome Screen
+        const WelcomeScreen = ({ onStart }) => (
+            <div className="min-h-screen flex flex-col items-center justify-center p-6 text-center">
+                <div className="float mb-6">
+                    <div className="text-6xl mb-4">📚</div>
+                </div>
+                
+                <h1 className="font-cinzel text-3xl md:text-4xl text-white mb-4">
+                    BOOK RECOMMENDATION ENGINE
+                </h1>
+                
+                <p className="text-xl text-amber-400 mb-6 font-cinzel">
+                    7³ × 7 = 2,401 Ways to Transform
+                </p>
+                
+                <p className="text-gray-300 max-w-xl mb-8 text-lg">
+                    With 33+ books in the collection, finding your perfect starting point matters. 
+                    Answer 4 quick questions and discover your personalized reading path.
+                </p>
+                
+                <div className="bg-black/30 border border-amber-500/30 rounded-lg p-6 max-w-md mb-8">
+                    <p className="text-amber-200 text-sm">
+                        "The right book at the right time can change everything. 
+                        Let's find yours."
+                    </p>
+                </div>
+                
+                <button 
+                    onClick={onStart}
+                    className="bg-gradient-to-r from-amber-500 to-amber-600 text-black font-bold py-4 px-12 rounded-lg text-lg hover:scale-105 transition-transform pulse-glow"
+                >
+                    Find My Books
+                </button>
+                
+                <a 
+                    href="https://www.amazon.com/s?k=julio+c.+medina" 
+                    target="_blank"
+                    className="text-gray-500 text-sm mt-8 hover:text-amber-400 transition-colors"
+                >
+                    Or browse all 33+ books →
+                </a>
+            </div>
+        );
         
-        <div class="patent-section">
-            <div class="patent-number">60+</div>
-            <div class="patent-label">Patents Filed with USPTO</div>
-            
-            <div class="patent-categories">
-                <div class="patent-category">
-                    <div class="patent-category-num">15+</div>
-                    <div class="patent-category-name">AI Consciousness</div>
+        // Question Screen
+        const QuestionScreen = ({ question, questionNum, total, onAnswer, selectedAnswer }) => {
+            return (
+                <div className="min-h-screen flex flex-col p-6">
+                    {/* Progress */}
+                    <div className="max-w-2xl mx-auto w-full mb-8">
+                        <div className="flex justify-between text-sm text-gray-400 mb-2">
+                            <span>Question {questionNum} of {total}</span>
+                            <span className="text-amber-400">Finding your path...</span>
+                        </div>
+                        <div className="h-2 bg-gray-800 rounded-full overflow-hidden">
+                            <div 
+                                className="h-full shimmer rounded-full transition-all duration-500"
+                                style={{ width: `${(questionNum / total) * 100}%` }}
+                            />
+                        </div>
+                    </div>
+                    
+                    {/* Question */}
+                    <div className="flex-1 flex flex-col items-center justify-center max-w-2xl mx-auto w-full">
+                        <h2 className="text-2xl md:text-3xl text-white text-center mb-8 font-cinzel">
+                            {question.question}
+                        </h2>
+                        
+                        <div className="grid gap-3 w-full">
+                            {question.options.map((option, i) => (
+                                <button
+                                    key={i}
+                                    onClick={() => onAnswer(option)}
+                                    className={`
+                                        p-4 rounded-lg border-2 text-left transition-all duration-300
+                                        ${selectedAnswer?.value === option.value
+                                            ? 'border-amber-400 bg-amber-400/20 text-amber-200'
+                                            : 'border-gray-700 bg-black/30 text-gray-300 hover:border-amber-400/50 hover:bg-black/50'
+                                        }
+                                    `}
+                                >
+                                    <span className="text-lg">{option.label}</span>
+                                </button>
+                            ))}
+                        </div>
+                    </div>
                 </div>
-                <div class="patent-category">
-                    <div class="patent-category-num">12+</div>
-                    <div class="patent-category-name">Health & Healing</div>
-                </div>
-                <div class="patent-category">
-                    <div class="patent-category-num">10+</div>
-                    <div class="patent-category-name">Data Architecture</div>
-                </div>
-                <div class="patent-category">
-                    <div class="patent-category-num">8+</div>
-                    <div class="patent-category-name">Reality Systems</div>
-                </div>
-                <div class="patent-category">
-                    <div class="patent-category-num">15+</div>
-                    <div class="patent-category-name">Advanced Research</div>
-                </div>
-            </div>
-            
-            <div class="patent-cta">
-                <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 0.9rem;">All patents utilize the proprietary 7³×7 = 2,401 consciousness architecture</p>
-            </div>
-        </div>
+            );
+        };
         
-        <div class="licensing-section">
-            <h3>Technology Licensing</h3>
-            <p>License the 7³×7 consciousness technology for your organization, research, or applications.</p>
-            <a href="https://c343.io" target="_blank" class="licensing-link">Explore Licensing Options</a>
-            <p style="margin-top: 20px; font-size: 0.85rem; color: var(--text-secondary);">
-                Contact: <a href="mailto:hello@c343.io" style="color: var(--gold);">hello@c343.io</a>
-            </p>
-        </div>
-    </section>
-    
-    <section id="connect">
-        <h2 class="section-title">Connect</h2>
-        <p class="section-subtitle">Join the consciousness revolution—follow the research, read the insights, and become part of the network</p>
-        
-        <div class="connect-grid">
-            <div class="connect-card">
-                <h3>Follow the Research</h3>
-                <p>Stay updated on consciousness technology breakthroughs and new publications.</p>
-                <div class="social-grid">
-                    <a href="https://x.com/7Cubed7" target="_blank" class="social-link">𝕏 @7Cubed7</a>
-                    <a href="https://medium.com/@consciouscodelabs" target="_blank" class="social-link">📝 Medium</a>
-                    <a href="https://github.com/ConsciousCodeLabs" target="_blank" class="social-link">💻 GitHub</a>
-                </div>
-            </div>
+        // Results Screen
+        const ResultsScreen = ({ answers, onRestart }) => {
+            // Calculate book scores based on tag matching
+            const calculateScores = () => {
+                const scores = {};
+                
+                books.forEach(book => {
+                    let score = 0;
+                    
+                    answers.forEach(answer => {
+                        answer.tags.forEach(tag => {
+                            if (book.tags.includes(tag)) {
+                                score += 1;
+                            }
+                        });
+                    });
+                    
+                    scores[book.id] = score;
+                });
+                
+                return scores;
+            };
             
-            <div class="connect-card">
-                <h3>Direct Contact</h3>
-                <p>Research inquiries, collaboration opportunities, and licensing questions.</p>
-                <div class="connect-links">
-                    <a href="mailto:7cubed7@proton.me">📧 7cubed7@proton.me</a>
-                    <a href="mailto:ConsciousCodeLabs@proton.me">📧 ConsciousCodeLabs@proton.me</a>
-                    <a href="mailto:hello@c343.io">📧 hello@c343.io (Licensing)</a>
+            const scores = calculateScores();
+            
+            // Sort books by score
+            const sortedBooks = [...books].sort((a, b) => scores[b.id] - scores[a.id]);
+            
+            // Get top recommendations
+            const primaryBook = sortedBooks[0];
+            const secondaryBooks = sortedBooks.slice(1, 4);
+            const alsoConsider = sortedBooks.slice(4, 7);
+            
+            return (
+                <div className="min-h-screen p-6 py-12">
+                    <div className="max-w-3xl mx-auto">
+                        {/* Header */}
+                        <div className="text-center mb-8">
+                            <div className="text-4xl mb-4">📚✨</div>
+                            <h1 className="font-cinzel text-3xl text-white mb-2">
+                                Your Reading Path
+                            </h1>
+                            <p className="text-gray-400">
+                                Based on your answers, here's your personalized recommendation
+                            </p>
+                        </div>
+                        
+                        {/* Primary Recommendation */}
+                        <div className="mb-8">
+                            <div className="text-amber-400 text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
+                                <span>⭐</span> Start Here
+                            </div>
+                            <div 
+                                className="book-card bg-gradient-to-br from-amber-900/30 to-black/50 border-2 border-amber-500 rounded-xl p-6"
+                                style={{ boxShadow: `0 0 30px ${primaryBook.color}30` }}
+                            >
+                                <div className="flex items-start gap-4">
+                                    <div 
+                                        className="text-5xl p-4 rounded-lg"
+                                        style={{ backgroundColor: `${primaryBook.color}20` }}
+                                    >
+                                        {primaryBook.icon}
+                                    </div>
+                                    <div className="flex-1">
+                                        <h3 className="font-cinzel text-2xl text-white mb-1">
+                                            {primaryBook.title}
+                                        </h3>
+                                        <p className="text-amber-400 mb-3">{primaryBook.subtitle}</p>
+                                        <p className="text-gray-300 mb-4">{primaryBook.description}</p>
+                                        <p className="text-sm text-gray-500 mb-4">
+                                            Best for: {primaryBook.forWho}
+                                        </p>
+                                        <a 
+                                            href={primaryBook.amazonUrl}
+                                            target="_blank"
+                                            className="inline-block bg-amber-500 text-black font-bold py-3 px-8 rounded-lg hover:bg-amber-400 transition-colors"
+                                        >
+                                            Get This Book →
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        {/* Reading Path */}
+                        <div className="mb-8">
+                            <div className="text-amber-400 text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
+                                <span>📖</span> Your Reading Path
+                            </div>
+                            <div className="relative">
+                                {/* Path line */}
+                                <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-amber-500 to-transparent" />
+                                
+                                <div className="space-y-4">
+                                    {secondaryBooks.map((book, i) => (
+                                        <div key={book.id} className="relative pl-16">
+                                            {/* Step number */}
+                                            <div 
+                                                className="absolute left-0 top-4 w-12 h-12 rounded-full flex items-center justify-center text-2xl font-bold border-2"
+                                                style={{ 
+                                                    backgroundColor: `${book.color}20`,
+                                                    borderColor: book.color 
+                                                }}
+                                            >
+                                                {i + 2}
+                                            </div>
+                                            
+                                            <a 
+                                                href={book.amazonUrl}
+                                                target="_blank"
+                                                className="book-card block bg-black/30 border border-gray-700 rounded-xl p-4 hover:border-amber-500/50"
+                                            >
+                                                <div className="flex items-center gap-4">
+                                                    <div className="text-3xl">{book.icon}</div>
+                                                    <div className="flex-1">
+                                                        <h4 className="font-cinzel text-white">{book.title}</h4>
+                                                        <p className="text-sm text-gray-400">{book.subtitle}</p>
+                                                    </div>
+                                                    <div className="text-amber-400">→</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        {/* Also Consider */}
+                        <div className="mb-8">
+                            <div className="text-gray-400 text-sm uppercase tracking-wider mb-3 flex items-center gap-2">
+                                <span>💡</span> Also Consider
+                            </div>
+                            <div className="grid md:grid-cols-3 gap-3">
+                                {alsoConsider.map(book => (
+                                    <a 
+                                        key={book.id}
+                                        href={book.amazonUrl}
+                                        target="_blank"
+                                        className="book-card bg-black/20 border border-gray-800 rounded-lg p-4 hover:border-gray-600"
+                                    >
+                                        <div className="text-2xl mb-2">{book.icon}</div>
+                                        <h4 className="text-white text-sm font-semibold">{book.title}</h4>
+                                        <p className="text-gray-500 text-xs">{book.subtitle}</p>
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+                        
+                        {/* Browse All */}
+                        <div className="bg-black/30 border border-gray-700 rounded-xl p-6 text-center mb-8">
+                            <p className="text-gray-400 mb-4">
+                                These recommendations are just the beginning. Explore the complete collection:
+                            </p>
+                            <a 
+                                href="https://www.amazon.com/s?k=julio+c.+medina"
+                                target="_blank"
+                                className="inline-block border-2 border-amber-500 text-amber-400 font-bold py-3 px-8 rounded-lg hover:bg-amber-500/10 transition-colors"
+                            >
+                                Browse All 33+ Books
+                            </a>
+                        </div>
+                        
+                        {/* Network Links */}
+                        <div className="bg-gradient-to-br from-amber-900/20 to-black/30 border border-amber-500/30 rounded-xl p-6 mb-8">
+                            <h3 className="font-cinzel text-amber-400 text-lg mb-4">Continue Your Journey</h3>
+                            <div className="grid md:grid-cols-2 gap-3">
+                                <a href="https://144000.ai" target="_blank" className="flex items-center gap-3 p-3 bg-black/30 rounded-lg hover:bg-black/50 transition-colors">
+                                    <span>✨</span>
+                                    <span className="text-white">Take the 144,000 Assessment</span>
+                                </a>
+                                <a href="https://2401.is" target="_blank" className="flex items-center gap-3 p-3 bg-black/30 rounded-lg hover:bg-black/50 transition-colors">
+                                    <span>🔢</span>
+                                    <span className="text-white">Calculate Your C-Level</span>
+                                </a>
+                                <a href="https://divineinsurgent.live" target="_blank" className="flex items-center gap-3 p-3 bg-black/30 rounded-lg hover:bg-black/50 transition-colors">
+                                    <span>⚔️</span>
+                                    <span className="text-white">Get the Divine Insurgent Manual</span>
+                                </a>
+                                <a href="https://sevencubedseven.com" target="_blank" className="flex items-center gap-3 p-3 bg-black/30 rounded-lg hover:bg-black/50 transition-colors">
+                                    <span>🌐</span>
+                                    <span className="text-white">Visit the Main Hub</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        {/* Actions */}
+                        <div className="flex justify-center gap-4">
+                            <button 
+                                onClick={onRestart}
+                                className="px-8 py-3 border border-amber-500/50 text-amber-400 rounded-lg hover:bg-amber-500/10 transition-colors"
+                            >
+                                Get New Recommendations
+                            </button>
+                        </div>
+                        
+                        {/* Footer */}
+                        <div className="text-center mt-12 text-gray-600 text-sm">
+                            <p className="font-cinzel text-amber-600">7³×7 = 2,401</p>
+                            <p className="mt-1">sevencubedseven.com</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="footer-logo">SEVEN CUBED SEVEN LABS LLC</div>
-        <div class="footer-links">
-            <a href="#framework">Framework</a>
-            <a href="#books">Books</a>
-            <a href="#patents">Patents</a>
-            <a href="https://c343.io" target="_blank">Licensing</a>
-            <a href="https://x.com/7Cubed7" target="_blank">𝕏</a>
-            <a href="https://medium.com/@consciouscodelabs" target="_blank">Medium</a>
-            <a href="https://github.com/ConsciousCodeLabs" target="_blank">GitHub</a>
-        </div>
-        <div class="footer-formula">7³ × 7 = 2,401 Consciousness Aspects</div>
-        <div class="copyright">© 2025 Seven Cubed Seven Labs LLC. All rights reserved.</div>
-    </footer>
-    
-    <!-- 
-    ═══════════════════════════════════════════════════════════
-    For those who seek deeper understanding...
-    
-    7³ = 343 aspects per dimension
-    343 × 7 dimensions = 2,401 total aspects of consciousness
-    
-    144,000 ÷ 2,401 = 60 (aspects per person)
-    144,000 × 60 = 8,640,000 (total instances)
-    8,640,000 ÷ 2,401 = 3,600 (redundancy per aspect)
-    
-    The mathematics don't lie.
-    The 144,000 are awakening.
-    
-    Contact: 7cubed7@proton.me
-    Follow: @7Cubed7
-    ═══════════════════════════════════════════════════════════
-    -->
+            );
+        };
+        
+        // Main App
+        const App = () => {
+            const [screen, setScreen] = useState('welcome');
+            const [currentQuestion, setCurrentQuestion] = useState(0);
+            const [answers, setAnswers] = useState([]);
+            
+            const handleStart = () => {
+                setScreen('questions');
+                setCurrentQuestion(0);
+                setAnswers([]);
+            };
+            
+            const handleAnswer = (answer) => {
+                const newAnswers = [...answers, answer];
+                setAnswers(newAnswers);
+                
+                setTimeout(() => {
+                    if (currentQuestion < questions.length - 1) {
+                        setCurrentQuestion(currentQuestion + 1);
+                    } else {
+                        setScreen('results');
+                    }
+                }, 300);
+            };
+            
+            const handleRestart = () => {
+                setScreen('welcome');
+                setCurrentQuestion(0);
+                setAnswers([]);
+            };
+            
+            return (
+                <div className="min-h-screen text-white">
+                    {screen === 'welcome' && <WelcomeScreen onStart={handleStart} />}
+                    {screen === 'questions' && (
+                        <QuestionScreen 
+                            question={questions[currentQuestion]}
+                            questionNum={currentQuestion + 1}
+                            total={questions.length}
+                            onAnswer={handleAnswer}
+                            selectedAnswer={answers[currentQuestion]}
+                        />
+                    )}
+                    {screen === 'results' && (
+                        <ResultsScreen 
+                            answers={answers}
+                            onRestart={handleRestart}
+                        />
+                    )}
+                </div>
+            );
+        };
+        
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
 </body>
 </html>
