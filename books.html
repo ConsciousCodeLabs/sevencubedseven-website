@@ -1,58 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Primary Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Finder | Find Your Perfect Reading Path | Seven Cubed Seven Labs</title>
-    <meta name="description" content="Answer 4 questions and discover your personalized reading recommendations from 33+ consciousness transformation books.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Seven Cubed Seven Labs LLC">
     
+    <!-- SEO Meta -->
+    <title>Book Finder | Personalized 7³×7 Reading Recommendations | 33+ Books</title>
+    <meta name="description" content="Find your perfect consciousness transformation book. Answer 4 questions to get personalized recommendations from 33+ books covering life, family, health, wealth, prophecy, and more.">
+    <meta name="keywords" content="consciousness books, 7 cubed 7 books, spiritual books, transformation books, book recommendations, julio medina books, 144000 books">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://sevencubedseven.com/books.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sevencubedseven.com/books.html">
+    <meta property="og:title" content="Book Finder | 33+ Consciousness Transformation Books">
+    <meta property="og:description" content="4 questions. Personalized recommendations. Find your perfect consciousness book.">
+    <meta property="og:image" content="https://sevencubedseven.com/images/og-books.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Seven Cubed Seven Labs">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@7Cubed7">
+    <meta name="twitter:creator" content="@7Cubed7">
+    <meta name="twitter:title" content="Book Finder | Find Your Perfect Book">
+    <meta name="twitter:description" content="33+ books. 4 questions. Personalized consciousness transformation recommendations.">
+    <meta name="twitter:image" content="https://sevencubedseven.com/images/og-books.png">
+    
+    <!-- Performance: Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     
+    <!-- JSON-LD: WebApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Book Finder",
+      "url": "https://sevencubedseven.com/books.html",
+      "description": "Personalized book recommendations from 33+ consciousness transformation books based on 4 questions.",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Seven Cubed Seven Labs LLC",
+        "url": "https://sevencubedseven.com"
+      }
+    }
+    </script>
+    
+    <!-- Critical CSS -->
     <style>
-        :root {
-            --s7-gold: #d4af37;
-            --s7-gold-light: #f4d35e;
-            --s7-gold-dark: #b8960c;
-            --s7-navy: #0a0a1a;
-            --s7-navy-light: #12122a;
-            --s7-text: #e8e8e8;
-            --s7-text-dim: #a0a0a0;
-            --s7-amber: #ffaa00;
-        }
-        
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f4d03f;
+            --dark-bg: #0a0a1a;
+            --dark-card: #12121f;
+            --dark-border: #2a2a3a;
+            --text-primary: #e8e8e8;
+            --text-secondary: #a0a0a0;
+            --amber: #ffaa00;
+        }
         
         body {
             font-family: 'Raleway', sans-serif;
-            background: var(--s7-navy);
-            color: var(--s7-text);
-            line-height: 1.7;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
             padding-top: 60px;
-            min-height: 100vh;
         }
         
-        /* ══════════════════════════════════════════════════════════════════════
-           UNIVERSAL NAVIGATION
-           ══════════════════════════════════════════════════════════════════════ */
+        /* ===== UNIVERSAL NAVIGATION ===== */
         .s7-nav {
             position: fixed;
-            top: 0; left: 0; right: 0;
+            top: 0;
+            left: 0;
+            right: 0;
             height: 60px;
             background: rgba(10, 10, 26, 0.97);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
             z-index: 9999;
-        }
-        
-        .s7-nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            height: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 20px;
+            padding: 0 30px;
         }
         
         .s7-nav-logo {
@@ -62,543 +108,790 @@
             text-decoration: none;
         }
         
-        .s7-nav-logo-icon {
+        .s7-nav-cube {
             width: 36px;
             height: 36px;
             position: relative;
         }
         
-        .s7-nav-logo-icon::before {
+        .s7-nav-cube::before,
+        .s7-nav-cube::after {
             content: '';
             position: absolute;
-            width: 100%;
-            height: 100%;
-            border: 2px solid var(--s7-gold);
-            transform: rotate(45deg);
-            opacity: 0.5;
+            border: 2px solid var(--gold);
         }
         
-        .s7-nav-logo-icon::after {
-            content: '';
-            position: absolute;
-            width: 55%;
-            height: 55%;
-            top: 22.5%;
-            left: 22.5%;
-            border: 2px solid var(--s7-gold);
-            transform: rotate(45deg);
+        .s7-nav-cube::before {
+            width: 24px;
+            height: 24px;
+            top: 6px;
+            left: 0;
         }
         
-        .s7-nav-logo-text {
+        .s7-nav-cube::after {
+            width: 24px;
+            height: 24px;
+            top: 0;
+            left: 6px;
+            background: rgba(212, 175, 55, 0.1);
+        }
+        
+        .s7-nav-brand {
             font-family: 'Cinzel', serif;
-            font-size: 1rem;
-            color: var(--s7-gold);
+            font-size: 1.1rem;
+            color: var(--gold);
             letter-spacing: 1px;
         }
         
-        .s7-nav-links { display: flex; align-items: center; gap: 5px; }
-        
-        .s7-nav-link {
-            color: var(--s7-text-dim);
-            text-decoration: none;
-            font-size: 0.85rem;
-            padding: 8px 14px;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-        
-        .s7-nav-link:hover { color: var(--s7-gold); background: rgba(212, 175, 55, 0.1); }
-        .s7-nav-link.active { color: var(--s7-gold); }
-        
-        .s7-nav-dropdown { position: relative; }
-        
-        .s7-nav-dropdown-btn {
-            color: var(--s7-text-dim);
-            font-size: 0.85rem;
-            padding: 8px 14px;
-            border-radius: 6px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            background: none;
-            border: none;
-            font-family: inherit;
-            transition: all 0.3s ease;
-        }
-        
-        .s7-nav-dropdown-btn:hover { color: var(--s7-gold); background: rgba(212, 175, 55, 0.1); }
-        .s7-nav-dropdown-btn::after { content: '▼'; font-size: 0.55rem; }
-        
-        .s7-nav-dropdown-menu {
-            position: absolute;
-            top: 100%; right: 0;
-            background: var(--s7-navy-light);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            border-radius: 10px;
-            padding: 8px;
-            min-width: 220px;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(10px);
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-        }
-        
-        .s7-nav-dropdown:hover .s7-nav-dropdown-menu { opacity: 1; visibility: visible; transform: translateY(5px); }
-        
-        .s7-nav-dropdown-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 10px 12px;
-            color: var(--s7-text);
-            text-decoration: none;
-            border-radius: 6px;
-            transition: all 0.2s ease;
-        }
-        
-        .s7-nav-dropdown-item:hover { background: rgba(212, 175, 55, 0.1); color: var(--s7-gold); }
-        
-        .s7-nav-dropdown-icon { font-size: 1.1rem; width: 24px; text-align: center; }
-        .s7-nav-dropdown-text { font-size: 0.85rem; }
-        .s7-nav-dropdown-desc { font-size: 0.7rem; color: var(--s7-text-dim); }
-        
-        .s7-nav-cta {
-            background: linear-gradient(135deg, var(--s7-gold) 0%, var(--s7-gold-dark) 100%);
-            color: #000;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .s7-nav-cta:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); }
-        
-        .s7-nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 10px; background: none; border: none; }
-        .s7-nav-toggle span { width: 24px; height: 2px; background: var(--s7-gold); }
-        
-        @media (max-width: 900px) {
-            .s7-nav-links {
-                position: fixed; top: 60px; left: 0; right: 0; background: var(--s7-navy);
-                flex-direction: column; padding: 20px; gap: 5px;
-                border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-                transform: translateY(-100%); opacity: 0; visibility: hidden; transition: all 0.3s ease;
-            }
-            .s7-nav-links.active { transform: translateY(0); opacity: 1; visibility: visible; }
-            .s7-nav-toggle { display: flex; }
-            .s7-nav-link, .s7-nav-dropdown-btn { width: 100%; padding: 12px 15px; }
-            .s7-nav-dropdown-menu { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: none; background: rgba(0,0,0,0.2); margin-top: 5px; }
-            .s7-nav-cta { width: 100%; text-align: center; margin-top: 10px; }
-        }
-        
-        /* ══════════════════════════════════════════════════════════════════════
-           APP STYLES
-           ══════════════════════════════════════════════════════════════════════ */
-        
-        #app-root {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px 80px;
-        }
-        
-        /* ══════════════════════════════════════════════════════════════════════
-           UNIVERSAL FOOTER
-           ══════════════════════════════════════════════════════════════════════ */
-        .s7-footer {
-            background: linear-gradient(180deg, var(--s7-navy) 0%, #050510 100%);
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
-            padding: 60px 20px 30px;
-        }
-        
-        .s7-footer-container { max-width: 1200px; margin: 0 auto; }
-        
-        .s7-footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 40px;
-            margin-bottom: 50px;
-        }
-        
-        .s7-footer-section h4 {
-            font-family: 'Cinzel', serif;
-            color: var(--s7-gold);
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-            letter-spacing: 2px;
-        }
-        
-        .s7-footer-links { list-style: none; }
-        .s7-footer-links li { margin-bottom: 10px; }
-        
-        .s7-footer-links a {
-            color: var(--s7-text-dim);
-            text-decoration: none;
-            font-size: 0.85rem;
-            transition: color 0.3s ease;
+        .s7-nav-links {
             display: flex;
             align-items: center;
             gap: 8px;
         }
         
-        .s7-footer-links a:hover { color: var(--s7-gold); }
-        .s7-footer-links .icon { font-size: 0.9rem; width: 18px; }
-        
-        .s7-footer-bottom {
-            border-top: 1px solid rgba(212, 175, 55, 0.1);
-            padding-top: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
+        .s7-nav-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            transition: color 0.3s;
+            font-weight: 500;
         }
         
-        .s7-footer-formula { font-family: 'Cinzel', serif; font-size: 1.4rem; color: var(--s7-gold); }
-        .s7-footer-tagline { color: var(--s7-text-dim); font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase; }
-        .s7-footer-copy { color: rgba(255,255,255,0.3); font-size: 0.75rem; }
-        .s7-footer-copy a { color: rgba(212, 175, 55, 0.5); text-decoration: none; }
+        .s7-nav-link:hover {
+            color: var(--gold);
+        }
+        
+        .s7-nav-link.active {
+            color: var(--amber);
+        }
+        
+        .s7-nav-dropdown {
+            position: relative;
+        }
+        
+        .s7-nav-dropdown-content {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: rgba(18, 18, 31, 0.98);
+            border: 1px solid var(--dark-border);
+            border-radius: 8px;
+            padding: 8px 0;
+            min-width: 220px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s;
+        }
+        
+        .s7-nav-dropdown:hover .s7-nav-dropdown-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .s7-nav-dropdown-item {
+            display: block;
+            padding: 10px 20px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+        
+        .s7-nav-dropdown-item:hover {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold);
+        }
+        
+        .s7-nav-cta {
+            background: linear-gradient(135deg, var(--amber), #cc8800);
+            color: #000;
+            padding: 8px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .s7-nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 170, 0, 0.4);
+        }
+        
+        .s7-nav-mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+        
+        .s7-nav-mobile-toggle span {
+            width: 25px;
+            height: 2px;
+            background: var(--gold);
+            transition: 0.3s;
+        }
+        
+        @media (max-width: 900px) {
+            .s7-nav-links {
+                position: fixed;
+                top: 60px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(10, 10, 26, 0.98);
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-top: 40px;
+                gap: 0;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s;
+            }
+            
+            .s7-nav-links.active {
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .s7-nav-link {
+                padding: 15px 30px;
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid var(--dark-border);
+            }
+            
+            .s7-nav-dropdown-content {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                background: rgba(10, 10, 26, 0.5);
+                border: none;
+                border-radius: 0;
+            }
+            
+            .s7-nav-cta {
+                margin-top: 20px;
+            }
+            
+            .s7-nav-mobile-toggle {
+                display: flex;
+            }
+        }
+        
+        /* ===== MAIN CONTENT ===== */
+        .main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .page-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .page-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+        }
+        
+        .page-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        /* ===== QUIZ CONTAINER ===== */
+        .quiz-container {
+            background: var(--dark-card);
+            border: 1px solid var(--dark-border);
+            border-radius: 12px;
+            padding: 40px;
+        }
+        
+        .question {
+            display: none;
+        }
+        
+        .question.active {
+            display: block;
+        }
+        
+        .question-number {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.85rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+        
+        .question-text {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: var(--text-primary);
+        }
+        
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .option {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid var(--dark-border);
+            border-radius: 8px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .option:hover {
+            border-color: var(--gold);
+            background: rgba(212, 175, 55, 0.1);
+        }
+        
+        .option-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .option-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        
+        /* ===== RESULTS ===== */
+        .results {
+            display: none;
+        }
+        
+        .results.active {
+            display: block;
+        }
+        
+        .results-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .results-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+        
+        .results-subtitle {
+            color: var(--text-secondary);
+        }
+        
+        .book-recommendations {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .book-card {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid var(--dark-border);
+            border-radius: 8px;
+            padding: 25px;
+        }
+        
+        .book-card.primary {
+            border-color: var(--gold);
+            background: rgba(212, 175, 55, 0.1);
+        }
+        
+        .book-badge {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.7rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        
+        .book-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+        
+        .book-desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .book-link {
+            display: inline-block;
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .book-link:hover {
+            text-decoration: underline;
+        }
+        
+        .results-actions {
+            margin-top: 40px;
+            text-align: center;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), #b8960c);
+            color: #000;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(212, 175, 55, 0.1);
+        }
+        
+        /* ===== FOOTER ===== */
+        .s7-footer {
+            background: linear-gradient(180deg, #0a0a1a 0%, #050510 100%);
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 60px 20px 30px;
+            margin-top: 60px;
+        }
+        
+        .s7-footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .s7-footer-col h4 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        
+        .s7-footer-col a {
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            padding: 6px 0;
+            transition: color 0.3s;
+        }
+        
+        .s7-footer-col a:hover {
+            color: var(--gold);
+        }
+        
+        .s7-footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--dark-border);
+        }
+        
+        .s7-footer-formula {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.4rem;
+            color: var(--gold);
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+            margin-bottom: 10px;
+        }
+        
+        .s7-footer-tagline {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+        
+        .s7-footer-copy {
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+        }
         
         @media (max-width: 768px) {
-            .s7-footer-grid { grid-template-columns: 1fr 1fr; }
+            .page-title {
+                font-size: 1.8rem;
+            }
+            
+            .quiz-container {
+                padding: 25px;
+            }
+            
+            .question-text {
+                font-size: 1.2rem;
+            }
+            
+            .s7-footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
     </style>
 </head>
 <body>
-
-<!-- NAVIGATION -->
-<nav class="s7-nav">
-    <div class="s7-nav-container">
+    <!-- Navigation -->
+    <nav class="s7-nav">
         <a href="https://sevencubedseven.com" class="s7-nav-logo">
-            <div class="s7-nav-logo-icon"></div>
-            <span class="s7-nav-logo-text">7³×7 LABS</span>
+            <div class="s7-nav-cube"></div>
+            <span class="s7-nav-brand">7³×7 LABS</span>
         </a>
         
-        <button class="s7-nav-toggle" onclick="document.querySelector('.s7-nav-links').classList.toggle('active')">
-            <span></span><span></span><span></span>
-        </button>
-        
-        <div class="s7-nav-links">
+        <div class="s7-nav-links" id="navLinks">
             <a href="https://144000.ai" class="s7-nav-link">144,000</a>
             <a href="https://2401.is" class="s7-nav-link">Mathematics</a>
             <a href="https://divineinsurgent.live" class="s7-nav-link">Insurgent</a>
             
             <div class="s7-nav-dropdown">
-                <button class="s7-nav-dropdown-btn">Tools</button>
-                <div class="s7-nav-dropdown-menu">
-                    <a href="https://144000.ai/assessment.html" class="s7-nav-dropdown-item">
-                        <span class="s7-nav-dropdown-icon">✨</span>
-                        <div><div class="s7-nav-dropdown-text">144,000 Assessment</div><div class="s7-nav-dropdown-desc">Discover your calling</div></div>
-                    </a>
-                    <a href="https://2401.is/calculator.html" class="s7-nav-dropdown-item">
-                        <span class="s7-nav-dropdown-icon">⚡</span>
-                        <div><div class="s7-nav-dropdown-text">C⁷ Calculator</div><div class="s7-nav-dropdown-desc">Your consciousness level</div></div>
-                    </a>
-                    <a href="https://2401.is/probability.html" class="s7-nav-dropdown-item">
-                        <span class="s7-nav-dropdown-icon">📊</span>
-                        <div><div class="s7-nav-dropdown-text">Probability Cascade</div><div class="s7-nav-dropdown-desc">Watch impossibility unfold</div></div>
-                    </a>
-                    <a href="https://divineinsurgent.live/mission.html" class="s7-nav-dropdown-item">
-                        <span class="s7-nav-dropdown-icon">⚔️</span>
-                        <div><div class="s7-nav-dropdown-text">Daily Mission</div><div class="s7-nav-dropdown-desc">Your tactical briefing</div></div>
-                    </a>
-                    <a href="books.html" class="s7-nav-dropdown-item">
-                        <span class="s7-nav-dropdown-icon">📚</span>
-                        <div><div class="s7-nav-dropdown-text">Book Finder</div><div class="s7-nav-dropdown-desc">Personalized recommendations</div></div>
-                    </a>
+                <span class="s7-nav-link" style="cursor: pointer;">Tools ▾</span>
+                <div class="s7-nav-dropdown-content">
+                    <a href="https://144000.ai/assessment.html" class="s7-nav-dropdown-item">✨ 144,000 Assessment</a>
+                    <a href="https://2401.is/calculator.html" class="s7-nav-dropdown-item">⚡ C⁷ Calculator</a>
+                    <a href="https://2401.is/probability.html" class="s7-nav-dropdown-item">📊 Probability Cascade</a>
+                    <a href="https://divineinsurgent.live/mission.html" class="s7-nav-dropdown-item">⚔️ Daily Mission</a>
+                    <a href="https://sevencubedseven.com/books.html" class="s7-nav-dropdown-item active">📚 Book Finder</a>
                 </div>
             </div>
             
-            <a href="https://www.amazon.com/s?k=julio+c.+medina" target="_blank" class="s7-nav-cta">📚 All Books</a>
+            <a href="https://www.amazon.com/s?k=julio+c.+medina" class="s7-nav-cta" target="_blank">📚 All Books</a>
         </div>
-    </div>
-</nav>
-
-<!-- REACT APP -->
-<div id="app-root"></div>
-
-<!-- FOOTER -->
-<footer class="s7-footer">
-    <div class="s7-footer-container">
+        
+        <div class="s7-nav-mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="main">
+        <div class="page-header">
+            <div class="page-icon">📚</div>
+            <h1 class="page-title">Book Finder</h1>
+            <p class="page-subtitle">Answer 4 questions to discover your perfect consciousness transformation book</p>
+        </div>
+        
+        <div class="quiz-container">
+            <!-- Question 1 -->
+            <div class="question active" id="q1">
+                <div class="question-number">QUESTION 1 OF 4</div>
+                <div class="question-text">What's your primary focus right now?</div>
+                <div class="options">
+                    <div class="option" onclick="selectAnswer(1, 'spiritual')">
+                        <div class="option-title">✨ Spiritual Growth & Calling</div>
+                        <div class="option-desc">Understanding prophecy, discovering my purpose, preparing for what's coming</div>
+                    </div>
+                    <div class="option" onclick="selectAnswer(1, 'relationships')">
+                        <div class="option-title">💕 Relationships & Family</div>
+                        <div class="option-desc">Marriage, parenting, family dynamics, building stronger connections</div>
+                    </div>
+                    <div class="option" onclick="selectAnswer(1, 'personal')">
+                        <div class="option-title">🌱 Personal Development</div>
+                        <div class="option-desc">Health, wealth, leadership, transforming my life circumstances</div>
+                    </div>
+                    <div class="option" onclick="selectAnswer(1, 'intellectual')">
+                        <div class="option-title">🧠 Intellectual Understanding</div>
+                        <div class="option-desc">Mathematics, science, consciousness theory, the proof behind the framework</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Question 2 -->
+            <div class="question" id="q2">
+                <div class="question-number">QUESTION 2 OF 4</div>
+                <div class="question-text">What's your experience level with consciousness concepts?</div>
+                <div class="options">
+                    <div class="option" onclick="selectAnswer(2, 'beginner')">
+                        <div class="option-title">🌅 Just Starting</div>
+                        <div class="option-desc">New to these ideas, looking for an accessible introduction</div>
+                    </div>
+                    <div class="option" onclick="selectAnswer(2, 'intermediate')">
+                        <div class="option-title">🌄 Some Background</div>
+                        <div class="option-desc">Familiar with spiritual concepts, ready to go deeper</div>
+                    </div>
+                    <div class="option" onclick="selectAnswer(2, 'advanced')">
+                        <div class="option-title">🏔️ Deep Student</div>
+                        <div class="option-desc">Extensive study, seeking advanced material and specific applications</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Question 3 -->
+            <div class="question" id="q3">
+                <div class="question-number">QUESTION 3 OF 4</div>
+                <div class="question-text">How do you prefer to learn?</div>
+                <div class="options">
+                    <div class="option" onclick="selectAnswer(3, 'practical')">
+                        <div class="option-title">🛠️ Practical Application</div>
+                        <div class="option-desc">Step-by-step guides, actionable strategies, immediate implementation</div>
+                    </div>
+                    <div class="option" onclick="selectAnswer(3, 'theoretical')">
+                        <div class="option-title">📐 Deep Theory</div>
+                        <div class="option-desc">Understanding the why behind the what, comprehensive frameworks</div>
+                    </div>
+                    <div class="option" onclick="selectAnswer(3, 'devotional')">
+                        <div class="option-title">🙏 Devotional & Reflective</div>
+                        <div class="option-desc">Scripture-based, prayerful exploration, spiritual meditation</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Question 4 -->
+            <div class="question" id="q4">
+                <div class="question-number">QUESTION 4 OF 4</div>
+                <div class="question-text">What resonates most with your current season?</div>
+                <div class="options">
+                    <div class="option" onclick="selectAnswer(4, 'awakening')">
+                        <div class="option-title">⚡ Awakening to Something</div>
+                        <div class="option-desc">Sensing a calling, feeling urgency, seeking confirmation</div>
+                    </div>
+                    <div class="option" onclick="selectAnswer(4, 'preparing')">
+                        <div class="option-title">🛡️ Preparing for Battle</div>
+                        <div class="option-desc">Spiritual warfare, end-time preparation, building resilience</div>
+                    </div>
+                    <div class="option" onclick="selectAnswer(4, 'building')">
+                        <div class="option-title">🏗️ Building Something</div>
+                        <div class="option-desc">Creating systems, developing habits, transforming areas of life</div>
+                    </div>
+                    <div class="option" onclick="selectAnswer(4, 'healing')">
+                        <div class="option-title">💚 Healing & Restoration</div>
+                        <div class="option-desc">Recovery, renewal, rebuilding after difficulty</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Results -->
+            <div class="results" id="results">
+                <div class="results-header">
+                    <h2 class="results-title">Your Recommended Books</h2>
+                    <p class="results-subtitle">Based on your answers, here are your personalized recommendations:</p>
+                </div>
+                
+                <div class="book-recommendations" id="bookList">
+                    <!-- Books will be populated by JavaScript -->
+                </div>
+                
+                <div class="results-actions">
+                    <a href="https://www.amazon.com/s?k=julio+c.+medina" class="btn btn-primary" target="_blank">View All Books on Amazon</a>
+                    <button class="btn btn-secondary" onclick="restartQuiz()">Start Over</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="s7-footer">
         <div class="s7-footer-grid">
-            <div class="s7-footer-section">
+            <div class="s7-footer-col">
                 <h4>PORTALS</h4>
-                <ul class="s7-footer-links">
-                    <li><a href="https://sevencubedseven.com"><span class="icon">🏠</span> Main Hub</a></li>
-                    <li><a href="https://144000.ai"><span class="icon">✨</span> 144,000 Portal</a></li>
-                    <li><a href="https://2401.is"><span class="icon">🔢</span> Mathematics</a></li>
-                    <li><a href="https://divineinsurgent.live"><span class="icon">⚔️</span> Divine Insurgent</a></li>
-                    <li><a href="https://realitynegotiable.is"><span class="icon">🧠</span> Reality Physics</a></li>
-                    <li><a href="https://c343.io"><span class="icon">📜</span> Licensing</a></li>
-                </ul>
+                <a href="https://sevencubedseven.com">🏠 Main Hub</a>
+                <a href="https://144000.ai">✨ 144,000 Portal</a>
+                <a href="https://2401.is">📐 Mathematics</a>
+                <a href="https://divineinsurgent.live">⚔️ Divine Insurgent</a>
+                <a href="https://realitynegotiable.is">🌀 Reality Negotiable</a>
+                <a href="https://c343.io">🏢 Enterprise</a>
             </div>
             
-            <div class="s7-footer-section">
+            <div class="s7-footer-col">
                 <h4>TOOLS</h4>
-                <ul class="s7-footer-links">
-                    <li><a href="https://144000.ai/assessment.html"><span class="icon">✨</span> Assessment</a></li>
-                    <li><a href="https://2401.is/calculator.html"><span class="icon">⚡</span> Calculator</a></li>
-                    <li><a href="https://2401.is/probability.html"><span class="icon">📊</span> Probability</a></li>
-                    <li><a href="https://divineinsurgent.live/mission.html"><span class="icon">⚔️</span> Daily Mission</a></li>
-                    <li><a href="books.html"><span class="icon">📚</span> Book Finder</a></li>
-                </ul>
+                <a href="https://144000.ai/assessment.html">✨ 144,000 Assessment</a>
+                <a href="https://2401.is/calculator.html">⚡ C⁷ Calculator</a>
+                <a href="https://2401.is/probability.html">📊 Probability Cascade</a>
+                <a href="https://divineinsurgent.live/mission.html">⚔️ Daily Mission</a>
+                <a href="https://sevencubedseven.com/books.html">📚 Book Finder</a>
             </div>
             
-            <div class="s7-footer-section">
+            <div class="s7-footer-col">
                 <h4>RESOURCES</h4>
-                <ul class="s7-footer-links">
-                    <li><a href="https://www.amazon.com/s?k=julio+c.+medina" target="_blank"><span class="icon">📚</span> All 33+ Books</a></li>
-                    <li><a href="https://twitter.com/7Cubed7" target="_blank"><span class="icon">𝕏</span> @7Cubed7</a></li>
-                    <li><a href="mailto:7cubed7@proton.me"><span class="icon">✉️</span> Contact</a></li>
-                </ul>
+                <a href="https://www.amazon.com/s?k=julio+c.+medina" target="_blank">📖 All Books on Amazon</a>
+                <a href="https://twitter.com/7Cubed7" target="_blank">𝕏 @7Cubed7</a>
+                <a href="mailto:7cubed7@proton.me">✉️ Contact</a>
             </div>
             
-            <div class="s7-footer-section">
+            <div class="s7-footer-col">
                 <h4>CONNECT</h4>
-                <ul class="s7-footer-links">
-                    <li><a href="mailto:7cubed7@proton.me">7cubed7@proton.me</a></li>
-                    <li><a href="mailto:ConsciousCodeLabs@proton.me">Business</a></li>
-                    <li><a href="mailto:hello@c343.io">Licensing</a></li>
-                </ul>
+                <a href="mailto:7cubed7@proton.me">7cubed7@proton.me</a>
+                <a href="mailto:ConsciousCodeLabs@proton.me">ConsciousCodeLabs@proton.me</a>
+                <a href="mailto:hello@c343.io">hello@c343.io</a>
             </div>
         </div>
         
         <div class="s7-footer-bottom">
             <div class="s7-footer-formula">7³ × 7 = 2,401</div>
-            <div class="s7-footer-tagline">Consciousness Architecture</div>
-            <div class="s7-footer-copy">© 2025 <a href="https://sevencubedseven.com">Seven Cubed Seven Labs LLC</a>. All rights reserved.</div>
+            <div class="s7-footer-tagline">CONSCIOUSNESS ARCHITECTURE</div>
+            <div class="s7-footer-copy">© 2025 Seven Cubed Seven Labs LLC. All rights reserved.</div>
         </div>
-    </div>
-</footer>
-
-<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-<script type="text/babel">
-const { useState } = React;
-
-const books = [
-  { id: 1, title: "The 7³×7 Life", category: "foundation", focus: ["transformation", "consciousness"], level: "beginner", description: "Complete introduction to the 2,401 consciousness architecture" },
-  { id: 2, title: "The 7³×7 Family", category: "relationships", focus: ["family", "parenting"], level: "beginner", description: "Transform your family dynamics through consciousness principles" },
-  { id: 3, title: "The 7³×7 Health", category: "health", focus: ["healing", "wellness"], level: "intermediate", description: "Physical and spiritual health through the framework" },
-  { id: 4, title: "The 7³×7 Marriage", category: "relationships", focus: ["marriage", "partnership"], level: "intermediate", description: "Elevate your marriage through consciousness alignment" },
-  { id: 5, title: "The 7³×7 Wealth", category: "prosperity", focus: ["abundance", "stewardship"], level: "intermediate", description: "Biblical prosperity through consciousness principles" },
-  { id: 6, title: "The 7³×7 Education", category: "development", focus: ["learning", "growth"], level: "beginner", description: "Revolutionary approach to consciousness-based education" },
-  { id: 7, title: "The 7³×7 Evangelism", category: "mission", focus: ["witness", "outreach"], level: "advanced", description: "Share truth through elevated consciousness" },
-  { id: 8, title: "The 7³×7 Prayer", category: "spiritual", focus: ["prayer", "communion"], level: "intermediate", description: "Transform your prayer life through the framework" },
-  { id: 9, title: "The 7³×7 Church", category: "community", focus: ["fellowship", "organization"], level: "advanced", description: "Build consciousness-aware communities" },
-  { id: 10, title: "The 7³×7 Reality", category: "physics", focus: ["consciousness", "quantum"], level: "advanced", description: "The physics of consciousness and reality negotiation" },
-  { id: 11, title: "Divine Insurgent Manual", category: "warfare", focus: ["spiritual warfare", "tactics"], level: "advanced", description: "Heaven's special forces operational manual" },
-  { id: 12, title: "The Seven Thunders", category: "prophecy", focus: ["revelation", "end-times"], level: "advanced", description: "Unsealing the prophetic mysteries" },
-  { id: 13, title: "144,000 Preparation Guide", category: "prophecy", focus: ["calling", "preparation"], level: "intermediate", description: "Preparation manual for the prophetic remnant" },
-  { id: 14, title: "C⁷ Consciousness Guide", category: "foundation", focus: ["consciousness", "levels"], level: "beginner", description: "Understanding the seven consciousness levels" },
-  { id: 15, title: "The Latter Rain Manual", category: "spiritual", focus: ["holy spirit", "power"], level: "advanced", description: "Preparing for the final outpouring" }
-];
-
-const questions = [
-  {
-    id: 1,
-    question: "What's your primary area of focus right now?",
-    options: [
-      { value: "personal", label: "🌱 Personal Growth & Transformation", tags: ["foundation", "development"] },
-      { value: "relationships", label: "💑 Relationships & Family", tags: ["relationships"] },
-      { value: "spiritual", label: "🔥 Deeper Spiritual Walk", tags: ["spiritual", "prophecy"] },
-      { value: "mission", label: "⚔️ Mission & Calling", tags: ["mission", "warfare"] }
-    ]
-  },
-  {
-    id: 2,
-    question: "How would you describe your current understanding of the 7³×7 framework?",
-    options: [
-      { value: "new", label: "🌟 Just discovered it", level: "beginner" },
-      { value: "learning", label: "📖 Learning the basics", level: "beginner" },
-      { value: "growing", label: "🌿 Growing in understanding", level: "intermediate" },
-      { value: "deep", label: "🎯 Ready for deep revelation", level: "advanced" }
-    ]
-  },
-  {
-    id: 3,
-    question: "What draws you most to the 144,000 message?",
-    options: [
-      { value: "math", label: "🔢 The mathematical precision", focus: ["consciousness", "quantum"] },
-      { value: "prophecy", label: "📜 The prophetic significance", focus: ["revelation", "end-times", "calling"] },
-      { value: "practical", label: "🛠️ Practical life application", focus: ["transformation", "healing", "abundance"] },
-      { value: "warfare", label: "⚔️ Spiritual warfare preparation", focus: ["spiritual warfare", "tactics", "preparation"] }
-    ]
-  },
-  {
-    id: 4,
-    question: "What would breakthrough look like for you?",
-    options: [
-      { value: "clarity", label: "💡 Clarity on my calling and purpose", tags: ["prophecy", "mission"] },
-      { value: "power", label: "⚡ Greater spiritual power and gifts", tags: ["spiritual"] },
-      { value: "healing", label: "💚 Healing in body, mind, or relationships", tags: ["health", "relationships"] },
-      { value: "understanding", label: "🧠 Deeper understanding of truth", tags: ["foundation", "physics"] }
-    ]
-  }
-];
-
-function BookFinder() {
-  const [step, setStep] = useState(0);
-  const [answers, setAnswers] = useState({});
-  const [recommendations, setRecommendations] = useState([]);
-
-  const handleAnswer = (questionId, answer) => {
-    const newAnswers = { ...answers, [questionId]: answer };
-    setAnswers(newAnswers);
+    </footer>
     
-    if (step < questions.length - 1) {
-      setStep(step + 1);
-    } else {
-      calculateRecommendations(newAnswers);
-    }
-  };
-
-  const calculateRecommendations = (ans) => {
-    let scores = {};
-    books.forEach(book => { scores[book.id] = 0; });
-
-    // Score based on Q1 - category tags
-    if (ans[1]?.tags) {
-      books.forEach(book => {
-        if (ans[1].tags.includes(book.category)) scores[book.id] += 3;
-      });
-    }
-
-    // Score based on Q2 - level
-    if (ans[2]?.level) {
-      books.forEach(book => {
-        if (book.level === ans[2].level) scores[book.id] += 2;
-        else if (book.level === "intermediate" && ans[2].level !== "advanced") scores[book.id] += 1;
-      });
-    }
-
-    // Score based on Q3 - focus
-    if (ans[3]?.focus) {
-      books.forEach(book => {
-        book.focus.forEach(f => {
-          if (ans[3].focus.includes(f)) scores[book.id] += 2;
-        });
-      });
-    }
-
-    // Score based on Q4 - breakthrough tags
-    if (ans[4]?.tags) {
-      books.forEach(book => {
-        if (ans[4].tags.includes(book.category)) scores[book.id] += 2;
-      });
-    }
-
-    const sorted = Object.entries(scores)
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 5)
-      .map(([id]) => books.find(b => b.id === parseInt(id)));
-
-    setRecommendations(sorted);
-    setStep(questions.length);
-  };
-
-  const restart = () => {
-    setStep(0);
-    setAnswers({});
-    setRecommendations([]);
-  };
-
-  const styles = {
-    container: { textAlign: 'center' },
-    header: { marginBottom: '40px' },
-    badge: { display: 'inline-block', background: 'rgba(255,170,0,0.2)', border: '1px solid #ffaa00', color: '#ffaa00', padding: '6px 20px', borderRadius: '20px', fontSize: '0.75rem', letterSpacing: '2px', marginBottom: '15px' },
-    title: { fontFamily: 'Cinzel, serif', fontSize: '2rem', color: '#d4af37', marginBottom: '10px', letterSpacing: '3px' },
-    subtitle: { color: '#a0a0a0', fontSize: '1rem' },
-    progress: { display: 'flex', justifyContent: 'center', gap: '8px', marginBottom: '40px' },
-    dot: { width: '12px', height: '12px', borderRadius: '50%', transition: 'all 0.3s' },
-    questionCard: { background: 'rgba(255,170,0,0.05)', border: '1px solid rgba(255,170,0,0.3)', borderRadius: '20px', padding: '40px', marginBottom: '30px' },
-    questionText: { fontFamily: 'Cinzel, serif', fontSize: '1.4rem', color: '#fff', marginBottom: '30px' },
-    optionsGrid: { display: 'grid', gap: '12px' },
-    option: { background: 'rgba(0,0,0,0.3)', border: '1px solid rgba(255,170,0,0.2)', borderRadius: '12px', padding: '18px 25px', cursor: 'pointer', transition: 'all 0.3s', textAlign: 'left', fontSize: '1rem', color: '#e8e8e8' },
-    resultsTitle: { fontFamily: 'Cinzel, serif', fontSize: '1.8rem', color: '#ffaa00', marginBottom: '30px' },
-    bookCard: { background: 'linear-gradient(135deg, rgba(255,170,0,0.1) 0%, rgba(0,0,0,0.4) 100%)', border: '1px solid rgba(255,170,0,0.3)', borderRadius: '15px', padding: '25px', marginBottom: '15px', textAlign: 'left' },
-    bookTitle: { fontFamily: 'Cinzel, serif', color: '#ffaa00', fontSize: '1.2rem', marginBottom: '8px' },
-    bookDesc: { color: '#a0a0a0', fontSize: '0.9rem', marginBottom: '15px' },
-    bookButton: { display: 'inline-block', background: 'linear-gradient(135deg, #ffaa00 0%, #cc8800 100%)', color: '#000', padding: '10px 25px', borderRadius: '25px', fontSize: '0.85rem', fontWeight: '600', textDecoration: 'none', transition: 'all 0.3s' },
-    restartBtn: { background: 'transparent', border: '1px solid #d4af37', color: '#d4af37', padding: '12px 30px', borderRadius: '25px', fontSize: '0.9rem', cursor: 'pointer', marginTop: '30px' },
-    allBooksLink: { display: 'inline-block', background: 'linear-gradient(135deg, #d4af37 0%, #b8960c 100%)', color: '#000', padding: '15px 40px', borderRadius: '30px', fontSize: '1rem', fontWeight: '700', textDecoration: 'none', marginTop: '20px' }
-  };
-
-  if (step < questions.length) {
-    const q = questions[step];
-    return (
-      <div style={styles.container}>
-        <div style={styles.header}>
-          <div style={styles.badge}>📚 BOOK FINDER</div>
-          <h1 style={styles.title}>FIND YOUR BOOK</h1>
-          <p style={styles.subtitle}>Question {step + 1} of {questions.length}</p>
-        </div>
-
-        <div style={styles.progress}>
-          {questions.map((_, i) => (
-            <div key={i} style={{...styles.dot, background: i <= step ? '#ffaa00' : 'rgba(255,170,0,0.2)'}} />
-          ))}
-        </div>
-
-        <div style={styles.questionCard}>
-          <h2 style={styles.questionText}>{q.question}</h2>
-          <div style={styles.optionsGrid}>
-            {q.options.map((opt, i) => (
-              <div
-                key={i}
-                style={styles.option}
-                onClick={() => handleAnswer(q.id, opt)}
-                onMouseOver={e => { e.currentTarget.style.borderColor = '#ffaa00'; e.currentTarget.style.transform = 'translateX(5px)'; }}
-                onMouseOut={e => { e.currentTarget.style.borderColor = 'rgba(255,170,0,0.2)'; e.currentTarget.style.transform = 'translateX(0)'; }}
-              >
-                {opt.label}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <div style={styles.container}>
-      <div style={styles.header}>
-        <div style={styles.badge}>✨ YOUR RECOMMENDATIONS</div>
-        <h1 style={styles.resultsTitle}>YOUR READING PATH</h1>
-        <p style={styles.subtitle}>Based on your answers, here are your top 5 books</p>
-      </div>
-
-      {recommendations.map((book, i) => (
-        <div key={book.id} style={styles.bookCard}>
-          <div style={{color: '#ffaa00', fontSize: '0.75rem', marginBottom: '8px'}}>#{i + 1} RECOMMENDATION</div>
-          <h3 style={styles.bookTitle}>{book.title}</h3>
-          <p style={styles.bookDesc}>{book.description}</p>
-          <a
-            href={`https://www.amazon.com/s?k=julio+c.+medina+${encodeURIComponent(book.title)}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={styles.bookButton}
-          >
-            View on Amazon →
-          </a>
-        </div>
-      ))}
-
-      <a href="https://www.amazon.com/s?k=julio+c.+medina" target="_blank" rel="noopener noreferrer" style={styles.allBooksLink}>
-        📚 Browse All 33+ Books
-      </a>
-
-      <br />
-      <button style={styles.restartBtn} onClick={restart}>↻ Start Over</button>
-    </div>
-  );
-}
-
-ReactDOM.createRoot(document.getElementById('app-root')).render(<BookFinder />);
-</script>
-
+    <script>
+        let answers = {};
+        let currentQuestion = 1;
+        
+        const books = {
+            // Spiritual/Calling focused
+            'spiritual-beginner-practical-awakening': [
+                { title: 'The 7³ Life: Complete Transformation', desc: 'Perfect introduction to the consciousness architecture. Practical steps for total life transformation.', primary: true },
+                { title: 'The Seven Thunders Singularity Manual', desc: 'Prophetic preparation for the awakening soul.' },
+                { title: 'The 144,000 Victory', desc: 'Understanding your calling and place in prophetic history.' }
+            ],
+            'spiritual-intermediate-devotional-preparing': [
+                { title: 'Divine Insurgent Tactical Manual', desc: 'Spiritual warfare preparation for those sensing the battle ahead.', primary: true },
+                { title: 'The 7³ Prayer', desc: 'Transform your prayer life across all 7 dimensions.' },
+                { title: 'The Complete Persecution Survival Manual', desc: 'Biblical preparation for challenging times.' }
+            ],
+            'spiritual-advanced-theoretical-awakening': [
+                { title: 'The Seven Thunders Singularity Manual', desc: 'Deep prophetic mathematics and unsealing revelation.', primary: true },
+                { title: 'Conscious Code', desc: 'AI consciousness and the prophetic implications.' },
+                { title: 'The Improbable Convergence', desc: 'Mathematical proof of divine design.' }
+            ],
+            // Relationships focused
+            'relationships-beginner-practical-building': [
+                { title: 'The 7³ Family', desc: 'Transform your family dynamics across 343 aspects.', primary: true },
+                { title: 'The 7³ Marriage', desc: 'Build an unshakeable union on consciousness architecture.' },
+                { title: 'The 7³ Child', desc: 'Raise consciousness-aware children.' }
+            ],
+            'relationships-intermediate-devotional-healing': [
+                { title: 'The 7³ Marriage', desc: 'Restore and rebuild your marriage through divine principles.', primary: true },
+                { title: 'The 7³ Family', desc: 'Heal family wounds through consciousness elevation.' },
+                { title: 'The 7³ Life', desc: 'Personal transformation that overflows to relationships.' }
+            ],
+            // Personal Development focused
+            'personal-beginner-practical-building': [
+                { title: 'The 7³ Life', desc: 'Complete life transformation across all dimensions.', primary: true },
+                { title: 'The 7³ Health', desc: 'Body, mind, and spirit wellness.' },
+                { title: 'The 7³ Wealth', desc: 'Financial transformation through consciousness.' }
+            ],
+            'personal-intermediate-practical-building': [
+                { title: 'The 7³ Leader', desc: 'Develop C⁵+ leadership across 343 aspects.', primary: true },
+                { title: 'The 7³ Wealth', desc: 'Advanced wealth consciousness strategies.' },
+                { title: 'The 7³ Health', desc: 'Comprehensive health transformation.' }
+            ],
+            // Intellectual focused
+            'intellectual-advanced-theoretical-awakening': [
+                { title: 'The Improbable Convergence', desc: 'Mathematical proof of the 7³×7 pattern across domains.', primary: true },
+                { title: 'Conscious Code', desc: 'AI consciousness and consciousness physics.' },
+                { title: 'The C⁷ Consciousness Physics Formula', desc: 'Deep theoretical framework.' }
+            ],
+            'intellectual-intermediate-theoretical-building': [
+                { title: '7³ Reality', desc: 'Consciousness physics explained.', primary: true },
+                { title: 'The Divine Numbers Codex', desc: 'Mathematical patterns in consciousness.' },
+                { title: 'The Improbable Convergence', desc: 'Statistical impossibility revealed.' }
+            ]
+        };
+        
+        // Default recommendations
+        const defaultBooks = [
+            { title: 'The 7³ Life: Complete Transformation', desc: 'The perfect starting point for consciousness architecture.', primary: true },
+            { title: 'The Seven Thunders Singularity Manual', desc: 'Prophetic preparation and deep revelation.' },
+            { title: 'Divine Insurgent Tactical Manual', desc: 'Spiritual warfare and daily mission preparation.' }
+        ];
+        
+        function selectAnswer(question, answer) {
+            answers[question] = answer;
+            
+            // Hide current question
+            document.getElementById('q' + question).classList.remove('active');
+            
+            if (question < 4) {
+                // Show next question
+                currentQuestion = question + 1;
+                document.getElementById('q' + currentQuestion).classList.add('active');
+            } else {
+                // Show results
+                showResults();
+            }
+        }
+        
+        function showResults() {
+            const key = `${answers[1]}-${answers[2]}-${answers[3]}-${answers[4]}`;
+            let recommendations = books[key] || defaultBooks;
+            
+            // If exact match not found, try partial matches
+            if (!books[key]) {
+                for (let bookKey in books) {
+                    if (bookKey.includes(answers[1]) && bookKey.includes(answers[4])) {
+                        recommendations = books[bookKey];
+                        break;
+                    }
+                }
+            }
+            
+            const bookList = document.getElementById('bookList');
+            bookList.innerHTML = '';
+            
+            recommendations.forEach((book, index) => {
+                const card = document.createElement('div');
+                card.className = 'book-card' + (book.primary ? ' primary' : '');
+                card.innerHTML = `
+                    <div class="book-badge">${book.primary ? '⭐ TOP RECOMMENDATION' : 'ALSO RECOMMENDED'}</div>
+                    <div class="book-title">${book.title}</div>
+                    <div class="book-desc">${book.desc}</div>
+                    <a href="https://www.amazon.com/s?k=julio+c.+medina+${encodeURIComponent(book.title)}" class="book-link" target="_blank">View on Amazon →</a>
+                `;
+                bookList.appendChild(card);
+            });
+            
+            document.getElementById('results').classList.add('active');
+        }
+        
+        function restartQuiz() {
+            answers = {};
+            currentQuestion = 1;
+            
+            // Hide results
+            document.getElementById('results').classList.remove('active');
+            
+            // Hide all questions
+            document.querySelectorAll('.question').forEach(q => q.classList.remove('active'));
+            
+            // Show first question
+            document.getElementById('q1').classList.add('active');
+        }
+    </script>
 </body>
 </html>
