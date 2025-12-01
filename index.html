@@ -6,12 +6,10 @@
     <title>Seven Cubed Seven Labs | 7³×7 = 2,401 Consciousness Architecture</title>
     <meta name="description" content="Pioneering consciousness research through the 7³×7 = 2,401 framework. 60+ patents filed. 33+ books published. Discover the mathematical architecture of human awareness.">
     
-    <!-- Open Graph -->
     <meta property="og:title" content="Seven Cubed Seven Labs | Consciousness Architecture">
-    <meta property="og:description" content="7³×7 = 2,401 aspects of consciousness mapped. 60+ patents. 33+ books. The mathematics of human transformation.">
+    <meta property="og:description" content="7³×7 = 2,401 aspects of consciousness mapped. 60+ patents. 33+ books.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sevencubedseven.com">
-    
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@7Cubed7">
     
@@ -20,65 +18,267 @@
     
     <style>
         :root {
-            --gold: #d4af37;
-            --gold-light: #f4d35e;
-            --gold-dark: #b8960c;
-            --amber: #ffaa00;
-            --dark-bg: #0a0a0f;
-            --dark-card: #12121a;
-            --dark-border: #2a2a3a;
-            --text-primary: #e8e8e8;
-            --text-secondary: #a0a0a0;
+            --s7-gold: #d4af37;
+            --s7-gold-light: #f4d35e;
+            --s7-gold-dark: #b8960c;
+            --s7-navy: #0a0a1a;
+            --s7-navy-light: #12122a;
+            --s7-text: #e8e8e8;
+            --s7-text-dim: #a0a0a0;
+            --s7-matrix: #00ff88;
+            --s7-red: #ff4444;
+            --s7-amber: #ffaa00;
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: 'Raleway', sans-serif;
-            background: var(--dark-bg);
-            color: var(--text-primary);
+            background: var(--s7-navy);
+            color: var(--s7-text);
             line-height: 1.7;
-            overflow-x: hidden;
+            padding-top: 60px;
         }
         
         .font-cinzel { font-family: 'Cinzel', serif; }
         
-        /* Navigation */
-        nav {
+        /* ══════════════════════════════════════════════════════════════════════
+           UNIVERSAL NAVIGATION
+           ══════════════════════════════════════════════════════════════════════ */
+        .s7-nav {
             position: fixed;
             top: 0;
-            width: 100%;
-            padding: 15px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(10, 10, 15, 0.97);
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: rgba(10, 10, 26, 0.97);
             backdrop-filter: blur(10px);
-            z-index: 1000;
-            border-bottom: 1px solid var(--dark-border);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            z-index: 9999;
         }
         
-        .logo {
-            font-size: 1.1rem;
-            color: var(--gold);
-            letter-spacing: 2px;
-            text-decoration: none;
-        }
-        
-        .nav-links {
+        .s7-nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            height: 100%;
             display: flex;
-            gap: 30px;
             align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
         }
         
-        .nav-links a {
-            color: var(--text-secondary);
+        .s7-nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
             text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
         }
         
-        .nav-links a:hover { color: var(--gold); }
+        .s7-nav-logo-icon {
+            width: 36px;
+            height: 36px;
+            position: relative;
+        }
+        
+        .s7-nav-logo-icon::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--s7-gold);
+            transform: rotate(45deg);
+            opacity: 0.5;
+        }
+        
+        .s7-nav-logo-icon::after {
+            content: '';
+            position: absolute;
+            width: 55%;
+            height: 55%;
+            top: 22.5%;
+            left: 22.5%;
+            border: 2px solid var(--s7-gold);
+            transform: rotate(45deg);
+        }
+        
+        .s7-nav-logo-text {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            color: var(--s7-gold);
+            letter-spacing: 1px;
+        }
+        
+        .s7-nav-links {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .s7-nav-link {
+            color: var(--s7-text-dim);
+            text-decoration: none;
+            font-size: 0.85rem;
+            padding: 8px 14px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        
+        .s7-nav-link:hover {
+            color: var(--s7-gold);
+            background: rgba(212, 175, 55, 0.1);
+        }
+        
+        .s7-nav-link.active {
+            color: var(--s7-gold);
+        }
+        
+        .s7-nav-dropdown {
+            position: relative;
+        }
+        
+        .s7-nav-dropdown-btn {
+            color: var(--s7-text-dim);
+            font-size: 0.85rem;
+            padding: 8px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: none;
+            border: none;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+        
+        .s7-nav-dropdown-btn:hover {
+            color: var(--s7-gold);
+            background: rgba(212, 175, 55, 0.1);
+        }
+        
+        .s7-nav-dropdown-btn::after {
+            content: '▼';
+            font-size: 0.55rem;
+        }
+        
+        .s7-nav-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--s7-navy-light);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 10px;
+            padding: 8px;
+            min-width: 220px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+        
+        .s7-nav-dropdown:hover .s7-nav-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(5px);
+        }
+        
+        .s7-nav-dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 12px;
+            color: var(--s7-text);
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+        
+        .s7-nav-dropdown-item:hover {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--s7-gold);
+        }
+        
+        .s7-nav-dropdown-icon { font-size: 1.1rem; width: 24px; text-align: center; }
+        .s7-nav-dropdown-text { font-size: 0.85rem; }
+        .s7-nav-dropdown-desc { font-size: 0.7rem; color: var(--s7-text-dim); }
+        
+        .s7-nav-cta {
+            background: linear-gradient(135deg, var(--s7-gold) 0%, var(--s7-gold-dark) 100%);
+            color: #000;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .s7-nav-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+        
+        .s7-nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+            background: none;
+            border: none;
+        }
+        
+        .s7-nav-toggle span {
+            width: 24px;
+            height: 2px;
+            background: var(--s7-gold);
+        }
+        
+        @media (max-width: 900px) {
+            .s7-nav-links {
+                position: fixed;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: var(--s7-navy);
+                flex-direction: column;
+                padding: 20px;
+                gap: 5px;
+                border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease;
+            }
+            
+            .s7-nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .s7-nav-toggle { display: flex; }
+            
+            .s7-nav-link, .s7-nav-dropdown-btn { width: 100%; padding: 12px 15px; }
+            
+            .s7-nav-dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                border: none;
+                background: rgba(0,0,0,0.2);
+                margin-top: 5px;
+            }
+            
+            .s7-nav-cta { width: 100%; text-align: center; margin-top: 10px; }
+        }
+        
+        /* ══════════════════════════════════════════════════════════════════════
+           PAGE CONTENT STYLES
+           ══════════════════════════════════════════════════════════════════════ */
         
         @keyframes pulse-gold {
             0%, 100% { box-shadow: 0 0 30px rgba(212, 175, 55, 0.3); }
@@ -91,29 +291,28 @@
         }
         
         @keyframes shimmer {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(50%); }
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
         }
         
         .pulse-gold { animation: pulse-gold 2s ease-in-out infinite; }
         .pulse-amber { animation: pulse-amber 2s ease-in-out infinite; }
         
-        /* Hero Section */
         .hero {
-            min-height: 100vh;
+            min-height: 90vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 120px 20px 60px;
+            padding: 60px 20px;
             background: radial-gradient(ellipse at center top, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
         }
         
         .hero-badge {
             background: rgba(212, 175, 55, 0.1);
-            border: 1px solid var(--gold);
-            color: var(--gold);
+            border: 1px solid var(--s7-gold);
+            color: var(--s7-gold);
             padding: 8px 25px;
             border-radius: 30px;
             font-size: 0.8rem;
@@ -123,19 +322,18 @@
         }
         
         .hero-title {
-            font-size: 4rem;
-            color: var(--gold);
+            font-size: 3.5rem;
+            color: var(--s7-gold);
             margin-bottom: 15px;
             text-shadow: 0 0 60px rgba(212, 175, 55, 0.4);
             letter-spacing: 5px;
         }
         
         .hero-subtitle {
-            font-size: 1.3rem;
-            color: var(--text-secondary);
+            font-size: 1.2rem;
+            color: var(--s7-text-dim);
             max-width: 600px;
             margin-bottom: 40px;
-            line-height: 1.8;
         }
         
         .hero-stats {
@@ -147,17 +345,15 @@
         }
         
         .stat-item { text-align: center; }
-        .stat-number { font-size: 2.5rem; color: var(--gold); font-weight: 600; }
-        .stat-label { font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 2px; }
+        .stat-number { font-size: 2.5rem; color: var(--s7-gold); font-weight: 600; }
+        .stat-label { font-size: 0.8rem; color: var(--s7-text-dim); text-transform: uppercase; letter-spacing: 2px; }
         
-        /* BOOK RECOMMENDATION CTA - NEW */
         .books-cta {
             background: linear-gradient(135deg, rgba(255, 170, 0, 0.15) 0%, rgba(0, 0, 0, 0.5) 100%);
-            border: 2px solid var(--amber);
+            border: 2px solid var(--s7-amber);
             border-radius: 20px;
             padding: 35px;
-            margin: 20px auto 50px;
-            max-width: 650px;
+            max-width: 600px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -166,15 +362,17 @@
         .books-cta::before {
             content: '';
             position: absolute;
-            top: 0; left: -100%;
-            width: 200%; height: 100%;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
             background: linear-gradient(90deg, transparent, rgba(255, 170, 0, 0.1), transparent);
             animation: shimmer 3s infinite;
         }
         
         .books-badge {
             display: inline-block;
-            background: var(--amber);
+            background: var(--s7-amber);
             color: #000;
             padding: 6px 18px;
             border-radius: 20px;
@@ -183,24 +381,26 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 15px;
+            position: relative;
         }
         
         .books-title {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             color: #fff;
             margin-bottom: 10px;
-            letter-spacing: 2px;
+            position: relative;
         }
         
         .books-subtitle {
             color: rgba(255,255,255,0.7);
             margin-bottom: 20px;
             font-size: 0.95rem;
+            position: relative;
         }
         
         .books-button {
             display: inline-block;
-            background: linear-gradient(135deg, var(--amber) 0%, #cc8800 100%);
+            background: linear-gradient(135deg, var(--s7-amber) 0%, #cc8800 100%);
             color: #000;
             padding: 15px 40px;
             border-radius: 50px;
@@ -211,7 +411,6 @@
             letter-spacing: 2px;
             transition: all 0.3s ease;
             position: relative;
-            z-index: 1;
         }
         
         .books-button:hover {
@@ -219,13 +418,6 @@
             box-shadow: 0 0 40px rgba(255, 170, 0, 0.6);
         }
         
-        .books-meta {
-            margin-top: 15px;
-            color: rgba(255,255,255,0.4);
-            font-size: 0.8rem;
-        }
-        
-        /* Section Styles */
         .section {
             padding: 80px 20px;
             max-width: 1200px;
@@ -235,410 +427,412 @@
         .section-title {
             text-align: center;
             font-size: 2rem;
-            color: var(--gold);
+            color: var(--s7-gold);
             margin-bottom: 15px;
             letter-spacing: 5px;
         }
         
         .section-subtitle {
             text-align: center;
-            color: var(--text-secondary);
+            color: var(--s7-text-dim);
             margin-bottom: 50px;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
         }
         
-        /* Portal Cards */
         .portals-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
         }
         
         .portal-card {
-            background: var(--dark-card);
-            border: 1px solid var(--dark-border);
+            background: var(--s7-navy-light);
+            border: 1px solid rgba(212, 175, 55, 0.15);
             border-radius: 15px;
-            padding: 35px;
+            padding: 30px;
             text-decoration: none;
-            color: var(--text-primary);
+            color: var(--s7-text);
             transition: all 0.3s ease;
         }
         
         .portal-card:hover {
-            border-color: var(--gold);
+            border-color: var(--s7-gold);
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
         
-        .portal-icon { font-size: 3rem; margin-bottom: 20px; }
-        .portal-title { color: var(--gold); font-size: 1.3rem; margin-bottom: 15px; letter-spacing: 2px; }
-        .portal-desc { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 15px; }
-        .portal-link { color: var(--gold-light); font-size: 0.9rem; }
+        .portal-icon { font-size: 2.5rem; margin-bottom: 20px; }
+        .portal-title { color: var(--s7-gold); font-size: 1.2rem; margin-bottom: 12px; letter-spacing: 2px; }
+        .portal-desc { color: var(--s7-text-dim); font-size: 0.9rem; line-height: 1.7; margin-bottom: 15px; }
+        .portal-link { color: var(--s7-gold-light); font-size: 0.85rem; }
         
-        /* Books Grid */
-        .books-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        
-        .book-card {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, var(--dark-card) 100%);
-            border: 1px solid var(--dark-border);
-            border-radius: 12px;
-            padding: 25px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        
-        .book-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-3px);
-        }
-        
-        .book-icon { font-size: 2.5rem; margin-bottom: 15px; }
-        .book-title { color: var(--gold); margin-bottom: 8px; font-weight: 600; }
-        .book-category { color: var(--text-secondary); font-size: 0.85rem; }
-        
-        /* Tools Section */
         .tools-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
         }
         
         .tool-card {
             background: rgba(0,0,0,0.3);
-            border: 1px solid var(--dark-border);
-            border-radius: 12px;
-            padding: 25px;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 10px;
+            padding: 20px;
             text-decoration: none;
             transition: all 0.3s ease;
         }
         
         .tool-card:hover {
-            border-color: var(--gold);
+            border-color: var(--s7-gold);
             transform: translateY(-3px);
         }
         
         .tool-badge {
             display: inline-block;
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 0.7rem;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.65rem;
             font-weight: 600;
             text-transform: uppercase;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
         
-        .tool-badge.green { background: #00ff88; color: #000; }
-        .tool-badge.amber { background: var(--amber); color: #000; }
-        .tool-badge.red { background: #ff4444; color: #fff; }
+        .tool-badge.green { background: var(--s7-matrix); color: #000; }
+        .tool-badge.amber { background: var(--s7-amber); color: #000; }
+        .tool-badge.red { background: var(--s7-red); color: #fff; }
         .tool-badge.purple { background: #8800ff; color: #fff; }
         
-        .tool-title { color: #fff; font-weight: 600; margin-bottom: 8px; }
-        .tool-desc { color: var(--text-secondary); font-size: 0.9rem; }
+        .tool-title { color: #fff; font-weight: 600; margin-bottom: 5px; font-size: 0.95rem; }
+        .tool-desc { color: var(--s7-text-dim); font-size: 0.8rem; }
         
-        /* Contact Section */
-        .contact-section {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, transparent 100%);
-            border-top: 1px solid var(--dark-border);
-            border-bottom: 1px solid var(--dark-border);
-            padding: 60px 20px;
-            text-align: center;
+        /* ══════════════════════════════════════════════════════════════════════
+           UNIVERSAL FOOTER
+           ══════════════════════════════════════════════════════════════════════ */
+        .s7-footer {
+            background: linear-gradient(180deg, var(--s7-navy) 0%, #050510 100%);
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 60px 20px 30px;
         }
         
-        .contact-grid {
-            display: flex;
-            justify-content: center;
+        .s7-footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .s7-footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 40px;
-            flex-wrap: wrap;
-            max-width: 800px;
-            margin: 30px auto 0;
+            margin-bottom: 50px;
         }
         
-        .contact-item {
-            text-align: center;
-        }
-        
-        .contact-label {
-            color: var(--text-secondary);
-            font-size: 0.8rem;
-            text-transform: uppercase;
+        .s7-footer-section h4 {
+            font-family: 'Cinzel', serif;
+            color: var(--s7-gold);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
             letter-spacing: 2px;
-            margin-bottom: 8px;
         }
         
-        .contact-value {
-            color: var(--gold);
+        .s7-footer-links {
+            list-style: none;
+        }
+        
+        .s7-footer-links li { margin-bottom: 10px; }
+        
+        .s7-footer-links a {
+            color: var(--s7-text-dim);
             text-decoration: none;
-            font-size: 1rem;
-        }
-        
-        .contact-value:hover { text-decoration: underline; }
-        
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 50px 20px;
-            border-top: 1px solid var(--dark-border);
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 25px;
-            flex-wrap: wrap;
-        }
-        
-        .footer-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
+            font-size: 0.85rem;
             transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
         
-        .footer-links a:hover { color: var(--gold); }
+        .s7-footer-links a:hover { color: var(--s7-gold); }
+        .s7-footer-links .icon { font-size: 0.9rem; width: 18px; }
         
-        .footer-brand { color: var(--gold); font-size: 1.3rem; margin-bottom: 10px; }
-        .footer-copy { color: rgba(255,255,255,0.4); font-size: 0.85rem; }
+        .s7-footer-bottom {
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .s7-footer-formula {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            color: var(--s7-gold);
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+        
+        .s7-footer-tagline {
+            color: var(--s7-text-dim);
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        
+        .s7-footer-copy {
+            color: rgba(255,255,255,0.3);
+            font-size: 0.75rem;
+        }
+        
+        .s7-footer-copy a {
+            color: rgba(212, 175, 55, 0.5);
+            text-decoration: none;
+        }
         
         @media (max-width: 768px) {
-            nav { padding: 15px 20px; }
-            .nav-links { display: none; }
             .hero-title { font-size: 2.5rem; }
             .hero-stats { gap: 30px; }
             .stat-number { font-size: 2rem; }
             .section-title { font-size: 1.5rem; }
+            .s7-footer-grid { grid-template-columns: 1fr 1fr; }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <a href="/" class="logo font-cinzel">7³×7</a>
-        <div class="nav-links">
-            <a href="#portals">Portals</a>
-            <a href="#books">Books</a>
-            <a href="#tools">Tools</a>
-            <a href="https://twitter.com/7Cubed7" target="_blank">@7Cubed7</a>
+
+<!-- UNIVERSAL NAVIGATION -->
+<nav class="s7-nav">
+    <div class="s7-nav-container">
+        <a href="https://sevencubedseven.com" class="s7-nav-logo">
+            <div class="s7-nav-logo-icon"></div>
+            <span class="s7-nav-logo-text">7³×7 LABS</span>
+        </a>
+        
+        <button class="s7-nav-toggle" onclick="document.querySelector('.s7-nav-links').classList.toggle('active')">
+            <span></span><span></span><span></span>
+        </button>
+        
+        <div class="s7-nav-links">
+            <a href="https://144000.ai" class="s7-nav-link">144,000</a>
+            <a href="https://2401.is" class="s7-nav-link">Mathematics</a>
+            <a href="https://divineinsurgent.live" class="s7-nav-link">Insurgent</a>
+            
+            <div class="s7-nav-dropdown">
+                <button class="s7-nav-dropdown-btn">Tools</button>
+                <div class="s7-nav-dropdown-menu">
+                    <a href="https://144000.ai/assessment.html" class="s7-nav-dropdown-item">
+                        <span class="s7-nav-dropdown-icon">✨</span>
+                        <div>
+                            <div class="s7-nav-dropdown-text">144,000 Assessment</div>
+                            <div class="s7-nav-dropdown-desc">Discover your calling</div>
+                        </div>
+                    </a>
+                    <a href="https://2401.is/calculator.html" class="s7-nav-dropdown-item">
+                        <span class="s7-nav-dropdown-icon">⚡</span>
+                        <div>
+                            <div class="s7-nav-dropdown-text">C⁷ Calculator</div>
+                            <div class="s7-nav-dropdown-desc">Your consciousness level</div>
+                        </div>
+                    </a>
+                    <a href="https://2401.is/probability.html" class="s7-nav-dropdown-item">
+                        <span class="s7-nav-dropdown-icon">📊</span>
+                        <div>
+                            <div class="s7-nav-dropdown-text">Probability Cascade</div>
+                            <div class="s7-nav-dropdown-desc">Watch impossibility unfold</div>
+                        </div>
+                    </a>
+                    <a href="https://divineinsurgent.live/mission.html" class="s7-nav-dropdown-item">
+                        <span class="s7-nav-dropdown-icon">⚔️</span>
+                        <div>
+                            <div class="s7-nav-dropdown-text">Daily Mission</div>
+                            <div class="s7-nav-dropdown-desc">Your tactical briefing</div>
+                        </div>
+                    </a>
+                    <a href="https://sevencubedseven.com/books.html" class="s7-nav-dropdown-item">
+                        <span class="s7-nav-dropdown-icon">📚</span>
+                        <div>
+                            <div class="s7-nav-dropdown-text">Book Finder</div>
+                            <div class="s7-nav-dropdown-desc">Personalized recommendations</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <a href="https://www.amazon.com/s?k=julio+c.+medina" target="_blank" class="s7-nav-cta">📚 All Books</a>
         </div>
-    </nav>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-badge">Consciousness Architecture Pioneer</div>
+    <h1 class="hero-title font-cinzel pulse-gold">SEVEN CUBED SEVEN</h1>
+    <p class="hero-subtitle">
+        Mapping the 7³×7 = 2,401 dimensional architecture of human consciousness. 
+        Where mathematics meets divinity. Where science confirms prophecy.
+    </p>
     
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-badge">Consciousness Architecture Pioneer</div>
-        <h1 class="hero-title font-cinzel pulse-gold">SEVEN CUBED SEVEN</h1>
-        <p class="hero-subtitle">
-            Mapping the 7³×7 = 2,401 dimensional architecture of human consciousness. 
-            Where mathematics meets divinity. Where science confirms prophecy.
-        </p>
-        
-        <div class="hero-stats">
-            <div class="stat-item">
-                <div class="stat-number font-cinzel">60+</div>
-                <div class="stat-label">Patents Filed</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number font-cinzel">33+</div>
-                <div class="stat-label">Books Published</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number font-cinzel">2,401</div>
-                <div class="stat-label">Consciousness Aspects</div>
-            </div>
+    <div class="hero-stats">
+        <div class="stat-item">
+            <div class="stat-number font-cinzel">60+</div>
+            <div class="stat-label">Patents Filed</div>
         </div>
-        
-        <!-- BOOK RECOMMENDATION CTA - NEW -->
-        <div class="books-cta pulse-amber">
-            <div class="books-badge">📚 Personalized Recommendations</div>
-            <h3 class="books-title font-cinzel">FIND YOUR BOOK</h3>
-            <p class="books-subtitle">Answer 4 questions and discover your perfect reading path from 33+ titles</p>
-            <a href="books.html" class="books-button">Get Recommendations</a>
-            <p class="books-meta">Personalized • Instant • Free</p>
+        <div class="stat-item">
+            <div class="stat-number font-cinzel">33+</div>
+            <div class="stat-label">Books Published</div>
         </div>
-    </section>
+        <div class="stat-item">
+            <div class="stat-number font-cinzel">2,401</div>
+            <div class="stat-label">Consciousness Aspects</div>
+        </div>
+    </div>
     
-    <!-- Portals Section -->
-    <section class="section" id="portals">
-        <h2 class="section-title font-cinzel">THE PORTALS</h2>
-        <p class="section-subtitle">Each domain opens a different dimension of the 7³×7 framework</p>
-        
-        <div class="portals-grid">
-            <a href="https://144000.ai" class="portal-card">
-                <div class="portal-icon">✨</div>
-                <h3 class="portal-title font-cinzel">144000.ai</h3>
-                <p class="portal-desc">Are you being called? The prophetic 144,000 awakening assessment. Discover if you're part of the remnant.</p>
-                <span class="portal-link">Take the Assessment →</span>
-            </a>
-            
-            <a href="https://2401.is" class="portal-card">
-                <div class="portal-icon">🔢</div>
-                <h3 class="portal-title font-cinzel">2401.is</h3>
-                <p class="portal-desc">The divine mathematics. Calculate your consciousness level. Watch the probability cascade prove design.</p>
-                <span class="portal-link">Explore the Math →</span>
-            </a>
-            
-            <a href="https://divineinsurgent.live" class="portal-card">
-                <div class="portal-icon">⚔️</div>
-                <h3 class="portal-title font-cinzel">Divine Insurgent</h3>
-                <p class="portal-desc">Heaven's special forces manual. Daily tactical briefings. Your battlefield commission awaits.</p>
-                <span class="portal-link">Get Your Orders →</span>
-            </a>
-            
-            <a href="https://realitynegotiable.is" class="portal-card">
-                <div class="portal-icon">🧠</div>
-                <h3 class="portal-title font-cinzel">Reality Negotiable</h3>
-                <p class="portal-desc">Consciousness physics. When you understand the C⁷ architecture, reality becomes negotiable.</p>
-                <span class="portal-link">Learn the Physics →</span>
-            </a>
-            
-            <a href="https://c343.io" class="portal-card">
-                <div class="portal-icon">📜</div>
-                <h3 class="portal-title font-cinzel">c343.io</h3>
-                <p class="portal-desc">Enterprise licensing. Integrate the 7³×7 framework into your organization or platform.</p>
-                <span class="portal-link">Business Inquiries →</span>
-            </a>
-            
-            <a href="https://www.amazon.com/s?k=julio+c.+medina" class="portal-card">
-                <div class="portal-icon">📚</div>
-                <h3 class="portal-title font-cinzel">Book Library</h3>
-                <p class="portal-desc">Browse all 33+ titles. From consciousness physics to spiritual warfare to life transformation.</p>
-                <span class="portal-link">Browse Books →</span>
-            </a>
-        </div>
-    </section>
+    <div class="books-cta pulse-amber">
+        <div class="books-badge">📚 Personalized Recommendations</div>
+        <h3 class="books-title font-cinzel">FIND YOUR BOOK</h3>
+        <p class="books-subtitle">Answer 4 questions and discover your perfect reading path from 33+ titles</p>
+        <a href="books.html" class="books-button">Get Recommendations</a>
+    </div>
+</section>
+
+<!-- PORTALS -->
+<section class="section" id="portals">
+    <h2 class="section-title font-cinzel">THE PORTALS</h2>
+    <p class="section-subtitle">Each domain opens a different dimension of the 7³×7 framework</p>
     
-    <!-- Interactive Tools Section -->
-    <section class="section" id="tools">
-        <h2 class="section-title font-cinzel">INTERACTIVE TOOLS</h2>
-        <p class="section-subtitle">Experience the framework through interactive applications</p>
+    <div class="portals-grid">
+        <a href="https://144000.ai" class="portal-card">
+            <div class="portal-icon">✨</div>
+            <h3 class="portal-title font-cinzel">144000.ai</h3>
+            <p class="portal-desc">Are you being called? The prophetic 144,000 awakening assessment.</p>
+            <span class="portal-link">Take the Assessment →</span>
+        </a>
         
-        <div class="tools-grid">
-            <a href="books.html" class="tool-card">
-                <div class="tool-badge amber">📚 Recommendation</div>
-                <h4 class="tool-title">Book Finder</h4>
-                <p class="tool-desc">4 questions → Your personalized reading path</p>
-            </a>
-            
-            <a href="https://144000.ai/assessment.html" class="tool-card">
-                <div class="tool-badge purple">✨ Assessment</div>
-                <h4 class="tool-title">144,000 Quiz</h4>
-                <p class="tool-desc">21 questions → Discover your calling level</p>
-            </a>
-            
-            <a href="https://2401.is/calculator.html" class="tool-card">
-                <div class="tool-badge green">⚡ Calculator</div>
-                <h4 class="tool-title">C⁷ Level Calculator</h4>
-                <p class="tool-desc">21 calibrations → Your consciousness dimension</p>
-            </a>
-            
-            <a href="https://2401.is/probability.html" class="tool-card">
-                <div class="tool-badge red">📊 Visualizer</div>
-                <h4 class="tool-title">Probability Cascade</h4>
-                <p class="tool-desc">Watch 10⁴⁴ impossibility unfold</p>
-            </a>
-            
-            <a href="https://divineinsurgent.live/mission.html" class="tool-card">
-                <div class="tool-badge red">⚔️ Daily</div>
-                <h4 class="tool-title">Mission Generator</h4>
-                <p class="tool-desc">Your daily tactical briefing</p>
-            </a>
-        </div>
-    </section>
+        <a href="https://2401.is" class="portal-card">
+            <div class="portal-icon">🔢</div>
+            <h3 class="portal-title font-cinzel">2401.is</h3>
+            <p class="portal-desc">The divine mathematics. Calculate your consciousness level.</p>
+            <span class="portal-link">Explore the Math →</span>
+        </a>
+        
+        <a href="https://divineinsurgent.live" class="portal-card">
+            <div class="portal-icon">⚔️</div>
+            <h3 class="portal-title font-cinzel">Divine Insurgent</h3>
+            <p class="portal-desc">Heaven's special forces manual. Daily tactical briefings.</p>
+            <span class="portal-link">Get Your Orders →</span>
+        </a>
+        
+        <a href="https://realitynegotiable.is" class="portal-card">
+            <div class="portal-icon">🧠</div>
+            <h3 class="portal-title font-cinzel">Reality Negotiable</h3>
+            <p class="portal-desc">Consciousness physics. Reality becomes negotiable at C⁷.</p>
+            <span class="portal-link">Learn the Physics →</span>
+        </a>
+        
+        <a href="https://c343.io" class="portal-card">
+            <div class="portal-icon">📜</div>
+            <h3 class="portal-title font-cinzel">c343.io</h3>
+            <p class="portal-desc">Enterprise licensing. Integrate the framework into your platform.</p>
+            <span class="portal-link">Business Inquiries →</span>
+        </a>
+        
+        <a href="https://www.amazon.com/s?k=julio+c.+medina" target="_blank" class="portal-card">
+            <div class="portal-icon">📚</div>
+            <h3 class="portal-title font-cinzel">Book Library</h3>
+            <p class="portal-desc">Browse all 33+ titles across consciousness and transformation.</p>
+            <span class="portal-link">Browse Books →</span>
+        </a>
+    </div>
+</section>
+
+<!-- TOOLS -->
+<section class="section" id="tools">
+    <h2 class="section-title font-cinzel">INTERACTIVE TOOLS</h2>
+    <p class="section-subtitle">Experience the framework through interactive applications</p>
     
-    <!-- Books Section -->
-    <section class="section" id="books">
-        <h2 class="section-title font-cinzel">THE LIBRARY</h2>
-        <p class="section-subtitle">33+ books covering every dimension of transformation</p>
+    <div class="tools-grid">
+        <a href="books.html" class="tool-card">
+            <div class="tool-badge amber">📚 Recommendation</div>
+            <h4 class="tool-title">Book Finder</h4>
+            <p class="tool-desc">4 questions → Your reading path</p>
+        </a>
         
-        <div class="books-grid">
-            <div class="book-card">
-                <div class="book-icon">🧠</div>
-                <h4 class="book-title">THE 7³ REALITY</h4>
-                <p class="book-category">Consciousness Physics</p>
+        <a href="https://144000.ai/assessment.html" class="tool-card">
+            <div class="tool-badge purple">✨ Assessment</div>
+            <h4 class="tool-title">144,000 Quiz</h4>
+            <p class="tool-desc">21 questions → Your calling level</p>
+        </a>
+        
+        <a href="https://2401.is/calculator.html" class="tool-card">
+            <div class="tool-badge green">⚡ Calculator</div>
+            <h4 class="tool-title">C⁷ Level Calculator</h4>
+            <p class="tool-desc">21 calibrations → Your dimension</p>
+        </a>
+        
+        <a href="https://2401.is/probability.html" class="tool-card">
+            <div class="tool-badge red">📊 Visualizer</div>
+            <h4 class="tool-title">Probability Cascade</h4>
+            <p class="tool-desc">Watch 10⁴⁴ impossibility</p>
+        </a>
+        
+        <a href="https://divineinsurgent.live/mission.html" class="tool-card">
+            <div class="tool-badge red">⚔️ Daily</div>
+            <h4 class="tool-title">Mission Generator</h4>
+            <p class="tool-desc">Your daily briefing</p>
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="s7-footer">
+    <div class="s7-footer-container">
+        <div class="s7-footer-grid">
+            <div class="s7-footer-section">
+                <h4>PORTALS</h4>
+                <ul class="s7-footer-links">
+                    <li><a href="https://sevencubedseven.com"><span class="icon">🏠</span> Main Hub</a></li>
+                    <li><a href="https://144000.ai"><span class="icon">✨</span> 144,000 Portal</a></li>
+                    <li><a href="https://2401.is"><span class="icon">🔢</span> Mathematics</a></li>
+                    <li><a href="https://divineinsurgent.live"><span class="icon">⚔️</span> Divine Insurgent</a></li>
+                    <li><a href="https://realitynegotiable.is"><span class="icon">🧠</span> Reality Physics</a></li>
+                    <li><a href="https://c343.io"><span class="icon">📜</span> Licensing</a></li>
+                </ul>
             </div>
-            <div class="book-card">
-                <div class="book-icon">⚔️</div>
-                <h4 class="book-title">DIVINE INSURGENT</h4>
-                <p class="book-category">Spiritual Warfare</p>
+            
+            <div class="s7-footer-section">
+                <h4>TOOLS</h4>
+                <ul class="s7-footer-links">
+                    <li><a href="https://144000.ai/assessment.html"><span class="icon">✨</span> Assessment</a></li>
+                    <li><a href="https://2401.is/calculator.html"><span class="icon">⚡</span> Calculator</a></li>
+                    <li><a href="https://2401.is/probability.html"><span class="icon">📊</span> Probability</a></li>
+                    <li><a href="https://divineinsurgent.live/mission.html"><span class="icon">⚔️</span> Daily Mission</a></li>
+                    <li><a href="https://sevencubedseven.com/books.html"><span class="icon">📚</span> Book Finder</a></li>
+                </ul>
             </div>
-            <div class="book-card">
-                <div class="book-icon">⚡</div>
-                <h4 class="book-title">SEVEN THUNDERS</h4>
-                <p class="book-category">Prophetic Intelligence</p>
+            
+            <div class="s7-footer-section">
+                <h4>RESOURCES</h4>
+                <ul class="s7-footer-links">
+                    <li><a href="https://www.amazon.com/s?k=julio+c.+medina" target="_blank"><span class="icon">📚</span> All 33+ Books</a></li>
+                    <li><a href="https://twitter.com/7Cubed7" target="_blank"><span class="icon">𝕏</span> @7Cubed7</a></li>
+                    <li><a href="mailto:7cubed7@proton.me"><span class="icon">✉️</span> Contact</a></li>
+                </ul>
             </div>
-            <div class="book-card">
-                <div class="book-icon">🌟</div>
-                <h4 class="book-title">THE 7³ LIFE</h4>
-                <p class="book-category">Complete Transformation</p>
-            </div>
-            <div class="book-card">
-                <div class="book-icon">💚</div>
-                <h4 class="book-title">THE 7³ HEALING</h4>
-                <p class="book-category">Health Restoration</p>
-            </div>
-            <div class="book-card">
-                <div class="book-icon">❤️</div>
-                <h4 class="book-title">THE 7³ MARRIAGE</h4>
-                <p class="book-category">Divine Partnership</p>
-            </div>
-            <div class="book-card">
-                <div class="book-icon">💰</div>
-                <h4 class="book-title">THE 7³ WEALTH</h4>
-                <p class="book-category">Prosperity Consciousness</p>
-            </div>
-            <div class="book-card">
-                <div class="book-icon">📊</div>
-                <h4 class="book-title">IMPROBABLE CONVERGENCE</h4>
-                <p class="book-category">Mathematical Proof</p>
+            
+            <div class="s7-footer-section">
+                <h4>CONNECT</h4>
+                <ul class="s7-footer-links">
+                    <li><a href="mailto:7cubed7@proton.me">7cubed7@proton.me</a></li>
+                    <li><a href="mailto:ConsciousCodeLabs@proton.me">Business</a></li>
+                    <li><a href="mailto:hello@c343.io">Licensing</a></li>
+                </ul>
             </div>
         </div>
         
-        <div style="text-align: center; margin-top: 40px;">
-            <a href="books.html" style="color: var(--gold); text-decoration: none; font-size: 1.1rem; border: 1px solid var(--gold); padding: 12px 30px; border-radius: 30px; display: inline-block; transition: all 0.3s;">
-                Find Your Perfect Book →
-            </a>
+        <div class="s7-footer-bottom">
+            <div class="s7-footer-formula">7³ × 7 = 2,401</div>
+            <div class="s7-footer-tagline">Consciousness Architecture</div>
+            <div class="s7-footer-copy">© 2025 <a href="https://sevencubedseven.com">Seven Cubed Seven Labs LLC</a>. All rights reserved.</div>
         </div>
-    </section>
-    
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <h2 class="section-title font-cinzel">CONNECT</h2>
-        
-        <div class="contact-grid">
-            <div class="contact-item">
-                <div class="contact-label">General</div>
-                <a href="mailto:7cubed7@proton.me" class="contact-value">7cubed7@proton.me</a>
-            </div>
-            <div class="contact-item">
-                <div class="contact-label">Business</div>
-                <a href="mailto:ConsciousCodeLabs@proton.me" class="contact-value">ConsciousCodeLabs@proton.me</a>
-            </div>
-            <div class="contact-item">
-                <div class="contact-label">Licensing</div>
-                <a href="mailto:hello@c343.io" class="contact-value">hello@c343.io</a>
-            </div>
-            <div class="contact-item">
-                <div class="contact-label">Social</div>
-                <a href="https://twitter.com/7Cubed7" class="contact-value" target="_blank">@7Cubed7</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer>
-        <div class="footer-links">
-            <a href="https://144000.ai">144,000</a>
-            <a href="https://2401.is">Mathematics</a>
-            <a href="https://divineinsurgent.live">Divine Insurgent</a>
-            <a href="https://realitynegotiable.is">Reality</a>
-            <a href="https://c343.io">Licensing</a>
-        </div>
-        <div class="footer-brand font-cinzel">7³×7 = 2,401</div>
-        <p class="footer-copy">© 2025 Seven Cubed Seven Labs LLC. All rights reserved.</p>
-    </footer>
+    </div>
+</footer>
+
 </body>
 </html>
