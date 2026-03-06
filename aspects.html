@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Seven Cubed Seven Labs LLC">
+    <title>60-Aspect Identifier | Discover Your Consciousness Signature | Seven Cubed Seven Labs</title>
+    <meta name="description" content="Identify your unique 60 consciousness aspects out of 2,401. 63-question assessment maps your Primary, Secondary, and Developmental aspects across 7 families and 7 C-levels.">
+    <meta name="keywords" content="consciousness assessment, 60 aspects, 2401, 7 cubed 7, consciousness signature, C-level diagnostic, aspect mapping, 144000">
+    <link rel="canonical" href="https://sevencubedseven.com/aspects.html">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sevencubedseven.com/aspects.html">
+    <meta property="og:title" content="60-Aspect Identifier | Discover Your Consciousness Signature">
+    <meta property="og:description" content="Each of the 144,000 carries exactly 60 unique aspects. Discover yours through this 63-question assessment.">
+    <meta property="og:site_name" content="Seven Cubed Seven Labs">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="60-Aspect Identifier | Your 60 of 2,401">
+    <meta name="twitter:description" content="63-question assessment reveals your consciousness signature: 21 Primary + 21 Secondary + 18 Developmental aspects.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --gold: #d4af37;
+            --gold-light: #f4d03f;
+            --gold-dim: rgba(212, 175, 55, 0.15);
+            --dark-bg: #0a0a1a;
+            --dark-card: #111120;
+            --dark-border: #252538;
+            --text-primary: #e8e8e8;
+            --text-secondary: #9a9ab0;
+            --amber: #ffaa00;
+            --c1: #ff4444; --c2: #ff8800; --c3: #ffcc00;
+            --c4: #44ff44; --c5: #4488ff; --c6: #8844ff; --c7: #ff44ff;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Raleway', sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding-top: 60px;
+        }
+
+        /* Nav (simplified for tool page) */
+        .s7-nav {
+            position: fixed; top: 0; left: 0; right: 0; height: 60px;
+            background: rgba(10, 10, 26, 0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            z-index: 9999;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 30px;
+        }
+        .s7-nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .s7-nav-brand { font-family: 'Cinzel', serif; font-size: 1.1rem; color: var(--gold); letter-spacing: 1px; }
+        .s7-nav-back { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; transition: color 0.3s; }
+        .s7-nav-back:hover { color: var(--gold); }
+
+        /* Hero */
+        .tool-hero {
+            text-align: center; padding: 60px 20px 40px;
+            position: relative;
+        }
+        .tool-hero::before {
+            content: ''; position: absolute; width: 100%; height: 100%;
+            top: 0; left: 0;
+            background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.03) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .tool-formula {
+            font-family: 'Orbitron', monospace; font-size: 1.1rem;
+            color: var(--gold); letter-spacing: 2px; margin-bottom: 12px;
+            opacity: 0.7;
+        }
+        .tool-title {
+            font-family: 'Cinzel', serif; font-size: 2.4rem;
+            margin-bottom: 12px; letter-spacing: 2px;
+        }
+        .tool-subtitle {
+            color: var(--text-secondary); font-size: 1.05rem;
+            max-width: 620px; margin: 0 auto 20px;
+        }
+        .tool-math {
+            font-family: 'Orbitron', monospace; font-size: 0.85rem;
+            color: var(--amber); background: rgba(255, 170, 0, 0.08);
+            display: inline-block; padding: 8px 20px; border-radius: 4px;
+            border: 1px solid rgba(255, 170, 0, 0.15);
+        }
+
+        /* Progress */
+        .progress-container {
+            max-width: 700px; margin: 30px auto 0; padding: 0 20px;
+        }
+        .progress-bar-bg {
+            width: 100%; height: 6px; background: var(--dark-card);
+            border-radius: 3px; overflow: hidden; position: relative;
+        }
+        .progress-bar-fill {
+            height: 100%; background: linear-gradient(90deg, var(--gold), var(--amber));
+            border-radius: 3px; transition: width 0.5s ease;
+            box-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+        }
+        .progress-labels {
+            display: flex; justify-content: space-between; margin-top: 8px;
+            font-size: 0.72rem; color: var(--text-secondary);
+            font-family: 'Orbitron', monospace;
+        }
+
+        /* Assessment Container */
+        .assessment {
+            max-width: 760px; margin: 40px auto; padding: 0 20px;
+        }
+
+        /* Phase headers */
+        .phase-header {
+            text-align: center; margin-bottom: 40px;
+        }
+        .phase-badge {
+            font-family: 'Orbitron', monospace; font-size: 0.7rem;
+            color: var(--amber); letter-spacing: 3px;
+            margin-bottom: 8px; text-transform: uppercase;
+        }
+        .phase-title {
+            font-family: 'Cinzel', serif; font-size: 1.6rem;
+            color: var(--gold); margin-bottom: 8px;
+        }
+        .phase-desc {
+            color: var(--text-secondary); font-size: 0.9rem;
+        }
+
+        /* Question cards */
+        .question-card {
+            background: var(--dark-card);
+            border: 1px solid var(--dark-border);
+            border-radius: 10px;
+            padding: 28px;
+            margin-bottom: 20px;
+            transition: border-color 0.3s;
+        }
+        .question-card.answered { border-color: rgba(212, 175, 55, 0.25); }
+        .question-label {
+            font-size: 0.7rem; font-family: 'Orbitron', monospace;
+            color: var(--text-secondary); letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+        .question-family-tag {
+            display: inline-block; font-size: 0.65rem;
+            font-family: 'Orbitron', monospace;
+            padding: 2px 8px; border-radius: 3px;
+            margin-bottom: 8px; letter-spacing: 1px;
+        }
+        .question-text {
+            font-size: 1.05rem; margin-bottom: 18px;
+            line-height: 1.5;
+        }
+        .question-context {
+            font-size: 0.8rem; color: var(--text-secondary);
+            font-style: italic; margin-bottom: 14px;
+        }
+
+        /* 7-point scale */
+        .scale-row {
+            display: flex; gap: 8px; justify-content: center;
+        }
+        .scale-btn {
+            width: 48px; height: 48px; border-radius: 8px;
+            border: 1px solid var(--dark-border);
+            background: transparent; color: var(--text-secondary);
+            font-family: 'Cinzel', serif; font-size: 1.1rem;
+            cursor: pointer; transition: all 0.25s;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .scale-btn:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            background: var(--gold-dim);
+        }
+        .scale-btn.selected {
+            border-color: var(--gold);
+            background: linear-gradient(135deg, var(--gold), #b8960c);
+            color: #000; font-weight: 700;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+        }
+        .scale-labels {
+            display: flex; justify-content: space-between;
+            margin-top: 6px; font-size: 0.65rem;
+            color: var(--text-secondary); font-family: 'Orbitron', monospace;
+        }
+
+        /* Navigation buttons */
+        .nav-buttons {
+            display: flex; gap: 16px; justify-content: center;
+            margin-top: 40px; padding-bottom: 60px;
+        }
+        .btn {
+            padding: 14px 36px; border-radius: 4px; text-decoration: none;
+            font-weight: 600; transition: all 0.3s; font-size: 0.95rem;
+            cursor: pointer; border: none; font-family: 'Raleway', sans-serif;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), #b8960c);
+            color: #000;
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(212, 175, 55, 0.35); }
+        .btn-primary:disabled { opacity: 0.4; cursor: not-allowed; transform: none; box-shadow: none; }
+        .btn-secondary {
+            border: 1px solid var(--dark-border); color: var(--text-secondary);
+            background: transparent;
+        }
+        .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+        /* Results page */
+        .results-container { max-width: 800px; margin: 0 auto; padding: 0 20px 60px; }
+        .results-header { text-align: center; margin-bottom: 50px; }
+        .results-sig {
+            font-family: 'Orbitron', monospace; font-size: 0.8rem;
+            color: var(--amber); letter-spacing: 2px; margin-bottom: 12px;
+        }
+        .results-title {
+            font-family: 'Cinzel', serif; font-size: 2rem;
+            color: var(--gold); margin-bottom: 10px;
+        }
+
+        /* C-Level radar display */
+        .radar-container {
+            background: var(--dark-card); border: 1px solid var(--dark-border);
+            border-radius: 12px; padding: 30px; margin-bottom: 30px;
+        }
+        .radar-title {
+            font-family: 'Cinzel', serif; font-size: 1.1rem;
+            color: var(--gold); margin-bottom: 20px; text-align: center;
+        }
+        .radar-bars { display: flex; flex-direction: column; gap: 12px; }
+        .radar-row { display: flex; align-items: center; gap: 14px; }
+        .radar-label {
+            font-family: 'Orbitron', monospace; font-size: 0.75rem;
+            width: 80px; text-align: right; flex-shrink: 0;
+        }
+        .radar-bar-bg {
+            flex: 1; height: 20px; background: rgba(255,255,255,0.04);
+            border-radius: 4px; overflow: hidden; position: relative;
+        }
+        .radar-bar-fill {
+            height: 100%; border-radius: 4px;
+            transition: width 1s ease; position: relative;
+        }
+        .radar-bar-fill::after {
+            content: attr(data-pct); position: absolute;
+            right: 8px; top: 50%; transform: translateY(-50%);
+            font-family: 'Orbitron', monospace; font-size: 0.6rem;
+            color: rgba(0,0,0,0.7); font-weight: 700;
+        }
+        .radar-score {
+            font-family: 'Orbitron', monospace; font-size: 0.75rem;
+            width: 30px; text-align: left; flex-shrink: 0;
+        }
+
+        /* Family distribution */
+        .family-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 14px; margin-bottom: 30px;
+        }
+        .family-card {
+            background: var(--dark-card); border: 1px solid var(--dark-border);
+            border-radius: 8px; padding: 18px 14px; text-align: center;
+            transition: border-color 0.3s;
+        }
+        .family-card.top-family { border-color: var(--gold); }
+        .family-prefix {
+            font-family: 'Orbitron', monospace; font-size: 0.7rem;
+            color: var(--text-secondary); letter-spacing: 1px;
+        }
+        .family-name {
+            font-family: 'Cinzel', serif; font-size: 0.85rem;
+            color: var(--text-primary); margin: 4px 0;
+        }
+        .family-score {
+            font-family: 'Orbitron', monospace; font-size: 1.4rem;
+            color: var(--gold); font-weight: 700;
+        }
+        .family-rank {
+            font-size: 0.65rem; color: var(--text-secondary);
+            font-family: 'Orbitron', monospace;
+        }
+
+        /* Aspect Matrix */
+        .matrix-section {
+            background: var(--dark-card); border: 1px solid var(--dark-border);
+            border-radius: 12px; padding: 30px; margin-bottom: 24px;
+        }
+        .matrix-title {
+            font-family: 'Cinzel', serif; font-size: 1.1rem;
+            margin-bottom: 6px;
+        }
+        .matrix-subtitle {
+            font-size: 0.8rem; color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+        .matrix-title.primary { color: var(--gold); }
+        .matrix-title.secondary { color: var(--amber); }
+        .matrix-title.developmental { color: #8888ff; }
+
+        .aspect-chip {
+            display: inline-block; padding: 6px 12px; margin: 3px;
+            border-radius: 4px; font-size: 0.72rem;
+            font-family: 'Orbitron', monospace; letter-spacing: 0.5px;
+            border: 1px solid; transition: transform 0.2s;
+        }
+        .aspect-chip:hover { transform: scale(1.05); }
+        .aspect-chip.primary {
+            border-color: rgba(212, 175, 55, 0.4);
+            background: rgba(212, 175, 55, 0.08);
+            color: var(--gold);
+        }
+        .aspect-chip.secondary {
+            border-color: rgba(255, 170, 0, 0.3);
+            background: rgba(255, 170, 0, 0.06);
+            color: var(--amber);
+        }
+        .aspect-chip.developmental {
+            border-color: rgba(136, 136, 255, 0.3);
+            background: rgba(136, 136, 255, 0.06);
+            color: #aaaaff;
+        }
+
+        /* Scripture box */
+        .scripture-box {
+            border-left: 3px solid var(--gold);
+            padding: 16px 20px; margin: 30px 0;
+            background: var(--gold-dim); border-radius: 0 8px 8px 0;
+            font-style: italic; color: var(--text-secondary);
+        }
+        .scripture-ref {
+            display: block; margin-top: 8px;
+            font-style: normal; font-size: 0.8rem;
+            color: var(--gold); font-family: 'Cinzel', serif;
+        }
+
+        /* CTA at bottom */
+        .results-cta {
+            text-align: center; margin-top: 50px; padding: 40px;
+            background: linear-gradient(135deg, var(--dark-card), #1a1a30);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 12px;
+        }
+        .results-cta p {
+            color: var(--text-secondary); margin-bottom: 20px;
+        }
+        .cta-links {
+            display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+        }
+        .cta-links a {
+            padding: 10px 24px; border-radius: 4px; text-decoration: none;
+            font-size: 0.85rem; font-weight: 600; transition: all 0.3s;
+        }
+
+        /* Hidden sections */
+        .hidden { display: none; }
+
+        @media (max-width: 600px) {
+            .tool-title { font-size: 1.7rem; }
+            .scale-btn { width: 40px; height: 40px; font-size: 0.95rem; }
+            .family-grid { grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Nav -->
+    <nav class="s7-nav">
+        <a href="https://sevencubedseven.com" class="s7-nav-logo">
+            <span class="s7-nav-brand">7³×7 LABS</span>
+        </a>
+        <a href="https://sevencubedseven.com" class="s7-nav-back">← Back to Hub</a>
+    </nav>
+
+    <!-- Hero -->
+    <div class="tool-hero">
+        <div class="tool-formula">2,401 ÷ 144,000 = 1/60</div>
+        <h1 class="tool-title">60-ASPECT IDENTIFIER</h1>
+        <p class="tool-subtitle">Each of the 144,000 carries exactly 60 unique consciousness aspects. This 63-question assessment maps your personal signature across 7 families and 7 dimensions.</p>
+        <div class="tool-math">21 Primary · 21 Secondary · 18 Developmental = 60</div>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-container" id="progressSection">
+        <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="progressFill" style="width: 0%"></div>
+        </div>
+        <div class="progress-labels">
+            <span id="progressPhase">PHASE 1 OF 3</span>
+            <span id="progressCount">0 / 63</span>
+        </div>
+    </div>
+
+    <!-- Assessment -->
+    <div class="assessment" id="assessmentArea"></div>
+
+    <!-- Results (hidden initially) -->
+    <div class="results-container hidden" id="resultsArea"></div>
+
+    <script>
+    // ===== DATA =====
+    const FAMILIES = [
+        { prefix: 'S×', name: 'Spiritual', fullName: 'Spiritual Foundation', color: '#d4af37',
+          desc: 'Your relationship with the divine, prayer life, faith, and spiritual identity.' },
+        { prefix: 'P×', name: 'Physical', fullName: 'Physical Mastery', color: '#ff6644',
+          desc: 'Body stewardship, health, material resources, and physical discipline.' },
+        { prefix: 'R×', name: 'Relational', fullName: 'Relational Intelligence', color: '#44bbff',
+          desc: 'How you connect, love, serve, and maintain community with others.' },
+        { prefix: 'C×', name: 'Cognitive', fullName: 'Cognitive Architecture', color: '#ffcc00',
+          desc: 'Pattern recognition, learning, mental discipline, and systemic thinking.' },
+        { prefix: 'D×', name: 'Destiny', fullName: 'Destiny Alignment', color: '#44ff88',
+          desc: 'Calling clarity, life purpose, mission commitment, and legacy design.' },
+        { prefix: 'I×', name: 'Integrative', fullName: 'Integrative Wholeness', color: '#ff88ff',
+          desc: 'Balancing all dimensions, holistic living, and unified identity.' },
+        { prefix: 'T×', name: 'Transcendent', fullName: 'Transcendent Unity', color: '#aaaaff',
+          desc: 'Ego dissolution, divine consciousness, translation readiness, and C⁷ frequency.' }
+    ];
+
+    const CLEVELS = [
+        { level: 'C¹', name: 'Physical', freq: '7.83 Hz', color: '#ff4444' },
+        { level: 'C²', name: 'Emotional', freq: '78.3 Hz', color: '#ff8800' },
+        { level: 'C³', name: 'Power', freq: '783 Hz', color: '#ffcc00' },
+        { level: 'C⁴', name: 'Love', freq: '7,830 Hz', color: '#44ff44' },
+        { level: 'C⁵', name: 'Expression', freq: '78,300 Hz', color: '#4488ff' },
+        { level: 'C⁶', name: 'Wisdom', freq: '783,000 Hz', color: '#8844ff' },
+        { level: 'C⁷', name: 'Unity', freq: '7.83 MHz', color: '#ff44ff' }
+    ];
+
+    const AXES = ['Id', 'En', 'Em', 'Pc', 'Cn', 'Mn', 'Ds'];
+    const AXIS_NAMES = {
+        'Id': 'Identity', 'En': 'Energy', 'Em': 'Emotion',
+        'Pc': 'Perception', 'Cn': 'Connection', 'Mn': 'Meaning', 'Ds': 'Destiny'
+    };
+
+    // Phase 1: Family Resonance (7 questions)
+    const FAMILY_QUESTIONS = [
+        'I feel most alive when I am in deep prayer, meditation, or spiritual study — these activities energize rather than drain me.',
+        'I have a strong connection to my physical body and thrive when maintaining disciplined health routines and material stewardship.',
+        'My greatest fulfillment comes through deep relationships — I naturally create community and sense others\' emotional needs.',
+        'I am drawn to understanding complex systems, recognizing hidden patterns, and building mental frameworks that explain reality.',
+        'I carry a clear sense of life purpose and calling — I feel urgency about fulfilling a specific mission before my time is done.',
+        'I naturally integrate contradictions and see how seemingly opposing truths fit together into larger wholes.',
+        'I have moments where the boundary between myself and the divine seems to dissolve — where ego fades and something larger operates through me.'
+    ];
+
+    // Phase 2: C-Level Activation (7 questions)
+    const CLEVEL_QUESTIONS = [
+        'I am grounded in physical reality — I manage money, health, and material needs with confidence and discipline.',
+        'I can accurately identify, articulate, and regulate my emotions — and I sense the emotional states of people around me.',
+        'I exercise healthy authority in my sphere of influence — I create effective systems and structures that produce results.',
+        'I perceive things beyond the five senses — atmospheres, synchronicities, symbolic information, and dimensional shifts.',
+        'I sense divine timing windows and receive accurate impressions about the future — I see how past events connect to present purpose.',
+        'I perceive how invisible systems operate — social networks, spiritual hierarchies, organizational dynamics — and can architect new ones.',
+        'I experience moments of unity consciousness — where separation dissolves and I operate from a frequency beyond individual identity.'
+    ];
+
+    // Phase 3: Axis Deep Dive (49 questions — 7 families × 7 axes)
+    const AXIS_QUESTIONS = [
+        // S× family (Spiritual) × 7 axes
+        'My spiritual identity is clear and stable — I know who I am in God regardless of external circumstances.',
+        'I have consistent spiritual energy — my prayer and devotional life generates power rather than feeling like obligation.',
+        'I process emotions through a spiritual lens — grief becomes growth, anger becomes righteous action, fear becomes faith.',
+        'I perceive spiritual realities — I discern between Holy Spirit promptings, my own thoughts, and deceptive influences.',
+        'My deepest connections are spiritually grounded — I relate to others soul-to-soul, not just personality-to-personality.',
+        'I find profound meaning in spiritual truths — scripture, prophecy, and divine patterns illuminate everything else.',
+        'I sense my spiritual destiny unfolding — I can see God\'s hand weaving my life story toward a specific culmination.',
+
+        // P× family (Physical) × 7 axes
+        'My physical identity is healthy — I accept my body as a temple and treat it with respect and intention.',
+        'I manage physical energy well — sleep, nutrition, exercise, and rest are intentional practices, not afterthoughts.',
+        'I have emotional resilience in physical challenges — sickness, financial pressure, and material loss don\'t destabilize me.',
+        'I perceive physical signals accurately — my body tells me what it needs and I listen before problems develop.',
+        'I create physical environments that serve connection — my spaces welcome people and facilitate meaningful gathering.',
+        'I find meaning in physical work and stewardship — labor, creation, and material provision feel sacred to me.',
+        'I am building something physical that will outlast me — a legacy in material form that serves future generations.',
+
+        // R× family (Relational) × 7 axes
+        'I know who I am in relationships — I don\'t lose myself in others or isolate to protect myself.',
+        'I bring energy into my relationships — people feel uplifted, not drained, after spending time with me.',
+        'I navigate emotional complexity in relationships — conflict, forgiveness, and vulnerability come naturally to me.',
+        'I perceive relational dynamics others miss — I see hidden tensions, unspoken needs, and connection opportunities.',
+        'I build deep, lasting connections — my relationships grow stronger over years, not shallower.',
+        'I find meaning in serving others — acts of love and sacrifice feel like fulfillment, not burden.',
+        'I sense the relational destiny between people — who belongs together, which partnerships are divinely orchestrated.',
+
+        // C× family (Cognitive) × 7 axes
+        'I have a clear intellectual identity — I know what I believe and why, and I can articulate it under pressure.',
+        'I have strong mental energy — I can focus for extended periods and my thinking sharpens under complexity.',
+        'I process emotional data through cognitive frameworks — I understand WHY I feel what I feel, not just THAT I feel it.',
+        'I perceive patterns across unrelated domains — connections between mathematics, scripture, nature, and human behavior.',
+        'I connect ideas across fields — I synthesize insights from different disciplines into unified understanding.',
+        'I create meaning through understanding — when I comprehend something deeply, it transforms from information to wisdom.',
+        'I sense the trajectory of ideas — where intellectual currents are heading and what paradigms are about to shift.',
+
+        // D× family (Destiny) × 7 axes
+        'My identity is anchored in calling — I know I was created for a specific purpose that no one else can fulfill.',
+        'I have destiny-level energy — when I operate in my calling, I experience supernatural endurance and flow.',
+        'My emotions serve my destiny — passion, urgency, and even righteous anger propel me toward my mission.',
+        'I perceive destiny signals — doors opening, divine appointments, and confirmations that I am on the right path.',
+        'I connect with others who share my mission frequency — destiny partnerships form naturally around shared calling.',
+        'My life story has meaning — even painful chapters make sense as preparation for what I am called to do.',
+        'I can see my destiny\'s culmination — not the exact details, but the general direction and ultimate impact.',
+
+        // I× family (Integrative) × 7 axes
+        'I hold multiple identities without fragmentation — spiritual, professional, familial, and personal selves are unified.',
+        'My energy is balanced across all domains — no single area of life chronically drains or dominates the others.',
+        'I experience emotional integration — joy and sorrow, confidence and humility, strength and tenderness coexist.',
+        'I perceive the wholeness in complexity — where others see contradictions, I see complementary truths.',
+        'I connect diverse people and ideas — I serve as a bridge between groups that normally don\'t communicate.',
+        'I find meaning in paradox — the deepest truths hold opposites together without resolving the tension.',
+        'I sense integration as destiny — my calling involves bringing wholeness to fragmented systems and people.',
+
+        // T× family (Transcendent) × 7 axes
+        'I experience moments where my individual identity gives way to something larger — ego dissolves into divine awareness.',
+        'I access energy that transcends physical explanation — supernatural strength, endurance, or power in crisis moments.',
+        'I feel emotions that seem bigger than personal — cosmic compassion, divine grief over brokenness, agape love.',
+        'I perceive realities beyond the material — multi-dimensional awareness, eternal perspective, divine architecture.',
+        'I experience connection beyond human relationship — communion with the divine, with nature, with consciousness itself.',
+        'I find meaning in the eternal — temporal achievements feel small compared to participation in God\'s cosmic purpose.',
+        'I sense translation readiness growing — preparation for a mode of existence beyond current physical limitations.'
+    ];
+
+    // ===== STATE =====
+    let answers = new Array(63).fill(0);
+    let currentPhase = 1;
+
+    // ===== RENDER =====
+    function renderAssessment() {
+        const area = document.getElementById('assessmentArea');
+        let html = '';
+
+        if (currentPhase === 1) {
+            html += renderPhaseHeader('PHASE 1', 'Family Resonance', 
+                'Rate how strongly each statement resonates with your lived experience. Trust your first instinct.');
+            FAMILY_QUESTIONS.forEach((q, i) => {
+                html += renderQuestion(i, FAMILIES[i].prefix, FAMILIES[i].fullName, q, FAMILIES[i].color);
+            });
+            html += renderNavButtons(null);
+        } else if (currentPhase === 2) {
+            html += renderPhaseHeader('PHASE 2', 'C-Level Activation', 
+                'Rate your current activation at each consciousness level. Be honest — growth requires accurate baselines.');
+            CLEVEL_QUESTIONS.forEach((q, i) => {
+                html += renderQuestion(7 + i, CLEVELS[i].level, CLEVELS[i].name + ' · ' + CLEVELS[i].freq, q, CLEVELS[i].color);
+            });
+            html += renderNavButtons(1);
+        } else if (currentPhase === 3) {
+            html += renderPhaseHeader('PHASE 3', 'Axis Deep Dive', 
+                '49 questions mapping 7 families × 7 axes. This is the core of your consciousness signature.');
+            AXIS_QUESTIONS.forEach((q, i) => {
+                const famIdx = Math.floor(i / 7);
+                const axisIdx = i % 7;
+                const label = FAMILIES[famIdx].prefix + AXIS_NAMES[AXES[axisIdx]];
+                html += renderQuestion(14 + i, FAMILIES[famIdx].prefix + AXES[axisIdx], label, q, FAMILIES[famIdx].color);
+            });
+            html += renderNavButtons(2);
+        }
+
+        area.innerHTML = html;
+        updateProgress();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function renderPhaseHeader(badge, title, desc) {
+        return `<div class="phase-header">
+            <div class="phase-badge">${badge}</div>
+            <h2 class="phase-title">${title}</h2>
+            <p class="phase-desc">${desc}</p>
+        </div>`;
+    }
+
+    function renderQuestion(idx, tag, label, text, color) {
+        const isAnswered = answers[idx] > 0;
+        return `<div class="question-card ${isAnswered ? 'answered' : ''}" id="q${idx}">
+            <div class="question-family-tag" style="color:${color};border:1px solid ${color}33;background:${color}11">${tag}</div>
+            <div class="question-label">${label}</div>
+            <p class="question-text">${text}</p>
+            <div class="scale-row">
+                ${[1,2,3,4,5,6,7].map(v => 
+                    `<button class="scale-btn ${answers[idx]===v?'selected':''}" 
+                     onclick="setAnswer(${idx},${v})">${v}</button>`
+                ).join('')}
+            </div>
+            <div class="scale-labels"><span>DORMANT</span><span>FULLY ACTIVE</span></div>
+        </div>`;
+    }
+
+    function renderNavButtons(prevPhase, nextPhaseOrAction) {
+        let html = '<div class="nav-buttons">';
+        if (prevPhase) {
+            html += `<button class="btn btn-secondary" onclick="goPhase(${prevPhase})">← Previous Phase</button>`;
+        }
+        // Always render the button with the correct onclick — just toggle disabled
+        if (currentPhase === 3) {
+            const ready = canAdvance(14, 63);
+            html += `<button class="btn btn-primary" id="nextBtn" ${ready?'':'disabled'} onclick="showResults()">Reveal Your 60 Aspects →</button>`;
+        } else if (currentPhase === 2) {
+            const ready = canAdvance(7, 14);
+            html += `<button class="btn btn-primary" id="nextBtn" ${ready?'':'disabled'} onclick="goPhase(3)">Next Phase →</button>`;
+        } else {
+            const ready = canAdvance(0, 7);
+            html += `<button class="btn btn-primary" id="nextBtn" ${ready?'':'disabled'} onclick="goPhase(2)">Next Phase →</button>`;
+        }
+        html += '</div>';
+        return html;
+    }
+
+    function canAdvance(from, to) {
+        for (let i = from; i < to; i++) {
+            if (answers[i] === 0) return false;
+        }
+        return true;
+    }
+
+    // ===== INTERACTIONS =====
+    function setAnswer(idx, val) {
+        answers[idx] = val;
+        // Re-render just that card
+        const card = document.getElementById('q' + idx);
+        if (card) {
+            card.classList.add('answered');
+            card.querySelectorAll('.scale-btn').forEach((btn, i) => {
+                btn.classList.toggle('selected', i + 1 === val);
+            });
+        }
+        updateProgress();
+        checkPhaseComplete();
+    }
+
+    function checkPhaseComplete() {
+        const btn = document.getElementById('nextBtn');
+        if (!btn) return;
+        let from, to;
+        if (currentPhase === 1) { from = 0; to = 7; }
+        else if (currentPhase === 2) { from = 7; to = 14; }
+        else { from = 14; to = 63; }
+        btn.disabled = !canAdvance(from, to);
+    }
+
+    function goPhase(phase) {
+        currentPhase = phase;
+        renderAssessment();
+    }
+
+    function updateProgress() {
+        const answered = answers.filter(a => a > 0).length;
+        const pct = (answered / 63) * 100;
+        document.getElementById('progressFill').style.width = pct + '%';
+        document.getElementById('progressCount').textContent = answered + ' / 63';
+        document.getElementById('progressPhase').textContent = 
+            currentPhase <= 3 ? `PHASE ${currentPhase} OF 3` : 'COMPLETE';
+    }
+
+    // ===== RESULTS CALCULATION =====
+    function showResults() {
+        document.getElementById('assessmentArea').classList.add('hidden');
+        document.getElementById('progressSection').classList.add('hidden');
+        document.getElementById('resultsArea').classList.remove('hidden');
+
+        // Calculate scores
+        const familyScores = FAMILIES.map((f, i) => {
+            const phase1 = answers[i]; // Family resonance
+            const axisScores = [];
+            for (let a = 0; a < 7; a++) {
+                axisScores.push(answers[14 + (i * 7) + a]);
+            }
+            const axisTotal = axisScores.reduce((s, v) => s + v, 0);
+            return {
+                ...f, phase1, axisScores, axisTotal,
+                combined: phase1 + axisTotal,
+                avgAxis: (axisTotal / 7).toFixed(1)
+            };
+        });
+
+        const clevelScores = CLEVELS.map((c, i) => ({
+            ...c, score: answers[7 + i],
+            pct: Math.round((answers[7 + i] / 7) * 100)
+        }));
+
+        // Rank families
+        const ranked = [...familyScores].sort((a, b) => b.combined - a.combined);
+        ranked.forEach((f, i) => f.rank = i + 1);
+        familyScores.forEach(f => { f.rank = ranked.find(r => r.prefix === f.prefix).rank; });
+
+        // Generate 60 aspects
+        const aspects = generateAspects(familyScores, clevelScores);
+
+        renderResults(familyScores, clevelScores, aspects);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function generateAspects(familyScores, clevelScores) {
+        // Build weighted pool of all 2,401 aspect slots
+        const pool = [];
+        for (let fi = 0; fi < 7; fi++) {
+            for (let ai = 0; ai < 7; ai++) {
+                for (let ci = 0; ci < 7; ci++) {
+                    const famWeight = familyScores[fi].combined;
+                    const axisWeight = familyScores[fi].axisScores[ai];
+                    const clevelWeight = clevelScores[ci].score;
+                    const totalWeight = famWeight * 0.4 + axisWeight * 0.35 + clevelWeight * 0.25;
+                    pool.push({
+                        family: fi, axis: ai, clevel: ci,
+                        id: `${FAMILIES[fi].prefix}${AXES[ai]}-${CLEVELS[ci].level}-${String(ci * 7 + ai + 1).padStart(2, '0')}`,
+                        displayName: `${FAMILIES[fi].name} ${AXIS_NAMES[AXES[ai]]} @ ${CLEVELS[ci].level}`,
+                        weight: totalWeight + (Math.random() * 0.5) // Small randomness for uniqueness
+                    });
+                }
+            }
+        }
+
+        // Sort by weight descending
+        pool.sort((a, b) => b.weight - a.weight);
+
+        // Select 60 with distribution constraints:
+        // ~8-9 per C-level, representation from all families
+        const selected = [];
+        const clevelCounts = new Array(7).fill(0);
+        const familyCounts = new Array(7).fill(0);
+        const maxPerClevel = 9;
+        const maxPerFamily = 12;
+
+        for (const asp of pool) {
+            if (selected.length >= 60) break;
+            if (clevelCounts[asp.clevel] >= maxPerClevel) continue;
+            if (familyCounts[asp.family] >= maxPerFamily) continue;
+            selected.push(asp);
+            clevelCounts[asp.clevel]++;
+            familyCounts[asp.family]++;
+        }
+
+        // Ensure we hit 60 (relax constraints if needed)
+        if (selected.length < 60) {
+            for (const asp of pool) {
+                if (selected.length >= 60) break;
+                if (!selected.includes(asp)) {
+                    selected.push(asp);
+                }
+            }
+        }
+
+        // Categorize: top 21 = Primary, next 21 = Secondary, last 18 = Developmental
+        selected.sort((a, b) => b.weight - a.weight);
+        return {
+            primary: selected.slice(0, 21),
+            secondary: selected.slice(21, 42),
+            developmental: selected.slice(42, 60)
+        };
+    }
+
+    function renderResults(familyScores, clevelScores, aspects) {
+        const area = document.getElementById('resultsArea');
+        const totalScore = answers.reduce((s, v) => s + v, 0);
+        const maxScore = 63 * 7;
+        const overallPct = Math.round((totalScore / maxScore) * 100);
+
+        let html = `
+        <div class="results-header">
+            <div class="results-sig">YOUR CONSCIOUSNESS SIGNATURE</div>
+            <h1 class="results-title">Your 60 Aspects Revealed</h1>
+            <p style="color:var(--text-secondary);max-width:550px;margin:0 auto">
+                Overall activation: <strong style="color:var(--gold)">${overallPct}%</strong> of maximum capacity · 
+                ${totalScore} / ${maxScore} total resonance
+            </p>
+        </div>
+
+        <div class="scripture-box">
+            "And I heard the number of them which were sealed: an hundred and forty and four thousand of all the tribes of the children of Israel."
+            <span class="scripture-ref">— Revelation 7:4, KJV</span>
+        </div>
+
+        <!-- C-Level Activation Radar -->
+        <div class="radar-container">
+            <div class="radar-title">C-Level Activation Profile</div>
+            <div class="radar-bars">
+                ${clevelScores.map(c => `
+                <div class="radar-row">
+                    <div class="radar-label" style="color:${c.color}">${c.level} ${c.name}</div>
+                    <div class="radar-bar-bg">
+                        <div class="radar-bar-fill" data-pct="${c.pct}%" 
+                             style="width:${c.pct}%;background:${c.color}"></div>
+                    </div>
+                    <div class="radar-score" style="color:${c.color}">${c.score}/7</div>
+                </div>`).join('')}
+            </div>
+        </div>
+
+        <!-- Family Distribution -->
+        <div class="radar-container">
+            <div class="radar-title">Family Distribution</div>
+            <div class="family-grid">
+                ${familyScores.map(f => `
+                <div class="family-card ${f.rank <= 3 ? 'top-family' : ''}">
+                    <div class="family-prefix" style="color:${f.color}">${f.prefix}</div>
+                    <div class="family-name">${f.name}</div>
+                    <div class="family-score">${f.avgAxis}</div>
+                    <div class="family-rank">${f.rank <= 3 ? '★ TOP ' + f.rank : '#' + f.rank}</div>
+                </div>`).join('')}
+            </div>
+        </div>
+
+        <!-- Primary Aspects -->
+        <div class="matrix-section">
+            <h3 class="matrix-title primary">21 Primary Aspects</h3>
+            <div class="matrix-subtitle">Your CORE calling — where you operate with natural authority and divine mandate.</div>
+            <div>${aspects.primary.map(a => 
+                `<span class="aspect-chip primary" title="${a.displayName}">${a.id}</span>`
+            ).join('')}</div>
+        </div>
+
+        <!-- Secondary Aspects -->
+        <div class="matrix-section">
+            <h3 class="matrix-title secondary">21 Secondary Aspects</h3>
+            <div class="matrix-subtitle">These SUPPORT your primary aspects — providing balance, depth, and operational range.</div>
+            <div>${aspects.secondary.map(a => 
+                `<span class="aspect-chip secondary" title="${a.displayName}">${a.id}</span>`
+            ).join('')}</div>
+        </div>
+
+        <!-- Developmental Aspects -->
+        <div class="matrix-section">
+            <h3 class="matrix-title developmental">18 Developmental Aspects</h3>
+            <div class="matrix-subtitle">Your GROWTH EDGE — intentional stretching areas where the 31 relational aspects emerge through community.</div>
+            <div>${aspects.developmental.map(a => 
+                `<span class="aspect-chip developmental" title="${a.displayName}">${a.id}</span>`
+            ).join('')}</div>
+        </div>
+
+        <div class="scripture-box">
+            "But covet earnestly the best gifts: and yet shew I unto you a more excellent way."
+            <span class="scripture-ref">— 1 Corinthians 12:31, KJV</span>
+        </div>
+
+        <!-- Retake / Explore -->
+        <div class="results-cta">
+            <p style="font-family:'Orbitron',monospace;font-size:0.75rem;color:var(--gold);letter-spacing:2px;margin-bottom:8px">
+                2,401 ÷ 144,000 = 1/60 · YOUR 60 ARE UNIQUE TO YOU
+            </p>
+            <p>No two people carry the same 60 aspects. The network is incomplete without your specific contribution.</p>
+            <div class="cta-links">
+                <a href="javascript:void(0)" onclick="retake()" class="btn btn-secondary">Retake Assessment</a>
+                <a href="https://2401.is/calculator.html" class="btn btn-primary">Calculate Your C-Level</a>
+                <a href="https://144000.ai/assessment.html" class="btn btn-secondary">144,000 Assessment</a>
+                <a href="https://www.amazon.com/stores/Julio-C.-Medina/author/B0GCNN3HWB" target="_blank" class="btn btn-secondary">Explore the Books</a>
+            </div>
+        </div>`;
+
+        area.innerHTML = html;
+    }
+
+    function retake() {
+        answers = new Array(63).fill(0);
+        currentPhase = 1;
+        document.getElementById('resultsArea').classList.add('hidden');
+        document.getElementById('resultsArea').innerHTML = '';
+        document.getElementById('assessmentArea').classList.remove('hidden');
+        document.getElementById('progressSection').classList.remove('hidden');
+        renderAssessment();
+    }
+
+    // ===== INIT =====
+    renderAssessment();
+    </script>
+</body>
+</html>
