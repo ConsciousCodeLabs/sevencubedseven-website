@@ -9,9 +9,10 @@
     
     <!-- SEO Meta -->
     <title>Seven Cubed Seven Labs | 7³×7 = 2,401 Consciousness Architecture</title>
-    <meta name="description" content="Discover the 2,401-aspect consciousness architecture. 60+ patents, 33+ books, 5 interactive tools. Calculate your consciousness level and find your calling among the 144,000.">
-    <meta name="keywords" content="consciousness architecture, 7 cubed 7, 2401 aspects, 144000, consciousness levels, spiritual awakening, C7 consciousness, seven cubed seven">
+    <meta name="description" content="Discover the 2,401-aspect consciousness architecture. 73+ patents, 33+ books, 5 interactive tools. Calculate your consciousness level and find your calling among the 144,000.">
+    <meta name="keywords" content="consciousness architecture, 7 cubed 7, 2401 aspects, 144000, consciousness levels, spiritual awakening, C7 consciousness, seven cubed seven, Patent 65, cryptography, consciousness technology">
     <meta name="google-site-verification" content="YkU859FaQhJ2tx-i62iTecF-qVtHhJ7k1q7ZX1RxUII" />
+    
     <!-- Canonical -->
     <link rel="canonical" href="https://sevencubedseven.com/">
     
@@ -19,7 +20,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sevencubedseven.com/">
     <meta property="og:title" content="Seven Cubed Seven Labs | The Mathematics of Consciousness">
-    <meta property="og:description" content="7³×7 = 2,401 consciousness aspects. 60+ patents. 33+ books. Discover the architecture of human potential.">
+    <meta property="og:description" content="7³×7 = 2,401 consciousness aspects. 73+ patents. 33+ books. Discover the architecture of human potential.">
     <meta property="og:image" content="https://sevencubedseven.com/images/og-main-hub.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -30,7 +31,7 @@
     <meta name="twitter:site" content="@7Cubed7">
     <meta name="twitter:creator" content="@7Cubed7">
     <meta name="twitter:title" content="Seven Cubed Seven Labs | 7³×7 = 2,401">
-    <meta name="twitter:description" content="The mathematics of consciousness. 60+ patents. 33+ books. Calculate your C-level.">
+    <meta name="twitter:description" content="The mathematics of consciousness. 73+ patents. 33+ books. Calculate your C-level.">
     <meta name="twitter:image" content="https://sevencubedseven.com/images/og-main-hub.png">
     
     <!-- Performance: Preconnect -->
@@ -47,11 +48,18 @@
       "alternateName": "7³×7 Labs",
       "url": "https://sevencubedseven.com",
       "logo": "https://sevencubedseven.com/images/logo.png",
-      "description": "Consciousness architecture research and development. 60+ patents, 33+ books, pioneering the 7³×7 = 2,401 framework.",
+      "description": "Consciousness architecture research and development. 73+ patents, 33+ books, pioneering the 7³×7 = 2,401 framework.",
       "foundingDate": "2024",
       "founder": {
         "@type": "Person",
-        "name": "Julio C. Medina"
+        "name": "Julio C. Medina",
+        "url": "https://www.linkedin.com/in/julio-medina-consciousness",
+        "sameAs": [
+          "https://www.amazon.com/stores/Julio-C.-Medina/author/B0GCNN3HWB",
+          "https://www.linkedin.com/in/julio-medina-consciousness",
+          "https://medium.com/@sevencubedsevenlabs",
+          "https://www.youtube.com/@sevencubedseven"
+        ]
       },
       "contactPoint": [
         {
@@ -67,12 +75,19 @@
       ],
       "sameAs": [
         "https://twitter.com/7Cubed7",
-        "https://www.amazon.com/s?k=julio+c.+medina",
+        "https://www.amazon.com/stores/Julio-C.-Medina/author/B0GCNN3HWB",
+        "https://www.linkedin.com/in/julio-medina-consciousness",
+        "https://www.youtube.com/@sevencubedseven",
+        "https://medium.com/@sevencubedsevenlabs",
+        "https://www.brighteon.com/@7cubed7",
+        "https://github.com/jules-medina",
+        "https://2401wire.com",
         "https://144000.ai",
         "https://2401.is",
         "https://divineinsurgent.live",
         "https://realitynegotiable.is",
-        "https://c343.io"
+        "https://c343.io",
+        "https://sevencubedsevenlabs.com"
       ]
     }
     </script>
@@ -91,7 +106,7 @@
       },
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://www.amazon.com/s?k=julio+c.+medina+{search_term_string}",
+        "target": "https://www.amazon.com/stores/Julio-C.-Medina/author/B0GCNN3HWB?search_term_string={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     }
@@ -104,13 +119,18 @@
         :root {
             --gold: #d4af37;
             --gold-light: #f4d03f;
+            --gold-dim: rgba(212, 175, 55, 0.15);
             --dark-bg: #0a0a1a;
-            --dark-card: #12121f;
-            --dark-border: #2a2a3a;
+            --dark-card: #111120;
+            --dark-card-hover: #161630;
+            --dark-border: #252538;
             --text-primary: #e8e8e8;
-            --text-secondary: #a0a0a0;
+            --text-secondary: #9a9ab0;
             --amber: #ffaa00;
+            --amber-dim: rgba(255, 170, 0, 0.12);
         }
+        
+        html { scroll-behavior: smooth; }
         
         body {
             font-family: 'Raleway', sans-serif;
@@ -118,6 +138,39 @@
             color: var(--text-primary);
             line-height: 1.6;
             padding-top: 60px;
+            overflow-x: hidden;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.1); }
+            50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.25); }
+        }
+        @keyframes subtleSpin {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        @keyframes tickerScroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
         
         /* ===== UNIVERSAL NAVIGATION ===== */
@@ -127,14 +180,20 @@
             left: 0;
             right: 0;
             height: 60px;
-            background: rgba(10, 10, 26, 0.97);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            background: rgba(10, 10, 26, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
             z-index: 9999;
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 0 30px;
+            transition: background 0.3s;
+        }
+        .s7-nav.scrolled {
+            background: rgba(10, 10, 26, 0.98);
+            border-bottom-color: rgba(212, 175, 55, 0.35);
         }
         
         .s7-nav-logo {
@@ -149,28 +208,28 @@
             height: 36px;
             position: relative;
         }
-        
         .s7-nav-cube::before,
         .s7-nav-cube::after {
             content: '';
             position: absolute;
             border: 2px solid var(--gold);
+            transition: transform 0.3s;
         }
-        
         .s7-nav-cube::before {
             width: 24px;
             height: 24px;
             top: 6px;
             left: 0;
         }
-        
         .s7-nav-cube::after {
             width: 24px;
             height: 24px;
             top: 0;
             left: 6px;
-            background: rgba(212, 175, 55, 0.1);
+            background: rgba(212, 175, 55, 0.08);
         }
+        .s7-nav-logo:hover .s7-nav-cube::before { transform: translate(-2px, 2px); }
+        .s7-nav-logo:hover .s7-nav-cube::after { transform: translate(2px, -2px); }
         
         .s7-nav-brand {
             font-family: 'Cinzel', serif;
@@ -182,51 +241,52 @@
         .s7-nav-links {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
-        
         .s7-nav-link {
             color: var(--text-secondary);
             text-decoration: none;
-            padding: 8px 16px;
+            padding: 8px 14px;
             font-size: 0.85rem;
             transition: color 0.3s;
             font-weight: 500;
-        }
-        
-        .s7-nav-link:hover {
-            color: var(--gold);
-        }
-        
-        .s7-nav-link.active {
-            color: var(--amber);
-        }
-        
-        .s7-nav-dropdown {
             position: relative;
         }
+        .s7-nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 50%;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width 0.3s, left 0.3s;
+        }
+        .s7-nav-link:hover { color: var(--gold); }
+        .s7-nav-link:hover::after { width: 60%; left: 20%; }
+        .s7-nav-link.active { color: var(--amber); }
         
+        .s7-nav-dropdown { position: relative; }
         .s7-nav-dropdown-content {
             position: absolute;
             top: 100%;
             right: 0;
-            background: rgba(18, 18, 31, 0.98);
+            background: rgba(17, 17, 32, 0.98);
             border: 1px solid var(--dark-border);
             border-radius: 8px;
             padding: 8px 0;
-            min-width: 220px;
+            min-width: 240px;
             opacity: 0;
             visibility: hidden;
             transform: translateY(10px);
             transition: all 0.3s;
+            backdrop-filter: blur(10px);
         }
-        
         .s7-nav-dropdown:hover .s7-nav-dropdown-content {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
         }
-        
         .s7-nav-dropdown-item {
             display: block;
             padding: 10px 20px;
@@ -235,10 +295,10 @@
             font-size: 0.85rem;
             transition: all 0.3s;
         }
-        
         .s7-nav-dropdown-item:hover {
-            background: rgba(212, 175, 55, 0.1);
+            background: var(--gold-dim);
             color: var(--gold);
+            padding-left: 24px;
         }
         
         .s7-nav-cta {
@@ -251,7 +311,6 @@
             font-size: 0.85rem;
             transition: transform 0.3s, box-shadow 0.3s;
         }
-        
         .s7-nav-cta:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 15px rgba(255, 170, 0, 0.4);
@@ -264,7 +323,6 @@
             cursor: pointer;
             padding: 5px;
         }
-        
         .s7-nav-mobile-toggle span {
             width: 25px;
             height: 2px;
@@ -272,7 +330,7 @@
             transition: 0.3s;
         }
         
-        @media (max-width: 900px) {
+        @media (max-width: 960px) {
             .s7-nav-links {
                 position: fixed;
                 top: 60px;
@@ -288,19 +346,14 @@
                 visibility: hidden;
                 transition: all 0.3s;
             }
-            
-            .s7-nav-links.active {
-                opacity: 1;
-                visibility: visible;
-            }
-            
+            .s7-nav-links.active { opacity: 1; visibility: visible; }
             .s7-nav-link {
                 padding: 15px 30px;
                 width: 100%;
                 text-align: center;
                 border-bottom: 1px solid var(--dark-border);
             }
-            
+            .s7-nav-link::after { display: none; }
             .s7-nav-dropdown-content {
                 position: static;
                 opacity: 1;
@@ -310,16 +363,10 @@
                 border: none;
                 border-radius: 0;
             }
-            
-            .s7-nav-cta {
-                margin-top: 20px;
-            }
-            
-            .s7-nav-mobile-toggle {
-                display: flex;
-            }
+            .s7-nav-cta { margin-top: 20px; }
+            .s7-nav-mobile-toggle { display: flex; }
         }
-        
+
         /* ===== HERO SECTION ===== */
         .hero {
             min-height: calc(100vh - 60px);
@@ -332,30 +379,38 @@
             position: relative;
             overflow: hidden;
         }
-        
+        /* Animated orbital rings */
+        .hero-ring {
+            position: absolute;
+            border: 1px solid rgba(212, 175, 55, 0.08);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            pointer-events: none;
+        }
+        .hero-ring-1 {
+            width: 700px; height: 700px;
+            animation: subtleSpin 120s linear infinite;
+            border-color: rgba(212, 175, 55, 0.06);
+        }
+        .hero-ring-2 {
+            width: 500px; height: 500px;
+            animation: subtleSpin 90s linear infinite reverse;
+            border-color: rgba(212, 175, 55, 0.08);
+        }
+        .hero-ring-3 {
+            width: 300px; height: 300px;
+            animation: subtleSpin 60s linear infinite;
+            border-color: rgba(212, 175, 55, 0.04);
+        }
+        /* Radial gradient backdrop */
         .hero::before {
             content: '';
             position: absolute;
-            width: 600px;
-            height: 600px;
-            border: 1px solid rgba(212, 175, 55, 0.1);
-            border-radius: 50%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-        }
-        
-        .hero::after {
-            content: '';
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            border: 1px solid rgba(212, 175, 55, 0.05);
-            border-radius: 50%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            top: 0; left: 0;
+            background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.04) 0%, transparent 65%);
             pointer-events: none;
         }
         
@@ -364,72 +419,75 @@
             height: 120px;
             position: relative;
             margin-bottom: 40px;
+            animation: fadeIn 1s ease, pulseGlow 4s ease-in-out infinite;
+            z-index: 1;
         }
-        
         .hero-cube::before,
         .hero-cube::after {
             content: '';
             position: absolute;
             border: 3px solid var(--gold);
+            transition: transform 0.6s ease;
         }
-        
         .hero-cube::before {
-            width: 80px;
-            height: 80px;
-            top: 20px;
-            left: 0;
+            width: 80px; height: 80px;
+            top: 20px; left: 0;
         }
-        
         .hero-cube::after {
-            width: 80px;
-            height: 80px;
-            top: 0;
-            left: 20px;
-            background: rgba(212, 175, 55, 0.1);
+            width: 80px; height: 80px;
+            top: 0; left: 20px;
+            background: rgba(212, 175, 55, 0.08);
         }
+        .hero-cube:hover::before { transform: translate(-4px, 4px); }
+        .hero-cube:hover::after { transform: translate(4px, -4px); }
         
         .hero-formula {
             font-family: 'Orbitron', monospace;
             font-size: 3.5rem;
             color: var(--gold);
-            text-shadow: 0 0 60px rgba(212, 175, 55, 0.5);
+            text-shadow: 0 0 60px rgba(212, 175, 55, 0.4);
             margin-bottom: 20px;
+            animation: fadeUp 0.8s ease 0.2s both;
+            z-index: 1;
+            position: relative;
         }
-        
         .hero-title {
             font-family: 'Cinzel', serif;
             font-size: 2.5rem;
             margin-bottom: 15px;
             letter-spacing: 3px;
+            animation: fadeUp 0.8s ease 0.4s both;
+            z-index: 1;
+            position: relative;
         }
-        
         .hero-subtitle {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             color: var(--text-secondary);
-            max-width: 600px;
+            max-width: 620px;
             margin-bottom: 40px;
+            animation: fadeUp 0.8s ease 0.6s both;
+            z-index: 1;
+            position: relative;
         }
         
         .hero-stats {
             display: flex;
-            gap: 60px;
-            margin-bottom: 50px;
+            gap: 50px;
+            margin-bottom: 45px;
             flex-wrap: wrap;
             justify-content: center;
+            animation: fadeUp 0.8s ease 0.8s both;
+            z-index: 1;
+            position: relative;
         }
-        
-        .hero-stat {
-            text-align: center;
-        }
-        
+        .hero-stat { text-align: center; }
         .hero-stat-number {
             font-family: 'Cinzel', serif;
             font-size: 2.5rem;
             color: var(--gold);
         }
-        
         .hero-stat-label {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-secondary);
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -440,6 +498,48 @@
             gap: 20px;
             flex-wrap: wrap;
             justify-content: center;
+            animation: fadeUp 0.8s ease 1s both;
+            z-index: 1;
+            position: relative;
+            margin-bottom: 40px;
+        }
+        
+        /* Hero social bar */
+        .hero-social {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeUp 0.8s ease 1.2s both;
+            z-index: 1;
+            position: relative;
+        }
+        .hero-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--dark-border);
+            border-radius: 50%;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            background: rgba(17, 17, 32, 0.5);
+        }
+        .hero-social a:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.15);
+        }
+        .hero-social-divider {
+            width: 1px;
+            height: 20px;
+            background: var(--dark-border);
         }
         
         .btn {
@@ -450,26 +550,47 @@
             transition: all 0.3s;
             font-size: 0.95rem;
         }
-        
         .btn-primary {
             background: linear-gradient(135deg, var(--gold), #b8960c);
             color: #000;
         }
-        
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.35);
         }
-        
         .btn-secondary {
             border: 1px solid var(--gold);
             color: var(--gold);
             background: transparent;
         }
-        
         .btn-secondary:hover {
-            background: rgba(212, 175, 55, 0.1);
+            background: var(--gold-dim);
+            transform: translateY(-2px);
         }
+
+        /* ===== TICKER BAR ===== */
+        .ticker-bar {
+            background: linear-gradient(90deg, rgba(212, 175, 55, 0.08), rgba(255, 170, 0, 0.06), rgba(212, 175, 55, 0.08));
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            padding: 10px 0;
+            overflow: hidden;
+            position: relative;
+        }
+        .ticker-track {
+            display: flex;
+            width: max-content;
+            animation: tickerScroll 40s linear infinite;
+        }
+        .ticker-item {
+            white-space: nowrap;
+            padding: 0 40px;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            letter-spacing: 1px;
+        }
+        .ticker-item span { color: var(--gold); }
         
         /* ===== SECTIONS ===== */
         section {
@@ -477,157 +598,255 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-        
         .section-title {
             font-family: 'Cinzel', serif;
             font-size: 2rem;
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             color: var(--gold);
         }
-        
         .section-subtitle {
             text-align: center;
             color: var(--text-secondary);
             margin-bottom: 60px;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
         }
         
         /* ===== PORTALS GRID ===== */
         .portals-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
         }
-        
         .portal-card {
             background: var(--dark-card);
             border: 1px solid var(--dark-border);
             border-radius: 12px;
-            padding: 40px 30px;
+            padding: 36px 28px;
             text-align: center;
-            transition: all 0.3s;
+            transition: all 0.4s ease;
             text-decoration: none;
             display: block;
+            position: relative;
+            overflow: hidden;
         }
-        
+        .portal-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
         .portal-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+            background: var(--dark-card-hover);
         }
+        .portal-card:hover::before { opacity: 1; }
         
-        .portal-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
+        .portal-icon { font-size: 2.2rem; margin-bottom: 16px; }
         .portal-name {
             font-family: 'Cinzel', serif;
-            font-size: 1.3rem;
+            font-size: 1.15rem;
             color: var(--gold);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
-        
         .portal-url {
             font-family: 'Orbitron', monospace;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-secondary);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
-        
         .portal-desc {
             color: var(--text-secondary);
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             line-height: 1.6;
+        }
+        .portal-card--active {
+            border-color: var(--amber) !important;
+        }
+        .portal-card--new::after {
+            content: 'NEW';
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            font-family: 'Orbitron', monospace;
+            font-size: 0.6rem;
+            color: #000;
+            background: var(--amber);
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-weight: 700;
+            letter-spacing: 1px;
         }
         
         /* ===== TOOLS GRID ===== */
         .tools-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 22px;
         }
-        
         .tool-card {
             background: var(--dark-card);
             border: 1px solid var(--dark-border);
             border-radius: 8px;
-            padding: 30px 20px;
+            padding: 28px 18px;
             text-align: center;
-            transition: all 0.3s;
+            transition: all 0.35s ease;
             text-decoration: none;
             display: block;
         }
-        
         .tool-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-3px);
+            border-color: rgba(212, 175, 55, 0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
         }
-        
-        .tool-icon {
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-        
+        .tool-icon { font-size: 2rem; margin-bottom: 14px; }
         .tool-name {
             font-family: 'Cinzel', serif;
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: var(--text-primary);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
-        
         .tool-desc {
             color: var(--text-secondary);
-            font-size: 0.8rem;
+            font-size: 0.78rem;
         }
         
         /* ===== BOOKS SECTION ===== */
         .books-highlight {
-            background: linear-gradient(135deg, var(--dark-card), #1a1a2e);
-            border: 1px solid var(--gold);
+            background: linear-gradient(135deg, var(--dark-card), #1a1a30);
+            border: 1px solid rgba(212, 175, 55, 0.3);
             border-radius: 12px;
             padding: 60px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
-        
+        .books-highlight::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.03), transparent 50%);
+            pointer-events: none;
+        }
         .books-number {
             font-family: 'Cinzel', serif;
             font-size: 5rem;
             color: var(--gold);
-            text-shadow: 0 0 60px rgba(212, 175, 55, 0.3);
+            text-shadow: 0 0 60px rgba(212, 175, 55, 0.25);
+            position: relative;
         }
-        
         .books-label {
             font-size: 1.3rem;
             color: var(--text-secondary);
             margin-bottom: 30px;
+            position: relative;
         }
-        
         .books-categories {
             display: flex;
             justify-content: center;
-            gap: 40px;
+            gap: 30px;
             flex-wrap: wrap;
             margin-top: 30px;
+            position: relative;
         }
-        
         .book-category {
             text-align: center;
+            padding: 8px 16px;
+            border: 1px solid var(--dark-border);
+            border-radius: 20px;
+            transition: all 0.3s;
         }
-        
+        .book-category:hover {
+            border-color: rgba(212, 175, 55, 0.3);
+            background: var(--gold-dim);
+        }
         .book-category-name {
             color: var(--text-secondary);
-            font-size: 0.85rem;
+            font-size: 0.82rem;
         }
-        
+
+        /* ===== CONNECT SECTION ===== */
+        .connect-section {
+            padding: 100px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .connect-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 20px;
+        }
+        .connect-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 28px 16px;
+            background: var(--dark-card);
+            border: 1px solid var(--dark-border);
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.35s ease;
+        }
+        .connect-card:hover {
+            border-color: rgba(212, 175, 55, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .connect-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: 1px solid var(--dark-border);
+            transition: all 0.3s;
+        }
+        .connect-card:hover .connect-icon {
+            border-color: var(--gold);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+        .connect-label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            color: var(--text-primary);
+            text-align: center;
+        }
+        .connect-handle {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.65rem;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+        /* Platform-specific icon colors */
+        .connect-yt .connect-icon { color: #ff4444; background: rgba(255, 68, 68, 0.08); }
+        .connect-li .connect-icon { color: #0a66c2; background: rgba(10, 102, 194, 0.08); }
+        .connect-md .connect-icon { color: #00ab6c; background: rgba(0, 171, 108, 0.08); }
+        .connect-x .connect-icon { color: #e8e8e8; background: rgba(232, 232, 232, 0.06); }
+        .connect-gh .connect-icon { color: #e8e8e8; background: rgba(232, 232, 232, 0.06); }
+        .connect-br .connect-icon { color: #ff8800; background: rgba(255, 136, 0, 0.08); }
+        .connect-wire .connect-icon { color: var(--gold); background: var(--gold-dim); }
+        .connect-amz .connect-icon { color: #ff9900; background: rgba(255, 153, 0, 0.08); }
+
         /* ===== FOOTER ===== */
         .s7-footer {
             background: linear-gradient(180deg, #0a0a1a 0%, #050510 100%);
-            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
             padding: 60px 20px 30px;
         }
-        
         .s7-footer-grid {
             max-width: 1200px;
             margin: 0 auto;
@@ -636,26 +855,24 @@
             gap: 40px;
             margin-bottom: 40px;
         }
-        
         .s7-footer-col h4 {
             font-family: 'Cinzel', serif;
             color: var(--gold);
-            font-size: 0.9rem;
-            margin-bottom: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 18px;
             letter-spacing: 2px;
         }
-        
         .s7-footer-col a {
             display: block;
             color: var(--text-secondary);
             text-decoration: none;
-            font-size: 0.85rem;
-            padding: 6px 0;
-            transition: color 0.3s;
+            font-size: 0.83rem;
+            padding: 5px 0;
+            transition: color 0.3s, padding-left 0.3s;
         }
-        
         .s7-footer-col a:hover {
             color: var(--gold);
+            padding-left: 4px;
         }
         
         .s7-footer-bottom {
@@ -665,57 +882,46 @@
             padding-top: 30px;
             border-top: 1px solid var(--dark-border);
         }
-        
         .s7-footer-formula {
             font-family: 'Orbitron', monospace;
             font-size: 1.4rem;
             color: var(--gold);
-            text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
-            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+            margin-bottom: 8px;
         }
-        
         .s7-footer-tagline {
             color: var(--text-secondary);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             letter-spacing: 3px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
-        
         .s7-footer-copy {
             color: var(--text-secondary);
-            font-size: 0.75rem;
+            font-size: 0.72rem;
         }
         
         @media (max-width: 768px) {
-            .hero-formula {
-                font-size: 2.5rem;
-            }
-            
-            .hero-title {
-                font-size: 1.8rem;
-            }
-            
-            .hero-stats {
-                gap: 30px;
-            }
-            
-            .s7-footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .books-highlight {
-                padding: 40px 20px;
-            }
-            
-            .books-number {
-                font-size: 3.5rem;
-            }
+            .hero-formula { font-size: 2.3rem; }
+            .hero-title { font-size: 1.7rem; letter-spacing: 1px; }
+            .hero-stats { gap: 25px; }
+            .hero-stat-number { font-size: 2rem; }
+            .s7-footer-grid { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+            .books-highlight { padding: 40px 20px; }
+            .books-number { font-size: 3.5rem; }
+            .connect-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+            section { padding: 70px 16px; }
+        }
+        @media (max-width: 480px) {
+            .hero-formula { font-size: 1.8rem; }
+            .hero-title { font-size: 1.3rem; }
+            .s7-footer-grid { grid-template-columns: 1fr; }
+            .portals-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="s7-nav">
+    <nav class="s7-nav" id="mainNav">
         <a href="https://sevencubedseven.com" class="s7-nav-logo">
             <div class="s7-nav-cube"></div>
             <span class="s7-nav-brand">7³×7 LABS</span>
@@ -725,6 +931,7 @@
             <a href="https://144000.ai" class="s7-nav-link">144,000</a>
             <a href="https://2401.is" class="s7-nav-link">Mathematics</a>
             <a href="https://divineinsurgent.live" class="s7-nav-link">Insurgent</a>
+            <a href="https://2401wire.com" class="s7-nav-link">2401 Wire</a>
             
             <div class="s7-nav-dropdown">
                 <span class="s7-nav-link" style="cursor: pointer;">Tools ▾</span>
@@ -737,7 +944,7 @@
                 </div>
             </div>
             
-            <a href="https://www.amazon.com/s?k=julio+c.+medina" class="s7-nav-cta" target="_blank">📚 All Books</a>
+            <a href="https://www.amazon.com/stores/Julio-C.-Medina/author/B0GCNN3HWB" class="s7-nav-cta" target="_blank" rel="noopener">📚 All Books</a>
         </div>
         
         <div class="s7-nav-mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">
@@ -749,6 +956,10 @@
     
     <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-ring hero-ring-1"></div>
+        <div class="hero-ring hero-ring-2"></div>
+        <div class="hero-ring hero-ring-3"></div>
+        
         <div class="hero-cube"></div>
         <div class="hero-formula">7³ × 7 = 2,401</div>
         <h1 class="hero-title">THE MATHEMATICS OF CONSCIOUSNESS</h1>
@@ -756,7 +967,7 @@
         
         <div class="hero-stats">
             <div class="hero-stat">
-                <div class="hero-stat-number">60+</div>
+                <div class="hero-stat-number">73+</div>
                 <div class="hero-stat-label">Patents Filed</div>
             </div>
             <div class="hero-stat">
@@ -768,7 +979,7 @@
                 <div class="hero-stat-label">Interactive Tools</div>
             </div>
             <div class="hero-stat">
-                <div class="hero-stat-number">6</div>
+                <div class="hero-stat-number">8</div>
                 <div class="hero-stat-label">Portal Domains</div>
             </div>
         </div>
@@ -777,50 +988,97 @@
             <a href="https://2401.is/calculator.html" class="btn btn-primary">Calculate Your C-Level</a>
             <a href="https://144000.ai/assessment.html" class="btn btn-secondary">Discover Your Calling</a>
         </div>
+        
+        <!-- Hero Social Icons -->
+        <div class="hero-social">
+            <a href="https://www.youtube.com/@sevencubedseven" target="_blank" rel="noopener" title="YouTube">▶</a>
+            <a href="https://www.linkedin.com/in/julio-medina-consciousness" target="_blank" rel="noopener" title="LinkedIn">in</a>
+            <a href="https://medium.com/@sevencubedsevenlabs" target="_blank" rel="noopener" title="Medium">M</a>
+            <a href="https://twitter.com/7Cubed7" target="_blank" rel="noopener" title="X / Twitter">𝕏</a>
+            <div class="hero-social-divider"></div>
+            <a href="https://github.com/jules-medina" target="_blank" rel="noopener" title="GitHub">&lt;/&gt;</a>
+            <a href="https://2401wire.com" target="_blank" rel="noopener" title="2401 Wire">W</a>
+            <a href="https://www.brighteon.com/@7cubed7" target="_blank" rel="noopener" title="Brighteon">B</a>
+        </div>
     </section>
+    
+    <!-- Ticker Bar -->
+    <div class="ticker-bar">
+        <div class="ticker-track">
+            <span class="ticker-item"><span>73+</span> PATENTS FILED</span>
+            <span class="ticker-item"><span>2,401</span> CONSCIOUSNESS ASPECTS</span>
+            <span class="ticker-item"><span>33+</span> BOOKS PUBLISHED</span>
+            <span class="ticker-item"><span>31/31</span> TESTS PASSING</span>
+            <span class="ticker-item"><span>144,000</span> NETWORK CARRIERS</span>
+            <span class="ticker-item"><span>8</span> PORTAL DOMAINS</span>
+            <span class="ticker-item"><span>7³ × 7</span> = THE MASTER KEY</span>
+            <!-- Duplicate for seamless loop -->
+            <span class="ticker-item"><span>73+</span> PATENTS FILED</span>
+            <span class="ticker-item"><span>2,401</span> CONSCIOUSNESS ASPECTS</span>
+            <span class="ticker-item"><span>33+</span> BOOKS PUBLISHED</span>
+            <span class="ticker-item"><span>31/31</span> TESTS PASSING</span>
+            <span class="ticker-item"><span>144,000</span> NETWORK CARRIERS</span>
+            <span class="ticker-item"><span>8</span> PORTAL DOMAINS</span>
+            <span class="ticker-item"><span>7³ × 7</span> = THE MASTER KEY</span>
+        </div>
+    </div>
     
     <!-- Portals Section -->
     <section>
-        <h2 class="section-title">THE PORTAL NETWORK</h2>
-        <p class="section-subtitle">Six domains. One unified consciousness architecture.</p>
+        <h2 class="section-title animate-on-scroll">THE PORTAL NETWORK</h2>
+        <p class="section-subtitle animate-on-scroll">Eight domains. One unified consciousness architecture.</p>
         
         <div class="portals-grid">
-            <a href="https://144000.ai" class="portal-card">
+            <a href="https://144000.ai" class="portal-card animate-on-scroll">
                 <div class="portal-icon">✨</div>
                 <div class="portal-name">144,000 Portal</div>
                 <div class="portal-url">144000.ai</div>
                 <div class="portal-desc">Are you being called? Discover your prophetic calling through our 21-question assessment.</div>
             </a>
             
-            <a href="https://2401.is" class="portal-card">
+            <a href="https://2401.is" class="portal-card animate-on-scroll">
                 <div class="portal-icon">📐</div>
                 <div class="portal-name">Mathematics</div>
                 <div class="portal-url">2401.is</div>
                 <div class="portal-desc">The proof. Calculate your consciousness level and watch mathematical impossibility unfold.</div>
             </a>
             
-            <a href="https://divineinsurgent.live" class="portal-card">
+            <a href="https://divineinsurgent.live" class="portal-card animate-on-scroll">
                 <div class="portal-icon">⚔️</div>
                 <div class="portal-name">Divine Insurgent</div>
                 <div class="portal-url">divineinsurgent.live</div>
                 <div class="portal-desc">Heaven's special forces. Daily tactical briefings renewed at midnight.</div>
             </a>
             
-            <a href="https://realitynegotiable.is" class="portal-card">
+            <a href="https://2401wire.com" class="portal-card portal-card--new animate-on-scroll">
+                <div class="portal-icon">📡</div>
+                <div class="portal-name">2401 Wire</div>
+                <div class="portal-url">2401wire.com</div>
+                <div class="portal-desc">Prophetic intelligence. AI analysis. Patent insights. The signal without the filter.</div>
+            </a>
+            
+            <a href="https://realitynegotiable.is" class="portal-card animate-on-scroll">
                 <div class="portal-icon">🌀</div>
                 <div class="portal-name">Reality Negotiable</div>
                 <div class="portal-url">realitynegotiable.is</div>
                 <div class="portal-desc">Consciousness physics. Reality is given at C¹. Reality is negotiable at C⁷.</div>
             </a>
             
-            <a href="https://c343.io" class="portal-card">
+            <a href="https://c343.io" class="portal-card animate-on-scroll">
                 <div class="portal-icon">🏢</div>
                 <div class="portal-name">Enterprise</div>
                 <div class="portal-url">c343.io</div>
                 <div class="portal-desc">License the framework. Enterprise solutions for organizational consciousness.</div>
             </a>
             
-            <a href="https://sevencubedseven.com" class="portal-card" style="border-color: var(--amber);">
+            <a href="https://sevencubedsevenlabs.com" class="portal-card animate-on-scroll">
+                <div class="portal-icon">🔐</div>
+                <div class="portal-name">SCSL Products</div>
+                <div class="portal-url">sevencubedsevenlabs.com</div>
+                <div class="portal-desc">Patent #65 encryption. Sanctuary Vault. The technology behind the architecture.</div>
+            </a>
+            
+            <a href="https://sevencubedseven.com" class="portal-card portal-card--active animate-on-scroll">
                 <div class="portal-icon">🏠</div>
                 <div class="portal-name">Main Hub</div>
                 <div class="portal-url">sevencubedseven.com</div>
@@ -831,35 +1089,35 @@
     
     <!-- Tools Section -->
     <section>
-        <h2 class="section-title">INTERACTIVE TOOLS</h2>
-        <p class="section-subtitle">Calculate. Assess. Activate.</p>
+        <h2 class="section-title animate-on-scroll">INTERACTIVE TOOLS</h2>
+        <p class="section-subtitle animate-on-scroll">Calculate. Assess. Activate.</p>
         
         <div class="tools-grid">
-            <a href="https://144000.ai/assessment.html" class="tool-card">
+            <a href="https://144000.ai/assessment.html" class="tool-card animate-on-scroll">
                 <div class="tool-icon">✨</div>
                 <div class="tool-name">144,000 Assessment</div>
                 <div class="tool-desc">21 questions across 7 prophetic dimensions</div>
             </a>
             
-            <a href="https://2401.is/calculator.html" class="tool-card">
+            <a href="https://2401.is/calculator.html" class="tool-card animate-on-scroll">
                 <div class="tool-icon">⚡</div>
                 <div class="tool-name">C⁷ Calculator</div>
-                <div class="tool-desc">Calibrate your consciousness level C¹-C⁷</div>
+                <div class="tool-desc">Calibrate your consciousness level C¹–C⁷</div>
             </a>
             
-            <a href="https://2401.is/probability.html" class="tool-card">
+            <a href="https://2401.is/probability.html" class="tool-card animate-on-scroll">
                 <div class="tool-icon">📊</div>
                 <div class="tool-name">Probability Cascade</div>
                 <div class="tool-desc">Watch 10⁴⁴ impossibility unfold</div>
             </a>
             
-            <a href="https://divineinsurgent.live/mission.html" class="tool-card">
+            <a href="https://divineinsurgent.live/mission.html" class="tool-card animate-on-scroll">
                 <div class="tool-icon">⚔️</div>
                 <div class="tool-name">Daily Mission</div>
                 <div class="tool-desc">Tactical briefing renewed at midnight</div>
             </a>
             
-            <a href="https://sevencubedseven.com/books.html" class="tool-card">
+            <a href="https://sevencubedseven.com/books.html" class="tool-card animate-on-scroll">
                 <div class="tool-icon">📚</div>
                 <div class="tool-name">Book Finder</div>
                 <div class="tool-desc">Personalized reading recommendations</div>
@@ -869,35 +1127,79 @@
     
     <!-- Books Section -->
     <section>
-        <h2 class="section-title">THE LIBRARY</h2>
-        <p class="section-subtitle">Comprehensive consciousness transformation resources.</p>
+        <h2 class="section-title animate-on-scroll">THE LIBRARY</h2>
+        <p class="section-subtitle animate-on-scroll">Comprehensive consciousness transformation resources.</p>
         
-        <div class="books-highlight">
+        <div class="books-highlight animate-on-scroll">
             <div class="books-number">33+</div>
             <div class="books-label">Books Published</div>
             
-            <a href="https://sevencubedseven.com/books.html" class="btn btn-primary">Find Your Perfect Book</a>
+            <a href="https://www.amazon.com/stores/Julio-C.-Medina/author/B0GCNN3HWB" class="btn btn-primary" target="_blank" rel="noopener">Browse All Books on Amazon</a>
             
             <div class="books-categories">
-                <div class="book-category">
-                    <div class="book-category-name">Life Transformation</div>
-                </div>
-                <div class="book-category">
-                    <div class="book-category-name">Family & Marriage</div>
-                </div>
-                <div class="book-category">
-                    <div class="book-category-name">Health & Wellness</div>
-                </div>
-                <div class="book-category">
-                    <div class="book-category-name">Wealth & Business</div>
-                </div>
-                <div class="book-category">
-                    <div class="book-category-name">Prophecy & Calling</div>
-                </div>
-                <div class="book-category">
-                    <div class="book-category-name">Consciousness Physics</div>
-                </div>
+                <div class="book-category"><div class="book-category-name">Life Transformation</div></div>
+                <div class="book-category"><div class="book-category-name">Family & Marriage</div></div>
+                <div class="book-category"><div class="book-category-name">Health & Wellness</div></div>
+                <div class="book-category"><div class="book-category-name">Wealth & Business</div></div>
+                <div class="book-category"><div class="book-category-name">Prophecy & Calling</div></div>
+                <div class="book-category"><div class="book-category-name">Consciousness Physics</div></div>
             </div>
+        </div>
+    </section>
+    
+    <!-- Connect Section -->
+    <section class="connect-section">
+        <h2 class="section-title animate-on-scroll">CONNECT</h2>
+        <p class="section-subtitle animate-on-scroll">Follow the signal across every frequency.</p>
+        
+        <div class="connect-grid">
+            <a href="https://www.youtube.com/@sevencubedseven" target="_blank" rel="noopener" class="connect-card connect-yt animate-on-scroll">
+                <div class="connect-icon">▶</div>
+                <div class="connect-label">YouTube</div>
+                <div class="connect-handle">@sevencubedseven</div>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/julio-medina-consciousness" target="_blank" rel="noopener" class="connect-card connect-li animate-on-scroll">
+                <div class="connect-icon">in</div>
+                <div class="connect-label">LinkedIn</div>
+                <div class="connect-handle">julio-medina</div>
+            </a>
+            
+            <a href="https://medium.com/@sevencubedsevenlabs" target="_blank" rel="noopener" class="connect-card connect-md animate-on-scroll">
+                <div class="connect-icon">M</div>
+                <div class="connect-label">Medium</div>
+                <div class="connect-handle">@sevencubedsevenlabs</div>
+            </a>
+            
+            <a href="https://twitter.com/7Cubed7" target="_blank" rel="noopener" class="connect-card connect-x animate-on-scroll">
+                <div class="connect-icon">𝕏</div>
+                <div class="connect-label">X / Twitter</div>
+                <div class="connect-handle">@7Cubed7</div>
+            </a>
+            
+            <a href="https://github.com/jules-medina" target="_blank" rel="noopener" class="connect-card connect-gh animate-on-scroll">
+                <div class="connect-icon">&lt;/&gt;</div>
+                <div class="connect-label">GitHub</div>
+                <div class="connect-handle">Patent #65 Demo</div>
+            </a>
+            
+            <a href="https://2401wire.com" target="_blank" rel="noopener" class="connect-card connect-wire animate-on-scroll">
+                <div class="connect-icon">W</div>
+                <div class="connect-label">2401 Wire</div>
+                <div class="connect-handle">2401wire.com</div>
+            </a>
+            
+            <a href="https://www.brighteon.com/@7cubed7" target="_blank" rel="noopener" class="connect-card connect-br animate-on-scroll">
+                <div class="connect-icon">B</div>
+                <div class="connect-label">Brighteon</div>
+                <div class="connect-handle">@7cubed7</div>
+            </a>
+            
+            <a href="https://www.amazon.com/stores/Julio-C.-Medina/author/B0GCNN3HWB" target="_blank" rel="noopener" class="connect-card connect-amz animate-on-scroll">
+                <div class="connect-icon">A</div>
+                <div class="connect-label">Amazon</div>
+                <div class="connect-handle">33+ Books</div>
+            </a>
         </div>
     </section>
     
@@ -912,6 +1214,8 @@
                 <a href="https://divineinsurgent.live">⚔️ Divine Insurgent</a>
                 <a href="https://realitynegotiable.is">🌀 Reality Negotiable</a>
                 <a href="https://c343.io">🏢 Enterprise</a>
+                <a href="https://sevencubedsevenlabs.com">🔐 SCSL Products</a>
+                <a href="https://2401wire.com">📡 2401 Wire</a>
             </div>
             
             <div class="s7-footer-col">
@@ -924,17 +1228,22 @@
             </div>
             
             <div class="s7-footer-col">
-                <h4>RESOURCES</h4>
-                <a href="https://www.amazon.com/s?k=julio+c.+medina" target="_blank">📖 All Books on Amazon</a>
-                <a href="https://twitter.com/7Cubed7" target="_blank">𝕏 @7Cubed7</a>
-                <a href="mailto:7cubed7@proton.me">✉️ Contact</a>
+                <h4>CONTENT</h4>
+                <a href="https://www.youtube.com/@sevencubedseven" target="_blank" rel="noopener">▶ YouTube</a>
+                <a href="https://medium.com/@sevencubedsevenlabs" target="_blank" rel="noopener">M Medium</a>
+                <a href="https://2401wire.com" target="_blank" rel="noopener">📡 2401 Wire</a>
+                <a href="https://www.brighteon.com/@7cubed7" target="_blank" rel="noopener">B Brighteon</a>
+                <a href="https://www.amazon.com/stores/Julio-C.-Medina/author/B0GCNN3HWB" target="_blank" rel="noopener">📖 All Books on Amazon</a>
+                <a href="https://github.com/jules-medina" target="_blank" rel="noopener">&lt;/&gt; GitHub</a>
             </div>
             
             <div class="s7-footer-col">
                 <h4>CONNECT</h4>
-                <a href="mailto:7cubed7@proton.me">7cubed7@proton.me</a>
-                <a href="mailto:ConsciousCodeLabs@proton.me">ConsciousCodeLabs@proton.me</a>
-                <a href="mailto:hello@c343.io">hello@c343.io</a>
+                <a href="https://www.linkedin.com/in/julio-medina-consciousness" target="_blank" rel="noopener">in LinkedIn</a>
+                <a href="https://twitter.com/7Cubed7" target="_blank" rel="noopener">𝕏 @7Cubed7</a>
+                <a href="mailto:7cubed7@proton.me">✉️ 7cubed7@proton.me</a>
+                <a href="mailto:hello@c343.io">✉️ hello@c343.io</a>
+                <a href="mailto:ConsciousCodeLabs@proton.me">✉️ ConsciousCodeLabs</a>
             </div>
         </div>
         
@@ -944,5 +1253,35 @@
             <div class="s7-footer-copy">© 2025 Seven Cubed Seven Labs LLC. All rights reserved.</div>
         </div>
     </footer>
+    
+    <!-- JavaScript: Scroll animations + nav behavior -->
+    <script>
+        // Navbar scroll effect
+        const nav = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+        
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Stagger animation for grid children
+                    const parent = entry.target.parentElement;
+                    if (parent && (parent.classList.contains('portals-grid') || 
+                                   parent.classList.contains('tools-grid') || 
+                                   parent.classList.contains('connect-grid'))) {
+                        const siblings = Array.from(parent.querySelectorAll('.animate-on-scroll'));
+                        const i = siblings.indexOf(entry.target);
+                        entry.target.style.transitionDelay = `${i * 0.08}s`;
+                    }
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
